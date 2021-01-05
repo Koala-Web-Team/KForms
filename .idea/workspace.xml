@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="" />
+    <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/config.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../w" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
@@ -62,6 +65,7 @@
       <workItem from="1609061673835" duration="127000" />
       <workItem from="1609195472987" duration="5457000" />
       <workItem from="1609355821668" duration="6888000" />
+      <workItem from="1609883081601" duration="1388000" />
     </task>
     <servers />
   </component>
