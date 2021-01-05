@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/noplaceholderbehavior.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/placeholderbehavior.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/KForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/KForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/label.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/label.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/KInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/KInput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/KCheckables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/KCheckables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/radioBotton.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/radioBotton.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/text.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/fields/text.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/dateTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/times/dateTime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/month.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/times/month.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/time.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/times/time.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/week.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/times/week.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
