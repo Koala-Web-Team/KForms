@@ -14,38 +14,31 @@ abstract class KNumeric extends KInput
 		$this->max = $max;
 	}
 
-	public function setMin($min)
-	{
+	public function setMin( $min ) {
 		$this->min = $min;
 	}
 
-	public function setStep($step)
-	{
+	public function setStep( $step ) {
 		$this->step = $step;
 	}
 
-	public function setList($id)
-	{
+	public function setList( $id ) {
 		$this->list = $id;
 	}
 
-	public function getMax()
-	{
+	public function getMax() {
 		return $this->max;
 	}
 
-	public function getMin()
-	{
+	public function getMin() {
 		return $this->min;
 	}
 
-	public function getStep()
-	{
+	public function getStep() {
 		return $this->step;
 	}
 
-	public function getList()
-	{
+	public function getList() {
 		return $this->list;
 	}
 
