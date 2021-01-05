@@ -4,7 +4,7 @@
 abstract class KNumeric extends KInput
 {
 
-	protected $min = 0;
+	protected $min;
 	protected $max = 100;
 	protected $step = 1;
 	protected $list;
