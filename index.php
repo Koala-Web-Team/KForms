@@ -1,6 +1,6 @@
 <?php
 
-include "includes/forms/assets/config.php";
+include "includes/forms/config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	echo "request is post";
