@@ -20,6 +20,7 @@
 	require_once("inputtypes/times/week.php");
 
 	require_once("elements/label.php");
-
+    require_once("inputtypes/fields/colorInput.php");
+    require_once ("inputtypes/fields/hiddenInput.php");
 	require_once("behaviours/placeholder/placeholderbehavior.php");
 	require_once("behaviours/placeholder/noplaceholderbehavior.php");

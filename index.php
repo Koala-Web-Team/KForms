@@ -29,7 +29,17 @@ $form->addInput( $firstTime );
 $form->addInput( $secondTime );
 // $form->addInputs( [ new text(), new text() ] );
 // $form->addInput( new submit() );
-
+	// hidden input
+	$hiddenInput = new hiddenInput();
+	$hiddenInput->setName("myname");
+	$hiddenInput->setId("myname_id");
+	//color input
+	$colorInput = new colorInput();
+	$colorInput->setName("mycolor");
+	//	$colorInput->setValue($colorInput->rgb_to_hex('#ffffff'));
+	$colorInput->setValue($colorInput->rgb_to_hex('rgb(123,125,132)')); // convert rgb to hex;
+	$form->addInput($hiddenInput);
+	$form->addInput($colorInput);
 ?>
 
 <body>
