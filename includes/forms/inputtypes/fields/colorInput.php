@@ -1,7 +1,6 @@
 <?php
 	class colorInput extends KInput
-	{
-		private $defaultValue="#000000"; // black color
+	{   private $defaultValue="#000000"; // black color
 		public function __construct( array $attributes = [] ) {
 			parent::__construct( $attributes );
 			$this->setType( "color" );
