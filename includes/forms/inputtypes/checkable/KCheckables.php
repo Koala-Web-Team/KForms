@@ -6,7 +6,7 @@ Abstract class KCheckables extends KInput
 
 	public function __construct( array $attributes = [] ) {
 		parent::__construct( $attributes );
-		$this->setPlaceholderBehavoir( new noplaceholderbehavior() );
+		$this->setPlaceholderBehavoir( new NoPlaceholderBehavior() );
 		$this->getLabel()->setAfterElement();
 	}
 

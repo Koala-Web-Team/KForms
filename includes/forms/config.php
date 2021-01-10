@@ -6,11 +6,14 @@
 	require_once("inputtypes/checkable/KCheckables.php");
 	require_once("inputtypes/checkable/checkbox.php");
 	require_once("inputtypes/checkable/checkboxes.php");
-	require_once("inputtypes/checkable/radioBotton.php");
+	require_once("inputtypes/checkable/radioButton.php");
 
 	require_once("inputtypes/numeric/KNumeric.php");
 	require_once("inputtypes/numeric/number.php");
 	require_once("inputtypes/numeric/range.php");
+
+	require_once("inputtypes/button/submit.php");
+	require_once("inputtypes/button/file.php");
 
 	require_once("inputtypes/times/KTimes.php");
 	require_once("inputtypes/times/date.php");

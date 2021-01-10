@@ -55,6 +55,8 @@ class Label
 
 	public function render() {
 		echo "<label " . $this->getHtmlAttributes() . ">";
+		echo $this->getText();
+		echo "</label>";
 	}
 
 	private function getHtmlAttributes() {

@@ -27,6 +27,12 @@ $firstTime->setName("toty");
 $secondTime = new time(["min"=>"7","value"=>"mkmk"]);
 $form->addInput( $firstTime );
 $form->addInput( $secondTime );
+
+$file = new File([
+		"fileType" => "image"
+]);
+
+$form->addInput($file);
 // $form->addInputs( [ new text(), new text() ] );
 // $form->addInput( new submit() );
 

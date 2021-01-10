@@ -1,6 +1,6 @@
 <?php
 
-class checkboxes extends KInput
+class Checkboxes extends KInput
 {
 	private $checkboxes = [];
 

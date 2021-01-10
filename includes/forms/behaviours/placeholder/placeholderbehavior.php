@@ -1,6 +1,6 @@
 <?php
 
-class placeholderbehavior
+class PlaceholderBehavior
 {
 	private $placeholder;
 
