@@ -11,18 +11,22 @@
 		private $value;
 		private $disabled;
 		private $autoFocus;
-		private $label;
+		protected $label;
 
 		private $placeholderBehavoir;
+		private $autocompleteBehavior;
+		private $readonlyBehavior;
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
-				if ( property_exists( $this, Helper::getAttributeWithCamelCase( $key ) ) ) {
-					$key = Helper::getAttributeWithCamelCase( $key );
+				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower($key) ) ) ) {
+					$key = Helper::getAttributeWithCamelCase( mb_strtolower($key) );
 					$this->$key = $value;
 				}
 			}
 			$this->placeholderBehavoir = new placeholderbehavior();
+			$this->autocompleteBehavior = new autocompleteBehavior();
+			$this->readonlyBehavior = new readonlyBehavior();
 			$this->label = new Label();
 		}
 
@@ -122,6 +126,32 @@
 		protected function setPlaceholderBehavoir( $placeholderBehavoir ) {
 			$this->placeholderBehavoir = $placeholderBehavoir;
 		}
+
+		public function setAutocomplet( $autocomplete ) {
+			$this->autocompleteBehavior->setAutocomplet( $autocomplete );
+		}
+
+		public function getAutocomplet() {
+			return $this->autocompleteBehavior->getAutocomplet();
+		}
+
+		protected function setAutocompleteBehavior( $autocompleteBehavior ) {
+			$this->autocompleteBehavior = $autocompleteBehavior;
+		}
+
+		public function setReadonly( $readonly ) {
+			$this->readonlyBehavior->setReadonly( $readonly );
+		}
+
+		public function getReadonly() {
+			return $this->readonlyBehavior->getReadonly();
+		}
+
+		protected function setReadonlyBehavior( $readonlyBehavior ) {
+			$this->readonlyBehavior = $readonlyBehavior;
+		}
+
+		
 
 		protected function render() {
 			if ( !$this->label->isAfterElement() ) {
