@@ -1,9 +1,10 @@
 <?php
 
-class text extends KInput
+class text extends KFields
 {
-	public function __construct( $attributes ) {
-		parent::__construct( $attributes );
-		$this->setType( "text" );
+	public function __construct( array $attributes = [] ) {
+        parent::__construct($attributes);
+        parent::setType('text');
 	}
+	
 }
