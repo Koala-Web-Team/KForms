@@ -38,7 +38,7 @@ class Helper
 	}
 
 	public static function getBehavoirsList() {
-		return [ 'placeholderBehavoir' ];
+		return [ 'placeholderBehavoir','readonlyBehavior','autocompleteBehavior' ];
 	}
 
 	public static function getAttributesNotInHtml() {

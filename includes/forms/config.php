@@ -25,6 +25,10 @@
 	require_once("behaviours/placeholder/placeholderbehavior.php");
 	require_once("behaviours/placeholder/noplaceholderbehavior.php");
 
+	require_once("inputtypes/comboBox/KComboBox.php");
+	require_once("inputtypes/comboBox/select.php");
+	require_once("inputtypes/comboBox/option.php");
+
 	require_once("behaviours/autocomplete/autocompleteBehavior.php");
 	require_once("behaviours/autocomplete/noAutocompleteBehavior.php");
 	require_once("behaviours/readonly/noReadonlyBehavior.php");

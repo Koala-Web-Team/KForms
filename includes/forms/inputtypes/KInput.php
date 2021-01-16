@@ -63,13 +63,6 @@
 			$this->type = $type;
 		}
 
-		// /**
-		//  * @param $style
-		//  */
-		// public function setStyle( $style ) {
-		// 	$this->style = $style;
-		// }
-
 		public function getStyle() {
 			return $this->style;
 		}
@@ -150,8 +143,6 @@
 		protected function setReadonlyBehavior( $readonlyBehavior ) {
 			$this->readonlyBehavior = $readonlyBehavior;
 		}
-
-		
 
 		protected function render() {
 			if ( !$this->label->isAfterElement() ) {
