@@ -1,8 +1,8 @@
 <?php
-	class radiobutton extends KCheckables
+	class hidden extends KInput
 	{
 		public function __construct( array $attributes = [] ) {
 			parent::__construct( $attributes );
-			$this->setType("radio");
+			$this->setType('hidden');
 		}
 	}

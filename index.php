@@ -1,45 +1,73 @@
 <?php
 
-include "includes/forms/config.php";
+	include "includes/forms/config.php";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	echo "request is post";
-}
-$form = new Form([
-	"meTHod" => "post",
-	"action" => "index.php",
-    "cssClass" => "classTest"
-]);
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		echo "request is post";
+	}
 
+	// form
+	$form = new Form([
+		"meTHod" => "post",
+		"action" => "index.php",
+		"cssClass" => "classTest"
+	]);
+	$form->addCssClass("class1 class2");
+	$form->addCssClass("class3 class4");
 
-$form->addCssClass("class1 class2");
-$form->addCssClass("class3 class4");
+	// time
+	$firstTime = new time();
+	$firstTime->setMax(7);
+	$firstTime->setName("toty");
 
-// $firstTime = new KTimes(["type"=>"time"]);
+	$secondTime = new time(["min"=>"7","value"=>"mkmk"]);
 
-// $form->addInput( $firstTime );
+	$form->addInput( $firstTime );
+	$form->addInput( $secondTime );
 
-$firstTime = new time();
-//$firstTime->setType("time");
-$firstTime->setMax(7);
-$firstTime->setName("toty");
-
-$secondTime = new time(["min"=>"7","value"=>"mkmk"]);
-$form->addInput( $firstTime );
-$form->addInput( $secondTime );
-// $form->addInputs( [ new text(), new text() ] );
-// $form->addInput( new submit() );
 	// hidden input
-	$hiddenInput = new hiddenInput();
+	$hiddenInput = new hidden();
 	$hiddenInput->setName("myname");
 	$hiddenInput->setId("myname_id");
-	//color input
-	$colorInput = new colorInput();
-	$colorInput->setName("mycolor");
-	//	$colorInput->setValue($colorInput->rgb_to_hex('#ffffff'));
-	$colorInput->setValue($colorInput->rgb_to_hex('rgb(123,125,132)')); // convert rgb to hex;
 	$form->addInput($hiddenInput);
+
+	// color input
+	$colorInput = new color();
+	$colorInput->setName("mycolor");
+	$colorInput->setRgbColor('rgb(123,125,132)');
+	//$colorInput->setHexaColor('#fffffff');
 	$form->addInput($colorInput);
+
+	// comboBox
+	// select 1
+	$select1 = new select(["name"=>"martina"]);
+	$select1->setId("99");
+	// option 1
+	$option1 = new option(["name"=>"martina", "value"=>"martina"]);
+	$option1->setId("99");
+	$option1->setText("martina");
+	// option 2
+	$option2 = new option();
+	$option2->setId("100");
+	$option2->setText("Ayman");
+	// add options to select
+	$select1->addOption($option2);
+	$select1->addOption($option1);
+	$form->addInput($select1);
+	// anther select
+	$select12 = new select(["name"=>"martina"]);
+	$select12->setId("997");
+	// option 1
+	$option12 = new option(["name"=>"martina", "value"=>"martina"]);
+	$option12->setId("99");
+	$option12->setText("martina2");
+	// option 2
+	$option22 = new option();
+	$option22->setId("100");
+	$option22->setText("Ayman2");
+	// add option to select as array
+	$select12->addOptions([$option22,$option12]);
+	$form->addInput($select12);
 ?>
 
 <body>
