@@ -1,10 +1,4 @@
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
-@font-face {
-  font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 .koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form, .koala-form .koala-fieldset, .koala-form .koala-input-button, .koala-form .koala-input-color {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
