@@ -1,0 +1,167 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form, .koala-form .koala-fieldset, .koala-form .koala-input-button, .koala-form .koala-input-color {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-number:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus {
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.28); }
+
+.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time {
+  transition: box-shadow .2s ease-in-out, border-color .2s ease-in-out; }
+
+.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time {
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: #343A40;
+  padding: 3px 8px;
+  font-size: 15px;
+  background-clip: padding-box;
+  background-color: #fff;
+  margin: 10px 0;
+  line-height: 2; }
+  .koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-number:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus {
+    outline: none;
+    border: 1px solid #007BFF; }
+
+.koala-form {
+  border: 1px solid #BBBBBB;
+  border-radius: 15px;
+  width: 25%;
+  margin: 15px;
+  padding: 20px 10px 15px 10px; }
+  .koala-form .koala-fieldset {
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 10px; }
+    .koala-form .koala-fieldset .koala-legend {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 7px;
+      font-family: Arial;
+      color: #343A40; }
+  .koala-form .koala-textarea-field {
+    height: 80px; }
+  .koala-form .koala-input-button {
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    outline: none;
+    background-color: #007BFF;
+    color: #fff;
+    width: 25%;
+    height: 40px;
+    padding: 3px 8px; }
+    .koala-form .koala-input-button:hover, .koala-form .koala-input-button:focus {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 3px #007bff; }
+  .koala-form .koala-input-number {
+    padding-right: 0; }
+  .koala-form .koala-input-range {
+    cursor: pointer;
+    appearance: none;
+    background-color: #dee2e6;
+    border-radius: 25px;
+    height: 7px;
+    width: 100%;
+    outline: none;
+    opacity: 1; }
+    .koala-form .koala-input-range::-webkit-slider-thumb {
+      background-color: #007BFF;
+      border-radius: 50%;
+      transition: box-shadow .2s ease-in-out; }
+    .koala-form .koala-input-range::-moz-range-thumb {
+      background-color: #007BFF;
+      border: none;
+      border-radius: 50%;
+      transition: box-shadow .2s ease-in-out; }
+    .koala-form .koala-input-range:focus::-webkit-slider-thumb {
+      box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+      border-radius: 50%;
+      background-clip: content-box; }
+    .koala-form .koala-input-range:focus::-moz-range-thumb {
+      box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+      border-radius: 50%;
+      background-clip: content-box; }
+  .koala-form .koala-input-file {
+    font-weight: unset;
+    padding: 0;
+    margin: 0 0 10px 0;
+    line-height: unset; }
+    .koala-form .koala-input-file::file-selector-button {
+      height: 100%;
+      border: none;
+      border-right: 1px solid #BBBBBB;
+      margin-right: 10px;
+      color: #343A40;
+      font-weight: unset;
+      outline: none; }
+    .koala-form .koala-input-file::-webkit-file-upload-button {
+      height: 100%;
+      border: none;
+      border-right: 1px solid #BBBBBB;
+      margin-right: 10px;
+      color: #343A40;
+      font-weight: unset;
+      outline: none; }
+  .koala-form .koala-input-color {
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    width: 40px;
+    height: 35px;
+    background-color: #fff;
+    outline: none; }
+    .koala-form .koala-input-color::-webkit-color-swatch {
+      border: none;
+      border-radius: 5px;
+      height: 100%;
+      width: 100%; }
+    .koala-form .koala-input-color::-moz-color-swatch {
+      border: none;
+      border-radius: 5px;
+      height: 70%;
+      margin-left: -2px;
+      width: 120%; }
+  .koala-form .koala-input-date, .koala-form .koala-input-time {
+    padding-right: 0;
+    width: 100%; }
+    .koala-form .koala-input-date::-webkit-datetime-edit, .koala-form .koala-input-time::-webkit-datetime-edit {
+      color: #6C757D;
+      font-family: Arial; }
+    .koala-form .koala-input-date::-webkit-calendar-picker-indicator, .koala-form .koala-input-time::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      width: 25%;
+      position: absolute; }
+    .koala-form .koala-input-date::after, .koala-form .koala-input-time::after {
+      box-sizing: border-box;
+      color: #6C757D;
+      content: '\f073';
+      font-family: "Font Awesome 5 Free";
+      background-color: #e9ecef;
+      padding: 10px;
+      border-left: 1px solid #BBBBBB; }
+  .koala-form .koala-input-time::after {
+    content: '\f017'; }
+  .koala-form .koala-type-date, .koala-form .koala-type-time {
+    padding: 0 8px;
+    font-family: Arial;
+    color: #6C757D; }
+
+@media only screen and (max-width: 1000px) {
+  .koala-form {
+    width: 33.33333%; } }
+@media only screen and (max-width: 768px) {
+  .koala-form {
+    width: 50%; } }
+@media only screen and (max-width: 576px) {
+  .koala-form {
+    width: 75%; } }
+
+/*# sourceMappingURL=form-style.css.map */
