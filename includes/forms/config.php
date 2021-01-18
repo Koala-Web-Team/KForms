@@ -41,3 +41,10 @@
 	require_once("inputtypes/fields/search.php");
 	require_once("inputtypes/fields/textarea.php");
 	require_once("inputtypes/fields/url.php");
+
+	require_once("inputtypes/button/KButton.php");
+	require_once("inputtypes/button/submit.php");
+	require_once("inputtypes/button/reset.php");
+	require_once("inputtypes/button/button.php");
+
+	require_once("inputtypes/image/image.php");

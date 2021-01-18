@@ -68,6 +68,28 @@
 	// add option to select as array
 	$select12->addOptions([$option22,$option12]);
 	$form->addInput($select12);
+
+	// Button
+	$s= new submit();
+	$s->setFormaction('test.php');
+	$s->setFormmethod('POST');
+	$r= new reset();
+	$r->setName('my-reset');
+	$b = new button();
+	$b->setName("mybtn");
+	$b->setValue('hello');
+	//$b->setOnClick("msg('m')"); => هنا في مشكله رخمة
+	//$b->setOnClick("msg("+"'m'"+")");
+	$b->setOnClick("msg()");
+	$form->addInput($b);
+	$form->addInput($r);
+	$form->addInput($s);
+
+	// image
+	$image = new Image(["src"=>"3.jpg"]);
+	$image->setAlt(" Ayman Photo ");
+	$image->setTitle('Habd');
+	$form->addInput($image);
 ?>
 
 <body>
