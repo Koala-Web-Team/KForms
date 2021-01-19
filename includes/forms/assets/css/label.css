@@ -1,0 +1,39 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.float-label {
+  width: 24%;
+  display: block;
+  position: relative;
+  height: 60px;
+  margin: 30px 5px 25px 5px; }
+  .float-label input {
+    border: none;
+    border-bottom: 2px #828282 solid;
+    color: black;
+    padding: 15px 20px 0 18px;
+    margin: 0;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none; }
+    .float-label input:focus ~ label {
+      font-size: 16px;
+      position: absolute;
+      top: 0;
+      left: 2px;
+      padding: 0;
+      transition: all 1s ease-in-out; }
+    .float-label input ~ label {
+      display: block;
+      color: #828282;
+      font-size: 22px;
+      bottom: 8px;
+      left: 10px;
+      position: absolute;
+      transition: all 1s ease-in-out; }
+
+/*# sourceMappingURL=label.css.map */
