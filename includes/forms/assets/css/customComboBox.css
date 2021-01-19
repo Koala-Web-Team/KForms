@@ -1,0 +1,58 @@
+.custom-select {
+  position: relative;
+  margin: 10px auto;
+  font-family: Arial;
+  border: rgba(100, 100, 100, 0.5) solid 1px;
+  border-radius: 4px;
+  width: 400px;
+}
+.custom-select select {
+  display: none;
+}
+.custom-select .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: solid rgba(100, 100, 100, 0.5);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+.custom-select .select-selected.select-arrow-active:after {
+  transform: rotate(-135deg);
+  top: 16px;
+}
+.custom-select .select-items div, .custom-select .select-selected {
+  color: #333;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.custom-select .select-items {
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.custom-select .select-hide {
+  display: none;
+}
+.custom-select .select-items div:hover, .custom-select .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-select:active {
+  position: relative;
+  font-family: Arial;
+  border: rgba(100, 100, 100, 0.5) solid 1px;
+  border-radius: 4px;
+  width: 400px;
+}
+
+/*# sourceMappingURL=customComboBox.css.map */
