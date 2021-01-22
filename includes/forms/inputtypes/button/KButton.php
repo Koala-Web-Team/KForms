@@ -12,7 +12,7 @@
 		 * @param mixed $onClick
 		 */
 		public function setOnClick( $onClick ) {
-			$this->onClick = $onClick;
+			$this->onClick = str_replace( "'", "\"", $onClick );
 		}
 
 		/**

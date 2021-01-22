@@ -4,6 +4,9 @@
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo "request is post";
+		echo "<pre>";
+		var_dump( $_POST );
+		echo "</pre>";
 	}
 
 	// form
@@ -54,6 +57,7 @@
 	$select1->addOption($option2);
 	$select1->addOption($option1);
 	$form->addInput($select1);
+
 	// anther select
 	$select12 = new select(["name"=>"martina"]);
 	$select12->setId("997");
@@ -78,15 +82,16 @@
 	$b = new button();
 	$b->setName("mybtn");
 	$b->setValue('hello');
-	//$b->setOnClick("msg('m')"); => هنا في مشكله رخمة
+	$b->setOnClick("msg('m')");
 	//$b->setOnClick("msg("+"'m'"+")");
-	$b->setOnClick("msg()");
+	// $b->setOnClick("msg()");
 	$form->addInput($b);
 	$form->addInput($r);
 	$form->addInput($s);
 
 	// image
-	$image = new Image(["src"=>"3.jpg"]);
+	$image = new Image(["src"=>"3.jpg", "name" => "absy"]);
+	$image->setName("amr_elabsy");
 	$image->setAlt(" Ayman Photo ");
 	$image->setTitle('Habd');
 	$form->addInput($image);

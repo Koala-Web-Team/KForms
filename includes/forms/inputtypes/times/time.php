@@ -5,5 +5,4 @@
             parent::__construct( $attributes );
             $this->setType("time");
         }
-        
     }

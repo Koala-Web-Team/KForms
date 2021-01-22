@@ -55,6 +55,8 @@ class Label
 
 	public function render() {
 		echo "<label " . $this->getHtmlAttributes() . ">";
+		echo $this->getText();
+		echo "</label>";
 	}
 
 	private function getHtmlAttributes() {
@@ -64,10 +66,10 @@ class Label
 			if ( $value !== NULL
 				&& !in_array( $key, Helper::getAttributesNotInHtml() )
 				&& !in_array( $key, Helper::getBehavoirsList() ) ) {
-				$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "'";
+				$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
 			}
 		}
-		return $htmlAttributes;
+		return trim( $htmlAttributes );
 	}
 
 }
