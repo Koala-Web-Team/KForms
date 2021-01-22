@@ -6,7 +6,7 @@
 	require_once("inputtypes/checkable/KCheckables.php");
 	require_once("inputtypes/checkable/checkbox.php");
 	require_once("inputtypes/checkable/checkboxes.php");
-	require_once("inputtypes/checkable/radioBotton.php");
+	require_once("inputtypes/checkable/radioButton.php");
 
 	require_once("inputtypes/numeric/KNumeric.php");
 	require_once("inputtypes/numeric/number.php");
