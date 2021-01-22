@@ -16,6 +16,9 @@ class Helper
 			case "afterelement":
 				return "afterElement";
 
+			case "onclick":
+				return "onClick";
+
 			default:
 				return $attribute;
 		}
@@ -29,11 +32,8 @@ class Helper
 			case "acceptcharset":
 				return "accept-charset";
 
-			case "novalidate":
-				return "novalidate";
-
 			default:
-				return $attribute;
+				return mb_strtolower( $attribute );
 		}
 	}
 

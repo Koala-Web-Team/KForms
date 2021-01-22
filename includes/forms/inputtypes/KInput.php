@@ -12,6 +12,7 @@
 		private $disabled;
 		private $autoFocus;
 		protected $label;
+		private $onClick;
 
 		private $placeholderBehavoir;
 		private $autocompleteBehavior;
@@ -19,8 +20,8 @@
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
-				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower($key) ) ) ) {
-					$key = Helper::getAttributeWithCamelCase( mb_strtolower($key) );
+				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower( $key ) ) ) ) {
+					$key = Helper::getAttributeWithCamelCase( mb_strtolower( $key ) );
 					$this->$key = $value;
 				}
 			}
@@ -154,6 +155,19 @@
 			}
 		}
 
+		// @TODO: Implement the Function.
+		public function setOn( $event, $function, $param = "" ) {
+		}
+
+		// TODO: Implement the function for the other
+		public function setOnClick( $function, ...$param ) {
+			$this->setOn( "click", $function, $param );
+		}
+
+		public function getOnClick() {
+			return $this->onClick;
+		}
+
 		public function setProperties() {
 		}
 
@@ -195,5 +209,4 @@
 			}
 			return $htmlAttributes;
 		}
-
 	}
