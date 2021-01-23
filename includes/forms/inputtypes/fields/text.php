@@ -1,9 +1,9 @@
 <?php
-
-class text extends KInput
-{
-	public function __construct( $attributes ) {
-		parent::__construct( $attributes );
-		$this->setType( "text" );
+    class text extends KFields
+    {
+	public function __construct( array $attributes = [] ) {
+        parent::__construct($attributes);
+        parent::setType('text');
 	}
-}
+	
+    }

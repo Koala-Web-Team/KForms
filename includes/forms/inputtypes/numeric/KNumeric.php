@@ -1,52 +1,41 @@
 <?php
-
-
-abstract class KNumeric extends KInput
-{
-
-	protected $min = 0;
-	protected $max = 100;
-	protected $step = 1;
-	protected $list;
-
-
-	public function setMax( $max ) {
-		$this->max = $max;
-	}
-
-	public function setMin($min)
+	abstract class KNumeric extends KInput
 	{
-		$this->min = $min;
-	}
+		protected $min = 0;
+		protected $max = 100;
+		protected $step = 1;
+		protected $list;
 
-	public function setStep($step)
-	{
-		$this->step = $step;
-	}
+		public function setMax( $max ) {
+			$this->max = $max;
+		}
 
-	public function setList($id)
-	{
-		$this->list = $id;
-	}
+		public function setMin( $min ) {
+			$this->min = $min;
+		}
 
-	public function getMax()
-	{
-		return $this->max;
-	}
+		public function setStep( $step ) {
+			$this->step = $step;
+		}
 
-	public function getMin()
-	{
-		return $this->min;
-	}
+		public function setList( $id ) {
+			$this->list = $id;
+		}
 
-	public function getStep()
-	{
-		return $this->step;
-	}
+		public function getMax() {
+			return $this->max;
+		}
 
-	public function getList()
-	{
-		return $this->list;
-	}
+		public function getMin() {
+			return $this->min;
+		}
 
-}
+		public function getStep() {
+			return $this->step;
+		}
+
+		public function getList() {
+			return $this->list;
+		}
+
+	}

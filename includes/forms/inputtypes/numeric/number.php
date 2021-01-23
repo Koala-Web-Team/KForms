@@ -1,12 +1,9 @@
 <?php
-
-
-class Number extends KNumeric
-{
-
-    public function __construct(array $attributes = [])
+    class Number extends KNumeric
     {
-        parent::__construct($attributes);
-        parent::setType('number');
+        public function __construct( array $attributes = [] ) {
+            parent::__construct($attributes);
+            parent::setType('number');
+        }
+        
     }
-}

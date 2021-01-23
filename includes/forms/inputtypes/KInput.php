@@ -11,18 +11,25 @@
 		private $value;
 		private $disabled;
 		private $autoFocus;
-		private $label;
+		protected $label;
+		private $onClick;
 
 		private $placeholderBehavoir;
+		private $autocompleteBehavior;
+		private $readonlyBehavior;
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
-				if ( property_exists( $this, Helper::getAttributeWithCamelCase( $key ) ) ) {
-					$key = Helper::getAttributeWithCamelCase( $key );
+				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower( $key ) ) ) ) {
+					$key = Helper::getAttributeWithCamelCase( mb_strtolower( $key ) );
 					$this->$key = $value;
 				}
 			}
-			$this->placeholderBehavoir = new PlaceholderBehavior();
+
+			$this->placeholderBehavoir = new placeholderbehavior();
+			$this->autocompleteBehavior = new autocompleteBehavior();
+			$this->readonlyBehavior = new readonlyBehavior();
+
 			$this->label = new Label();
 		}
 
@@ -58,13 +65,6 @@
 		protected function setType( $type ) {
 			$this->type = $type;
 		}
-
-		// /**
-		//  * @param $style
-		//  */
-		// public function setStyle( $style ) {
-		// 	$this->style = $style;
-		// }
 
 		public function getStyle() {
 			return $this->style;
@@ -123,6 +123,30 @@
 			$this->placeholderBehavoir = $placeholderBehavior;
 		}
 
+		public function setAutocomplet( $autocomplete ) {
+			$this->autocompleteBehavior->setAutocomplet( $autocomplete );
+		}
+
+		public function getAutocomplet() {
+			return $this->autocompleteBehavior->getAutocomplet();
+		}
+
+		protected function setAutocompleteBehavior( $autocompleteBehavior ) {
+			$this->autocompleteBehavior = $autocompleteBehavior;
+		}
+
+		public function setReadonly( $readonly ) {
+			$this->readonlyBehavior->setReadonly( $readonly );
+		}
+
+		public function getReadonly() {
+			return $this->readonlyBehavior->getReadonly();
+		}
+
+		protected function setReadonlyBehavior( $readonlyBehavior ) {
+			$this->readonlyBehavior = $readonlyBehavior;
+		}
+
 		protected function render() {
 			if ( !$this->getLabel()->isAfterElement() ) {
 				$this->getLabel()->render();
@@ -131,6 +155,19 @@
 				echo "<input " . $this->getHtmlAttributes() . ">";
 				$this->getLabel()->render();
 			}
+		}
+
+		// @TODO: Implement the Function.
+		public function setOn( $event, $function, $param = "" ) {
+		}
+
+		// TODO: Implement the function for the other
+		public function setOnClick( $function, ...$param ) {
+			$this->setOn( "click", $function, $param );
+		}
+
+		public function getOnClick() {
+			return $this->onClick;
 		}
 
 		public function setProperties() {
@@ -175,5 +212,4 @@
 			}
 			return $htmlAttributes;
 		}
-
 	}

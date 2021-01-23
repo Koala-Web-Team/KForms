@@ -1,12 +1,9 @@
 <?php
-
-
-class Range extends KNumeric
-{
-
-    public function __construct(array $attributes = [])
+    class Range extends KNumeric
     {
-        parent::__construct($attributes);
-        parent::setType('range');
+        public function __construct( array $attributes = [] ) {
+            parent::__construct($attributes);
+            parent::setType('range');
+        }
+        
     }
-}
