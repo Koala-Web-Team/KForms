@@ -16,6 +16,10 @@ class Helper
 			case "afterelement":
 				return "afterElement";
 
+
+			case "filetype":
+				return "fileType";
+        
 			case "onclick":
 				return "onClick";
 
@@ -42,6 +46,6 @@ class Helper
 	}
 
 	public static function getAttributesNotInHtml() {
-		return [ 'inputs', "label", "afterElement" ];
+		return [ 'inputs', "label", "afterElement", "fileTypes", "allowedExtensions", "text", "userDefinedAllowedExtensions" ];
 	}
 }

@@ -25,9 +25,11 @@
 					$this->$key = $value;
 				}
 			}
+
 			$this->placeholderBehavoir = new placeholderbehavior();
 			$this->autocompleteBehavior = new autocompleteBehavior();
 			$this->readonlyBehavior = new readonlyBehavior();
+
 			$this->label = new Label();
 		}
 
@@ -117,8 +119,8 @@
 			return $this->placeholderBehavoir->getPlaceholder();
 		}
 
-		protected function setPlaceholderBehavoir( $placeholderBehavoir ) {
-			$this->placeholderBehavoir = $placeholderBehavoir;
+		protected function setPlaceholderBehavoir( $placeholderBehavior ) {
+			$this->placeholderBehavoir = $placeholderBehavior;
 		}
 
 		public function setAutocomplet( $autocomplete ) {
@@ -146,12 +148,12 @@
 		}
 
 		protected function render() {
-			if ( !$this->label->isAfterElement() ) {
-				$this->label->render();
+			if ( !$this->getLabel()->isAfterElement() ) {
+				$this->getLabel()->render();
 				echo "<input " . $this->getHtmlAttributes() . ">";
 			} else {
 				echo "<input " . $this->getHtmlAttributes() . ">";
-				$this->label->render();
+				$this->getLabel()->render();
 			}
 		}
 
@@ -203,7 +205,8 @@
 			foreach ( $attributes as $key => $value ) {
 				if ( $value !== NULL
 					&& !in_array( $key, Helper::getAttributesNotInHtml() )
-					&& !in_array( $key, Helper::getBehavoirsList() ) ) {
+					&& !in_array( $key, Helper::getBehavoirsList() )
+					&& $value != false ) {
 					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
 				}
 			}

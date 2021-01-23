@@ -34,12 +34,28 @@
 	$hiddenInput->setId("myname_id");
 	$form->addInput($hiddenInput);
 
+
+$secondTime = new time(["min"=>"7","value"=>"mkmk"]);
+$form->addInput( $firstTime );
+$form->addInput( $secondTime );
+
+$file = new File([
+		"fileTypes" => [ "image", "video" ] // or video
+]);
+$file->addFileType("programming");
+// $file->addAccept("video/mp4");
+
+$form->addInput($file);
+// $form->addInputs( [ new text(), new text() ] );
+// $form->addInput( new submit() );
+
 	// color input
 	$colorInput = new color();
 	$colorInput->setName("mycolor");
 	$colorInput->setRgbColor('rgb(123,125,132)');
 	//$colorInput->setHexaColor('#fffffff');
 	$form->addInput($colorInput);
+
 
 	// comboBox
 	// select 1

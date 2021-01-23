@@ -12,6 +12,9 @@
 	require_once("inputtypes/numeric/number.php");
 	require_once("inputtypes/numeric/range.php");
 
+	require_once("inputtypes/button/submit.php");
+	require_once("inputtypes/button/file.php");
+
 	require_once("inputtypes/times/KTimes.php");
 	require_once("inputtypes/times/date.php");
 	require_once("inputtypes/times/dateTime.php");
