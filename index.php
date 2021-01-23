@@ -29,9 +29,10 @@ $form->addInput( $firstTime );
 $form->addInput( $secondTime );
 
 $file = new File([
-		"fileType" => "image"
+		"fileTypes" => [ "image", "video" ] // or video
 ]);
-$file->addAccept("video/mp4");
+$file->addFileType("programming");
+// $file->addAccept("video/mp4");
 
 $form->addInput($file);
 // $form->addInputs( [ new text(), new text() ] );

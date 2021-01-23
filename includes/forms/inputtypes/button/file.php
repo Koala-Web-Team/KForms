@@ -2,7 +2,7 @@
 
 class File extends KInput
 {
-	protected $fileType;
+	protected $fileTypes = [];
 	protected $allowedExtensions = [
 		"compressed" => ["7z", "arj", "deb", "pkg", "rar", "rpm", "tar.gz", "z", "zip"],
 		"media" => ["bin", "dmg", "iso", "toast", "vcd"],
@@ -43,12 +43,12 @@ class File extends KInput
 		return $this->multiple;
 	}
 
-	public function setFileType( $fileType ) {
-		$this->fileType = $fileType;
+	public function addFileType( $fileType ) {
+		$this->fileTypes[] = $fileType;
 	}
 
-	public function getFileType() {
-		return $this->fileType;
+	public function getFileTypes() {
+		return $this->fileTypes;
 	}
 
 	public function setCapture( $capture ) {
@@ -92,8 +92,10 @@ class File extends KInput
 //	}
 
 	private function setAccept() {
-		foreach ( $this->allowedExtensions[$this->getFileType()] as $extension ) {
-			$this->accept .= $this->getFileType() . "/" . $extension . ", ";
+		foreach ($this->getFileTypes() as $type ) {
+			foreach ( $this->allowedExtensions[$type] as $extension ) {
+				$this->accept .= $type . "/" . $extension . ", ";
+			}
 		}
 //		foreach ( $this->userDefinedAllowedExtensions as $extension ) {
 //			foreach ($this->allowedExtensions as $type => $type_extensions ) {
@@ -114,10 +116,13 @@ class File extends KInput
 		return $this->accept;
 	}
 
+	private function getFileTypesString() {
+		return implode(",", $this->getFileTypes());
+	}
+
 	protected function render() {
-		$this->accept = "";
 		$this->setAccept();
-		$inputString = "<input " . $this->getHtmlAttributes() . "file-type ='" . $this->getFileType() . "'>";
+		$inputString = "<input " . $this->getHtmlAttributes() . "file-type ='" . $this->getFileTypesString() . "'>";
 		if ( !$this->getLabel()->isAfterElement() ) {
 			$this->getLabel()->render();
 			echo $inputString;
