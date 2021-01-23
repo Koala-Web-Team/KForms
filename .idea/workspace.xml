@@ -20,18 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/forms/inputtypes/button/file.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/noplaceholderbehavior.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/noplaceholderbehavior.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/placeholderbehavior.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/placeholderbehavior.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/label.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/label.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/KInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/KInput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/KCheckables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/KCheckables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/checkbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/checkbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/checkboxes.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/checkboxes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/radioBotton.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/radioButton.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/button/file.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/inputtypes/button/file.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,9 +33,17 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lsAZ0cMFRUFhYmtzYFj3Lmy6rf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

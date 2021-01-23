@@ -31,6 +31,7 @@ $form->addInput( $secondTime );
 $file = new File([
 		"fileType" => "image"
 ]);
+$file->addAccept("video/mp4");
 
 $form->addInput($file);
 // $form->addInputs( [ new text(), new text() ] );
