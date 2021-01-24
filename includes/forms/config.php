@@ -12,9 +12,6 @@
 	require_once("inputtypes/numeric/number.php");
 	require_once("inputtypes/numeric/range.php");
 
-	require_once("inputtypes/button/submit.php");
-	require_once("inputtypes/button/file.php");
-
 	require_once("inputtypes/times/KTimes.php");
 	require_once("inputtypes/times/date.php");
 	require_once("inputtypes/times/dateTime.php");
@@ -28,9 +25,10 @@
 	require_once("behaviours/placeholder/placeholderbehavior.php");
 	require_once("behaviours/placeholder/noplaceholderbehavior.php");
 
-	require_once("inputtypes/comboBox/KComboBox.php");
-	require_once("inputtypes/comboBox/select.php");
-	require_once("inputtypes/comboBox/option.php");
+	require_once("inputtypes/select/KSelect.php");
+	require_once("inputtypes/select/option.php");
+	require_once("inputtypes/select/select.php");
+	require_once("inputtypes/select/compoBox.php");
 
 	require_once("behaviours/autocomplete/autocompleteBehavior.php");
 	require_once("behaviours/autocomplete/noAutocompleteBehavior.php");
@@ -49,5 +47,6 @@
 	require_once("inputtypes/button/submit.php");
 	require_once("inputtypes/button/reset.php");
 	require_once("inputtypes/button/button.php");
+	require_once("inputtypes/button/file.php");
 
 	require_once("inputtypes/image/image.php");

@@ -1,5 +1,5 @@
 <?php
-    abstract class KComboBox extends KInput
+    abstract class KSelect extends KInput
 	{
 		protected $searchable;
 		protected $multiple;

@@ -1,7 +1,7 @@
 <?php
-    class Option extends KComboBox
+    class Option extends KInput
     {
-        private $text;
+        protected $text;
         public function __construct( array $attributes = [] ) {
             parent::__construct( $attributes );
         }
