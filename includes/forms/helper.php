@@ -16,6 +16,13 @@ class Helper
 			case "afterelement":
 				return "afterElement";
 
+
+			case "filetype":
+				return "fileType";
+        
+			case "onclick":
+				return "onClick";
+
 			default:
 				return $attribute;
 		}
@@ -29,19 +36,16 @@ class Helper
 			case "acceptcharset":
 				return "accept-charset";
 
-			case "novalidate":
-				return "novalidate";
-
 			default:
-				return $attribute;
+				return mb_strtolower( $attribute );
 		}
 	}
 
 	public static function getBehavoirsList() {
-		return [ 'placeholderBehavoir' ];
+		return [ 'placeholderBehavoir','readonlyBehavior','autocompleteBehavior' ];
 	}
 
 	public static function getAttributesNotInHtml() {
-		return [ 'inputs', "label", "afterElement" ];
+		return [ 'inputs', "label", "afterElement", "fileTypes", "allowedExtensions", "text", "userDefinedAllowedExtensions" ];
 	}
 }

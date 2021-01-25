@@ -3,7 +3,7 @@
 class checkboxes extends KInput
 {
 	private $checkboxes = [];
-
+	protected $onchange;
 	public function __construct( array $attributes = [] ) {
 		parent::__construct( $attributes );
 	}
@@ -28,5 +28,12 @@ class checkboxes extends KInput
 			$this->checkboxes[$i]->renderDiv();
 		}
 	}
+
+	public function setOnChange($function,...$param) {
+		parent::setOn('change',$function,...$param);
+	  }
+	  public function getOnChange() {
+		return $this->onchange;
+	  }
 
 }

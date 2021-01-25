@@ -1,6 +1,6 @@
 <?php
 
-class radiobutton extends KCheckables
+class RadioButton extends KCheckables
 {
 	public function __construct( array $attributes = [] ) {
 		parent::__construct( $attributes );

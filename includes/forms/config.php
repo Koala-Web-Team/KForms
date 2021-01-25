@@ -6,11 +6,14 @@
 	require_once("inputtypes/checkable/KCheckables.php");
 	require_once("inputtypes/checkable/checkbox.php");
 	require_once("inputtypes/checkable/checkboxes.php");
-	require_once("inputtypes/checkable/radioBotton.php");
+	require_once("inputtypes/checkable/radioButton.php");
 
 	require_once("inputtypes/numeric/KNumeric.php");
 	require_once("inputtypes/numeric/number.php");
 	require_once("inputtypes/numeric/range.php");
+
+	require_once("inputtypes/button/submit.php");
+	require_once("inputtypes/button/file.php");
 
 	require_once("inputtypes/times/KTimes.php");
 	require_once("inputtypes/times/date.php");
@@ -25,6 +28,10 @@
 	require_once("behaviours/placeholder/placeholderbehavior.php");
 	require_once("behaviours/placeholder/noplaceholderbehavior.php");
 
+	require_once("inputtypes/comboBox/KComboBox.php");
+	require_once("inputtypes/comboBox/select.php");
+	require_once("inputtypes/comboBox/option.php");
+
 	require_once("behaviours/autocomplete/autocompleteBehavior.php");
 	require_once("behaviours/autocomplete/noAutocompleteBehavior.php");
 	require_once("behaviours/readonly/noReadonlyBehavior.php");
@@ -37,3 +44,10 @@
 	require_once("inputtypes/fields/search.php");
 	require_once("inputtypes/fields/textarea.php");
 	require_once("inputtypes/fields/url.php");
+
+	require_once("inputtypes/button/KButton.php");
+	require_once("inputtypes/button/submit.php");
+	require_once("inputtypes/button/reset.php");
+	require_once("inputtypes/button/button.php");
+
+	require_once("inputtypes/image/image.php");
