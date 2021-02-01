@@ -1,0 +1,72 @@
+$borderColor:rgba(100, 100, 100, 0.5);
+%kCheckBoxInput {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  .kCheckBox {
+    display: none;
+    &:checked + .kLabel::before{
+      background: dodgerblue;
+      border: 1px solid dodgerblue;
+    }
+  }
+
+  .kLabel {
+    cursor: pointer;
+
+    &::before {
+      content: '\2714';
+      color: #fff;
+      width: 1.25em;
+      height: 1.25em;
+      margin: .25em .5em .25em .25em;
+      display: inline-block;
+      background: #fff;
+      border: 1px solid $borderColor;
+      vertical-align: middle;
+      text-align: center;
+      border-radius: 4px;
+      transition: all ease-in-out .15s;
+    }
+  }
+}
+.container {
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .kCheckBoxInput-mark{
+    @extend %kCheckBoxInput;
+  }
+  .kCheckBoxInput-dash{
+    @extend %kCheckBoxInput;
+    .kCheckBox + .kLabel::before {
+      content: "\25AC";
+    }
+  }
+  .kCheckBoxInput-box{
+    @extend %kCheckBoxInput;
+    display: inline-flex;
+    border-radius: 5px;
+    border: 1px solid $borderColor;;
+    background-color: #fff;
+    padding: 0 3px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    .kLabel::after{
+      content: '';
+      background: $borderColor;
+      width: 2.2em;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      top:0px;
+      z-index: -1;
+    }
+  }
+}
+

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.container .kCheckBoxInput-box, .container .kCheckBoxInput-dash, .container .kCheckBoxInput-mark {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.container .kCheckBoxInput-box .kCheckBox, .container .kCheckBoxInput-dash .kCheckBox, .container .kCheckBoxInput-mark .kCheckBox {
+  display: none;
+}
+.container .kCheckBoxInput-box .kCheckBox:checked + .kLabel::before, .container .kCheckBoxInput-dash .kCheckBox:checked + .kLabel::before, .container .kCheckBoxInput-mark .kCheckBox:checked + .kLabel::before {
+  background: dodgerblue;
+  border: 1px solid dodgerblue;
+}
+.container .kCheckBoxInput-box .kLabel, .container .kCheckBoxInput-dash .kLabel, .container .kCheckBoxInput-mark .kLabel {
+  cursor: pointer;
+}
+.container .kCheckBoxInput-box .kLabel::before, .container .kCheckBoxInput-dash .kLabel::before, .container .kCheckBoxInput-mark .kLabel::before {
+  content: "✔";
+  color: #fff;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 4px;
+  transition: all ease-in-out 0.15s;
+  padding-bottom:.25em;
+}
+
+.container {
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container .kCheckBoxInput-dash .kCheckBox + .kLabel::before {
+  content: "▬";
+}
+.container .kCheckBoxInput-box {
+  display: inline-flex;
+  border-radius: 5px;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  background-color: #fff;
+  padding: 0 3px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.container .kCheckBoxInput-box .kLabel::after {
+  content: "";
+  background: rgba(100, 100, 100, 0.5);
+  width: 2.2em;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity:.3;
+}
+
+/*# sourceMappingURL=kCheckBox.css.map */
