@@ -34,20 +34,14 @@
 	$hiddenInput->setId("myname_id");
 	$form->addInput($hiddenInput);
 
+	// file
+	$file = new File([
+			"fileTypes" => [ "image", "video" ] // or video
+	]);
+	$file->addFileType("programming");
+	// $file->addAccept("video/mp4");
 
-$secondTime = new time(["min"=>"7","value"=>"mkmk"]);
-$form->addInput( $firstTime );
-$form->addInput( $secondTime );
-
-$file = new File([
-		"fileTypes" => [ "image", "video" ] // or video
-]);
-$file->addFileType("programming");
-// $file->addAccept("video/mp4");
-
-$form->addInput($file);
-// $form->addInputs( [ new text(), new text() ] );
-// $form->addInput( new submit() );
+	$form->addInput($file);
 
 	// color input
 	$colorInput = new color();
@@ -111,9 +105,20 @@ $form->addInput($file);
 	$image->setAlt(" Ayman Photo ");
 	$image->setTitle('Habd');
 	$form->addInput($image);
+
+	//compobox
+	$compo = new CompoBox();
+	$compo->setList("mmm");
+	$compo->addOption(new Option(["value" => "toty", "text" => "martina"]));
+	$form->addInput($compo);
+
+	$compo2 = new CompoBox(["name" => "girgis",'cssClass'=>'multi']);
+	$compo2->setMultiple();
+	$compo2->addOptions([new Option(["value" => "martina"]),new Option(["value" => "marina"]),new Option(["value" => "mary"])]);
+	$form->addInput($compo2);
 ?>
 
 <body>
 <?php $form->renderForm(); ?>
-
+<script src="test.js"></script>
 </body>

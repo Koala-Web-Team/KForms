@@ -1,5 +1,5 @@
 <?php
-    abstract class KComboBox extends KInput
+    abstract class KSelect extends KInput
 	{
 		protected $searchable;
 		protected $multiple;
@@ -12,6 +12,7 @@
 
 		public function __construct( array $attributes = [] ) {
 			parent::__construct( $attributes );
+			$this->multiple = false;
 		}
 
 		public function setSearchable( $searchable ) {
@@ -22,11 +23,11 @@
 			return $this->searchable;
 		}
 
-		public function setMultiple( $multiple ) {
+		public function setMultiple( $multiple = true ) {
 			$this->multiple = $multiple;
 		}
-
-		public function getMultiple() {
+	
+		public function isMultiple() {
 			return $this->multiple;
 		}
 

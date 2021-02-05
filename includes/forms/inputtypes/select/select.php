@@ -1,6 +1,6 @@
 <?php
 
-    class select extends KComboBox
+    class select extends KSelect
 	{
 		private $options = [];
 
