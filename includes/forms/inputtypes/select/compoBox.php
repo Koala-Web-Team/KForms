@@ -17,20 +17,18 @@
 
 		protected function render() {
 			if ( !$this->label->isAfterElement() ) {
-                $this->label->render();
-                echo "<input type='text' " . $this->getHtmlAttributes() . ">";
-                echo "<datalist id=". $this->getList() .">";
-				//echo "<select style='display: none;' >";
-				$this->renderOptions();
-                //echo "</select>";
-                echo "</datalist>";
+          $this->label->render();
+          echo "<input type='text' " . $this->getHtmlAttributes() . ">";
+          echo "<datalist id=". $this->getList() .">";
+
+          $this->renderOptions();
+          echo "</datalist>";
 			} else {
 				echo "<input type='text' " . $this->getHtmlAttributes() . "/>";
                 echo "<datalist id=". $this->getList() .">";
-				//echo "<select style='display: none;' >";
+        
 				$this->renderOptions();
-                //echo "</select>";
-                echo "</datalist>";
+          echo "</datalist>";
 				$this->label->render();
 			}
 		}

@@ -114,6 +114,7 @@
 
 	$compo2 = new CompoBox(["name" => "girgis",'cssClass'=>'multi']);
 	$compo2->setMultiple();
+
 	$compo2->addOptions([new Option(["value" => "martina"]),new Option(["value" => "marina"]),new Option(["value" => "mary"])]);
 	$form->addInput($compo2);
 ?>
