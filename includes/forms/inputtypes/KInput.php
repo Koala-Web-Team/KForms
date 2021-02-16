@@ -3,6 +3,7 @@
 	Abstract class KInput
 	{
 		private $id;
+		private $cssClass = "";
 		private $group;
 		private $formId;
 		private $type;
@@ -40,6 +41,14 @@
 
 		public function getId() {
 			return $this->id;
+		}
+
+		public function addCssClass( $class ) {
+			$this->cssClass .=  " " . $class;
+		}
+
+		public function getCssClass() {
+			return trim( $this->cssClass );
 		}
 
 		public function setGroup( $group ) {
