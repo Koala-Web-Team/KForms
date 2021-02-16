@@ -25,6 +25,9 @@ class File extends KInput
 	protected $capture;
 	protected $files;
 
+	protected $onchange;
+	protected $onselect;
+
 //	private $userDefinedAllowedExtensions = [];
 //	private $userDefinedRestrictedExtensions = [];
 	protected $multiple;
@@ -119,6 +122,19 @@ class File extends KInput
 	private function getFileTypesString() {
 		return implode(",", $this->getFileTypes());
 	}
+
+		public function setOnChange($function,...$param) {
+			parent::setOn('change',$function,...$param);
+		}
+		public function getOnChange() {
+			return $this->onchange;
+		}
+		public function setOnSelect($function,...$param) {
+			parent::setOn('select',$function,...$param);
+		}
+		public function getOnSelect() {
+			return $this->onselect;
+		}
 
 	protected function render() {
 		$this->setAccept();

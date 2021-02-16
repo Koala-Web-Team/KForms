@@ -1,7 +1,6 @@
 <?php
 
 	require_once ("config.php");
-
 	class Form
 	{
 		private $id;
@@ -14,7 +13,9 @@
 		private $noValidate;
 		private $method = "POST";
 		private $name;
+		protected $onreset;
 		private $inputs = [];
+		
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
@@ -113,6 +114,23 @@
 			foreach ( $inputs as $input ) {
 				$this->addInput( $input );
 			}
+		}
+		public function setOn( $event,$function,...$param) {
+			$function.="(";
+				foreach($param as $p){	
+				$function.='"'.$p.'", ';
+					}
+				$function=trim($function,', ');
+				$function.=")";
+				$event= mb_strtolower("on$event");
+				$this->$event=$function;
+	}
+	
+		public function setOnReset($function,...$param) {
+			$this->setOn('rest',$function,...$param);
+		}
+		public function getOnReset() {
+			return $this->onreset;
 		}
 
 		public function renderForm() {

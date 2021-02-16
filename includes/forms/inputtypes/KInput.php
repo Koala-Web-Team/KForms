@@ -13,7 +13,21 @@
 		private $disabled;
 		private $autoFocus;
 		protected $label;
-		private $onClick;
+
+		protected $onClick;
+		protected $ondblclick;
+		protected $oncontextmenu;
+		protected $onfocus;
+		protected $oninvalid;
+		protected $onmousedown;
+		protected $onmouseup;
+		protected $onmousemove;
+		protected $onmouseout;
+		protected $onmouseover;
+		protected $onwheel;
+		protected $oncopy;
+		protected $onpaste;
+		protected $oncut;
 
 		private $placeholderBehavoir;
 		private $autocompleteBehavior;
@@ -154,6 +168,121 @@
 
 		protected function setReadonlyBehavior( $readonlyBehavior ) {
 			$this->readonlyBehavior = $readonlyBehavior;
+		}
+
+
+		public function setOn( $event,$function,...$param) {
+			$function.="(";
+				foreach ($param as $p) {
+					$function.='"'.$p.'", ';
+				}
+				$function=trim($function,', ');
+				$function.=")";
+				$event= mb_strtolower("on$event");
+				$this->$event=$function;
+	}
+		public function setOnClick($function,...$param) {
+			$this->setOn('click',$function,...$param);
+		}
+		public function getOnClick(){
+			return $this->onClick;
+		}
+
+		public function setOnDblClick($function,...$param) {
+			$this->setOn('dblclick',$function,...$param);
+		}
+		public function getOnDblClick() {
+			return $this->ondblclick;
+		}
+
+		public function setOnContextMenu($function,...$param) {
+			$this->setOn('contextmenu',$function,...$param);
+		}
+		public function getOnContextMenu() {
+			return $this->oncontextmenu;
+		}
+		public function setOnBlur($function,...$param) {
+			$this->setOn('blur',$function,...$param);
+		}
+		public function getOnBlur() {
+			return $this->onblur;
+		}
+		
+		public function setOnFocus($function,...$param) {
+			$this->setOn('focus',$function,...$param);
+		}
+		public function getOnFocus() {
+			return $this->onfocus;
+		}
+
+		public function setOnInvalid($function,...$param) {
+			$this->setOn('invalid',$function,...$param);
+		}
+		public function getOnInvalid() {
+			return $this->oninvalid;
+		}
+
+		public function setOnMouseDown($function,...$param) {
+			$this->setOn('mousedown',$function,...$param);
+		}
+		public function getOnMouseDown() {
+			return $this->onmousedown;
+		}
+
+		public function setOnMouseUp($function,...$param) {
+			$this->setOn('mouseup',$function,...$param);
+		}
+		public function getOnMouseUp() {
+			return $this->onmouseup;
+		}
+
+		public function setOnMouseMove($function,...$param) {
+			$this->setOn('mousemove',$function,...$param);
+		}
+		public function getOnMouseMove() {
+			return $this->onmousemove;
+		}
+
+		public function setOnMouseOut($function,...$param) {
+			$this->setOn('mouseout',$function,...$param);
+		}
+		public function getOnMouseOut() {
+			return $this->onmouseout;
+		}
+
+		public function setOnMouseOver($function,...$param) {
+			$this->setOn('mouseover',$function,...$param);
+		}
+		public function getOnMouseOver() {
+			return $this->onmouseover;
+		}
+
+		public function setOnWheel($function,...$param) {
+			$this->setOn('wheel',$function,...$param);
+		}
+		public function getOnWheel() {
+			return $this->onwheel;
+		}
+
+		public function setOnCopy($function,...$param) {
+			$this->setOn('copy',$function,...$param);
+		}
+		public function getOnCopy() {
+			return $this->oncopy;
+		}
+
+		public function setOnPaste($function,...$param) {
+			$this->setOn('paste',$function,...$param);
+		}
+		public function getOnPaste() {
+			return $this->onpaste;
+		}
+
+		public function setOnCut($function,...$param) {
+			$this->setOn('cut',$function,...$param);
+		}
+		public function getOnCut() {
+			return $this->oncut;
 		}
 
 		protected function render() {
