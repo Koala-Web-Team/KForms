@@ -19,12 +19,8 @@
 				return $this->spellcheck;
 			}
 
-			public function spellcheck() {
-				$this->spellcheck = true;
-			}
-
-			public function unspellcheck() {
-				$this->spellcheck = false;
+			public function setSpellcheck( $spellCheck = true ) {
+				$this->spellcheck = $spellCheck;
 			}
 
 			public function setAutocorrect( $autocorrect ) {

@@ -1,5 +1,6 @@
 <?php
 include_once("KButton.php");
+
 	class submit extends KButton
 	{
 		protected $formaction;

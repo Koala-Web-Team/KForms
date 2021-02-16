@@ -14,15 +14,14 @@
         parent::setType('text');
 	}
     
-    
-		public function setOnBlur($function,...$param) {
-			parent::setOn('blur',$function,...$param);
+		public function setOnBlur( $function, ...$param ) {
+			parent::setOn('blur', $function, ...$param );
 		}
 		public function getOnBlur() {
 			return $this->onblur;
         }
         
-		public function setOnFocus($function,...$param) {
+		public function setOnFocus( $function, ...$param ) {
 			parent::setOn('focus',$function,...$param);
 		}
 		public function getOnFocus() {
@@ -69,4 +68,5 @@
 		public function getOnKeyPress() {
 			return $this->onkeypress;
 		}
+
     }

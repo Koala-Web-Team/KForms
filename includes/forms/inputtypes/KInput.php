@@ -3,6 +3,7 @@
 	Abstract class KInput
 	{
 		private $id;
+		private $cssClass = "";
 		private $group;
 		private $formId;
 		private $type;
@@ -12,6 +13,7 @@
 		private $disabled;
 		private $autoFocus;
 		protected $label;
+
 		protected $onClick;
 		protected $ondblclick;
 		protected $oncontextmenu;
@@ -26,20 +28,23 @@
 		protected $oncopy;
 		protected $onpaste;
 		protected $oncut;
+
 		private $placeholderBehavoir;
 		private $autocompleteBehavior;
 		private $readonlyBehavior;
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
-				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower($key) ) ) ) {
-					$key = Helper::getAttributeWithCamelCase( mb_strtolower($key) );
+				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower( $key ) ) ) ) {
+					$key = Helper::getAttributeWithCamelCase( mb_strtolower( $key ) );
 					$this->$key = $value;
 				}
 			}
+
 			$this->placeholderBehavoir = new placeholderbehavior();
 			$this->autocompleteBehavior = new autocompleteBehavior();
 			$this->readonlyBehavior = new readonlyBehavior();
+
 			$this->label = new Label();
 		}
 
@@ -50,6 +55,14 @@
 
 		public function getId() {
 			return $this->id;
+		}
+
+		public function addCssClass( $class ) {
+			$this->cssClass .=  " " . $class;
+		}
+
+		public function getCssClass() {
+			return trim( $this->cssClass );
 		}
 
 		public function setGroup( $group ) {
@@ -75,13 +88,6 @@
 		protected function setType( $type ) {
 			$this->type = $type;
 		}
-
-		// /**
-		//  * @param $style
-		//  */
-		// public function setStyle( $style ) {
-		// 	$this->style = $style;
-		// }
 
 		public function getStyle() {
 			return $this->style;
@@ -136,8 +142,8 @@
 			return $this->placeholderBehavoir->getPlaceholder();
 		}
 
-		protected function setPlaceholderBehavoir( $placeholderBehavoir ) {
-			$this->placeholderBehavoir = $placeholderBehavoir;
+		protected function setPlaceholderBehavoir( $placeholderBehavior ) {
+			$this->placeholderBehavoir = $placeholderBehavior;
 		}
 
 		public function setAutocomplet( $autocomplete ) {
@@ -163,6 +169,7 @@
 		protected function setReadonlyBehavior( $readonlyBehavior ) {
 			$this->readonlyBehavior = $readonlyBehavior;
 		}
+
 
 		public function setOn( $event,$function,...$param) {
 			$function.="(";
@@ -279,13 +286,26 @@
 		}
 
 		protected function render() {
-			if ( !$this->label->isAfterElement() ) {
-				$this->label->render();
+			if ( !$this->getLabel()->isAfterElement() ) {
+				$this->getLabel()->render();
 				echo "<input " . $this->getHtmlAttributes() . ">";
 			} else {
 				echo "<input " . $this->getHtmlAttributes() . ">";
-				$this->label->render();
+				$this->getLabel()->render();
 			}
+		}
+
+		// @TODO: Implement the Function.
+		public function setOn( $event, $function, $param = "" ) {
+		}
+
+		// TODO: Implement the function for the other
+		public function setOnClick( $function, ...$param ) {
+			$this->setOn( "click", $function, $param );
+		}
+
+		public function getOnClick() {
+			return $this->onClick;
 		}
 
 		public function setProperties() {
@@ -323,11 +343,11 @@
 			foreach ( $attributes as $key => $value ) {
 				if ( $value !== NULL
 					&& !in_array( $key, Helper::getAttributesNotInHtml() )
-					&& !in_array( $key, Helper::getBehavoirsList() ) ) {
-					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "'";
+					&& !in_array( $key, Helper::getBehavoirsList() )
+					&& $value != false ) {
+					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
 				}
 			}
 			return $htmlAttributes;
 		}
-
 	}

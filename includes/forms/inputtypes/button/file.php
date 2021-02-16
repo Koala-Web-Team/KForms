@@ -24,6 +24,7 @@ class File extends KInput
 	protected $accept;
 	protected $capture;
 	protected $files;
+
 	protected $onchange;
 	protected $onselect;
 

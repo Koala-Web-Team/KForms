@@ -14,8 +14,10 @@
         protected $loading;	
         protected $longDesc;
         protected $referrerPolicy;
+
         protected $onerror;
         protected $onload;
+
         public function __construct( array $attributes = [] ) {
             parent::__construct( $attributes );
             $this->setType("image");
@@ -125,7 +127,8 @@
         public function getReferrerPolicy (){
             return $this->referrerPolicy;
         }
-        public function setOnError($function,...$param) {
+
+    public function setOnError($function,...$param) {
 			parent::setOn('error',$function,...$param);
 		}
 		public function getOnError() {
@@ -137,5 +140,6 @@
 		public function getOnLoad() {
 			return $this->onload;
 		}
+
 
     }

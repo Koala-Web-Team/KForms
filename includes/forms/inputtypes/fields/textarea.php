@@ -7,7 +7,8 @@
 		protected $rows;
 		protected $spellcheck;
 		protected $wrap;
-		protected $onchange;
+
+    protected $onchange;
 		protected $oninput;
 		protected $onselect;
 

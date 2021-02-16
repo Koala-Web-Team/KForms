@@ -49,6 +49,16 @@ $form->addInput($file);
 // $form->addInputs( [ new text(), new text() ] );
 // $form->addInput( new submit() );
 
+	// file
+	$file = new File([
+			"fileTypes" => [ "image", "video" ] // or video
+	]);
+	$file->addFileType("programming");
+	// $file->addAccept("video/mp4");
+
+	$form->addInput($file);
+
+
 	// color input
 	$colorInput = new color();
 	$colorInput->setName("mycolor");
@@ -98,7 +108,8 @@ $form->addInput($file);
 	$b = new button();
 	$b->setName("mybtn");
 	$b->setValue('hello');
-	// $b->setOnClick('msg',['ramaj','toka','mohammed']);
+
+// $b->setOnClick('msg',['ramaj','toka','mohammed']);
 	$b->setOnClick('msg','ramaj','toka','mohammed');
 	$pass= new password();
 	$pass->setOnChange('msg','abdy');
@@ -116,6 +127,17 @@ $form->addInput($file);
 	$image->setTitle('Habd');
 	$form->addInput($image);
 
+	//compobox
+	$compo = new CompoBox();
+	$compo->setList("mmm");
+	$compo->addOption(new Option(["value" => "toty", "text" => "martina"]));
+	$form->addInput($compo);
+
+	$compo2 = new CompoBox(["name" => "girgis",'cssClass'=>'multi']);
+	$compo2->setMultiple();
+
+	$compo2->addOptions([new Option(["value" => "martina"]),new Option(["value" => "marina"]),new Option(["value" => "mary"])]);
+	$form->addInput($compo2);
 ?>
 
 <body>
@@ -125,5 +147,4 @@ function msg(name,t,b){
 	alert(""+name+' '+t+" "+b);
 }
 </script>
-
 </body>

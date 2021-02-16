@@ -1,8 +1,9 @@
 <?php
 
-class checkbox extends KCheckables
+class Checkbox extends KCheckables
 {
 	protected $onchange;
+
 	public function __construct( array $attributes = [] ) {
 		parent::__construct( $attributes );
 		$this->setType("checkbox");
@@ -22,3 +23,4 @@ class checkbox extends KCheckables
 		return $this->onchange;
 	}
 }
+

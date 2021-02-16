@@ -5,6 +5,7 @@
 		protected $oninput;
 		protected $onchange;
 		protected $onselect;
+    
 		public function __construct( array $attributes = [] ) {
 			parent::__construct($attributes);
 			parent::setType('password');

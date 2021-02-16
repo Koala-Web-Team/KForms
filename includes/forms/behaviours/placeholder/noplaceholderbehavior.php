@@ -1,6 +1,6 @@
 <?php
 
-class noplaceholderbehavior
+class NoPlaceholderBehavior
 {
 	public function setPlaceholder( $placeholder ) {
 	}
