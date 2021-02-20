@@ -1,56 +1,69 @@
 <?php
-  require_once("helper.php");
-  require_once("KForm.php");
-	require_once("inputtypes/KInput.php");
+	require_once("helper.php");
+	require_once("KForm.php");
+	/**
+	 * Input Types
+	 */
+	// Koala Input
+	require_once("input_types/KInput.php");
+	// Button
+	require_once("input_types/button/KButton.php");
+	require_once("input_types/button/submit.php");
+	require_once("input_types/button/reset.php");
+	require_once("input_types/button/button.php");
+	require_once("input_types/button/file.php");
+	require_once("input_types/button/submit.php");
+	require_once("input_types/button/file.php");
+	// Checkable
+	require_once("input_types/checkable/KCheckables.php");
+	require_once("input_types/checkable/checkbox.php");
+	require_once("input_types/checkable/checkboxes.php");
+	require_once("input_types/checkable/radioButton.php");
+	// Color
+	require_once("input_types/color/color.php");
+	// Fields
+	require_once("input_types/fields/KFields.php");
+	require_once("input_types/fields/text.php");
+	require_once("input_types/fields/tel.php");
+	require_once("input_types/fields/email.php");
+	require_once("input_types/fields/password.php");
+	require_once("input_types/fields/search.php");
+	require_once("input_types/fields/textarea.php");
+	require_once("input_types/fields/url.php");
+	// Hidden
+	require_once("input_types/hidden/hidden.php");
+	// Image
+	require_once("input_types/image/image.php");
+	// Numeric
+	require_once("input_types/numeric/KNumeric.php");
+	require_once("input_types/numeric/number.php");
+	require_once("input_types/numeric/range.php");
+	// Select
+	require_once("input_types/select/KSelect.php");
+	require_once("input_types/select/option.php");
+	require_once("input_types/select/select.php");
+	require_once("input_types/select/compoBox.php");
+	require_once("input_types/times/KTimes.php");
+	require_once("input_types/times/date.php");
+	require_once("input_types/times/dateTime.php");
+	require_once("input_types/times/month.php");
+	require_once("input_types/times/time.php");
+	require_once("input_types/times/week.php");
 
-	require_once("inputtypes/checkable/KCheckables.php");
-	require_once("inputtypes/checkable/checkbox.php");
-	require_once("inputtypes/checkable/checkboxes.php");
-	require_once("inputtypes/checkable/radioButton.php");
-
-	require_once("inputtypes/numeric/KNumeric.php");
-	require_once("inputtypes/numeric/number.php");
-	require_once("inputtypes/numeric/range.php");
-
-	require_once("inputtypes/button/submit.php");
-	require_once("inputtypes/button/file.php");
-
-	require_once("inputtypes/times/KTimes.php");
-	require_once("inputtypes/times/date.php");
-	require_once("inputtypes/times/dateTime.php");
-	require_once("inputtypes/times/month.php");
-	require_once("inputtypes/times/time.php");
-	require_once("inputtypes/times/week.php");
-
+	/**
+	 *  Elements
+	 */
+	// Label
 	require_once("elements/label.php");
-  require_once("inputtypes/color/color.php");
-  require_once("inputtypes/hidden/hidden.php");
-	
-	require_once("inputtypes/select/KSelect.php");
-	require_once("inputtypes/select/option.php");
-	require_once("inputtypes/select/select.php");
-	require_once("inputtypes/select/compoBox.php");
+	// Html
+	require_once("elements/html.php");
 
-	require_once("behaviours/autocomplete/autocompleteBehavior.php");
-	require_once("behaviours/autocomplete/noAutocompleteBehavior.php");
-	require_once("behaviours/readonly/noReadonlyBehavior.php");
-	require_once("behaviours/readonly/readonlyBehavior.php");
-  require_once("behaviours/placeholder/placeholderbehavior.php");
-	require_once("behaviours/placeholder/noplaceholderbehavior.php");
-
-	require_once("inputtypes/fields/KFields.php");
-	require_once("inputtypes/fields/text.php");
-	require_once("inputtypes/fields/tel.php");
-	require_once("inputtypes/fields/email.php");
-	require_once("inputtypes/fields/password.php");
-	require_once("inputtypes/fields/search.php");
-	require_once("inputtypes/fields/textarea.php");
-	require_once("inputtypes/fields/url.php");
-
-	require_once("inputtypes/button/KButton.php");
-	require_once("inputtypes/button/submit.php");
-	require_once("inputtypes/button/reset.php");
-	require_once("inputtypes/button/button.php");
-	require_once("inputtypes/button/file.php");
-
-	require_once("inputtypes/image/image.php");
+	/**
+	 * Behaviours
+	 */
+	// Autocomplete
+	require_once("behaviors/autocomplete/autocompleteBehavior.php");
+	require_once("behaviors/autocomplete/noAutocompleteBehavior.php");
+	// Placeholder
+	require_once("behaviors/placeholder/placeholderBehavior.php");
+	require_once("behaviors/placeholder/noPlaceholderBehavior.php");

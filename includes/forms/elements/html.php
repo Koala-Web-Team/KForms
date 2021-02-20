@@ -1,6 +1,7 @@
 <?php
 
 class Html {
+	// The Tag itself, ex: input, div, a.
 	private $element;
 	private $attributes = [];
 	// List of void elements from HTML5, section 8.1.2 as of 2016-09-19
@@ -55,6 +56,7 @@ class Html {
 		'itemscope',
 	];
 
+	// When types <input type="foo"> then foo is a Valid Type.
 	private $validTypes = [
 		'hidden',
 		'text',
@@ -83,6 +85,39 @@ class Html {
 		'color',
 	];
 
+	private static $attribDefaults = [
+		'area' => [ 'shape' => 'rect' ],
+		'button' => [
+			'formaction' => 'GET',
+			'formenctype' => 'application/x-www-form-urlencoded',
+		],
+		'canvas' => [
+			'height' => '150',
+			'width' => '300',
+		],
+		'form' => [
+			'method' => 'GET',
+			'autocomplete' => 'on',
+			'enctype' => 'application/x-www-form-urlencoded',
+		],
+		'input' => [
+			'formaction' => 'GET',
+			'type' => 'text',
+		],
+		'keygen' => [ 'keytype' => 'rsa' ],
+		'link' => [
+			'media' => 'all',
+			"type" => "text/css"
+		],
+		'menu' => [ 'type' => 'list' ],
+		'script' => [ 'type' => 'text/javascript' ],
+		'style' => [
+			'media' => 'all',
+			'type' => 'text/css',
+		],
+		'textarea' => [ 'wrap' => 'soft' ]
+	];
+
 	public function __construct( $element, array $attributes = [] ) {
 		// This is not required in HTML5, but let's do it anyway, for
 		// consistency and better compression.
@@ -91,7 +126,8 @@ class Html {
 		// Some people were abusing this by passing things like
 		// 'h1 id="foo" to $element, which we don't want.
 		if ( strpos( $this->element, ' ' ) !== false ) {
-			// TODO: Make the element is the element only
+			$elementArray = explode(" ", $this->element);
+			$this->element = $elementArray[0];
 		}
 
 		// Not technically required in HTML5 but we'd like consistency
@@ -110,20 +146,20 @@ class Html {
 	 *   escaped!
 	 * @return string Raw HTML
 	 */
-	public function rawElement( $contents = '' ) {
-		$start = self::openElement();
+	public function toHtml( $contents = '' ) {
+		$start = $this->openTag();
 		if ( in_array( $this->element, self::$voidElements ) ) {
 			return substr( $start, 0, -1 ) . '/>';
 		} else {
-			return $start . $contents . $this->closeElement();
+			return $start . $contents . $this->closeTag();
 		}
 	}
 
-	public function openElement() {
-
+	public function openTag() {
 		// Remove invalid input types
 		if ( $this->element == 'input' ) {
-			if ( isset( $this->attributes['type'] ) && !in_array( $this->attributes['type'], $this->validTypes ) ) {
+			if ( isset( $this->attributes['type'] )
+				&& !in_array( $this->attributes['type'], $this->validTypes ) ) {
 				unset( $this->attributes['type'] );
 			}
 		}
@@ -139,7 +175,7 @@ class Html {
 		return "<$this->element" . $this->expandAttributes() . '>';
 	}
 
-	public function closeElement() {
+	public function closeTag() {
 		return "</$this->element>";
 	}
 
@@ -149,36 +185,6 @@ class Html {
 	 * are given their default values.
 	 */
 	private function dropDefaults() {
-		static $attribDefaults = [
-			'area' => [ 'shape' => 'rect' ],
-			'button' => [
-				'formaction' => 'GET',
-				'formenctype' => 'application/x-www-form-urlencoded',
-			],
-			'canvas' => [
-				'height' => '150',
-				'width' => '300',
-			],
-			'form' => [
-				'action' => 'GET',
-				'autocomplete' => 'on',
-				'enctype' => 'application/x-www-form-urlencoded',
-			],
-			'input' => [
-				'formaction' => 'GET',
-				'type' => 'text',
-			],
-			'keygen' => [ 'keytype' => 'rsa' ],
-			'link' => [ 'media' => 'all' ],
-			'menu' => [ 'type' => 'list' ],
-			'script' => [ 'type' => 'text/javascript' ],
-			'style' => [
-				'media' => 'all',
-				'type' => 'text/css',
-			],
-			'textarea' => [ 'wrap' => 'soft' ],
-		];
-
 		foreach ( $this->attributes as $attribute => $value ) {
 			if ( is_array( $value ) ) {
 				$value = implode( ' ', $value );
@@ -187,8 +193,8 @@ class Html {
 			}
 
 			// Simple checks using $attribDefaults
-			if ( isset( $attribDefaults[$this->element][$attribute] )
-				&& $attribDefaults[$this->element][$attribute] == $value
+			if ( isset( self::$attribDefaults[$this->element][$attribute] )
+				&& self::$attribDefaults[$this->element][$attribute] == $value
 			) {
 				unset( $this->attributes[$attribute] );
 			}
@@ -199,12 +205,6 @@ class Html {
 		}
 
 		// More subtle checks
-		if ( $this->element === 'link'
-			&& isset( $this->attributes['type'] ) && strval( $this->attributes['type'] ) == 'text/css'
-		) {
-			unset( $this->attributes['type'] );
-		}
-
 		if ( $this->element === 'input' ) {
 			$type = $this->attributes['type'] ? $this->attributes['type'] : null;
 			$value = $this->attributes['value'] ? $this->attributes['value'] : null;
@@ -229,9 +229,12 @@ class Html {
 			}
 		}
 
+		// Let's Handle the default value of the attribute "size",
+		// It's 4 if the select is mutiple, and 1 if it is not multiple.
 		if ( $this->element === 'select' && isset( $this->attributes['size'] ) ) {
 			if ( in_array( 'multiple', $this->attributes )
-				|| ( isset( $this->attributes['multiple'] ) && $this->attributes['multiple'] !== false )
+				|| ( isset( $this->attributes['multiple'] )
+					&& $this->attributes['multiple'] !== false )
 			) {
 				// A multi-select
 				if ( strval( $this->attributes['size'] ) == '4' ) {
@@ -317,7 +320,7 @@ class Html {
 			$quote = '"';
 
 			if ( in_array( $attribute, self::$boolAttribs ) ) {
-				$ret .= " $attribute=\"\"";
+				$ret .= " $attribute";
 			} else {
 				$ret .= " $attribute=$quote" . $this->encodeAttribute( $value ) . $quote;
 			}
