@@ -33,6 +33,10 @@ class Label
 		$this->cssClass = $cssClass;
 	}
 
+	public function getFor() {
+		return $this->for;
+	}
+
 	public function setFor( $for ) {
 		$this->for = $for;
 	}
@@ -55,6 +59,8 @@ class Label
 
 	public function render() {
 		echo "<label " . $this->getHtmlAttributes() . ">";
+		echo $this->getText();
+		echo "</label>";
 	}
 
 	private function getHtmlAttributes() {
@@ -63,11 +69,11 @@ class Label
 		foreach ( $attributes as $key => $value ) {
 			if ( $value !== NULL
 				&& !in_array( $key, Helper::getAttributesNotInHtml() )
-				&& !in_array( $key, Helper::getBehavoirsList() ) ) {
-				$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "'";
+				&& !in_array( $key, Helper::getBehaviorsList() ) ) {
+				$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
 			}
 		}
-		return $htmlAttributes;
+		return trim( $htmlAttributes );
 	}
 
 }

@@ -1,9 +1,12 @@
 <?php
 
-	include "includes/forms/config.php";
+	include "includes/forms/KForm.php";
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo "request is post";
+		echo "<pre>";
+		var_dump( $_POST );
+		echo "</pre>";
 	}
 
 	// form
@@ -31,12 +34,38 @@
 	$hiddenInput->setId("myname_id");
 	$form->addInput($hiddenInput);
 
+
+$secondTime = new time(["min"=>"7","value"=>"mkmk"]);
+$form->addInput( $firstTime );
+$form->addInput( $secondTime );
+
+$file = new File([
+		"fileTypes" => [ "image", "video" ] // or video
+]);
+$file->addFileType("programming");
+// $file->addAccept("video/mp4");
+
+$form->addInput($file);
+// $form->addInputs( [ new text(), new text() ] );
+// $form->addInput( new submit() );
+
+	// file
+	$file = new File([
+			"fileTypes" => [ "image", "video" ] // or video
+	]);
+	$file->addFileType("programming");
+	// $file->addAccept("video/mp4");
+
+	$form->addInput($file);
+
+
 	// color input
 	$colorInput = new color();
 	$colorInput->setName("mycolor");
 	$colorInput->setRgbColor('rgb(123,125,132)');
 	//$colorInput->setHexaColor('#fffffff');
 	$form->addInput($colorInput);
+
 
 	// comboBox
 	// select 1
@@ -54,6 +83,7 @@
 	$select1->addOption($option2);
 	$select1->addOption($option1);
 	$form->addInput($select1);
+
 	// anther select
 	$select12 = new select(["name"=>"martina"]);
 	$select12->setId("997");
@@ -78,21 +108,43 @@
 	$b = new button();
 	$b->setName("mybtn");
 	$b->setValue('hello');
-	//$b->setOnClick("msg('m')"); => هنا في مشكله رخمة
-	//$b->setOnClick("msg("+"'m'"+")");
-	$b->setOnClick("msg()");
+
+// $b->setOnClick('msg',['ramaj','toka','mohammed']);
+	$b->setOnClick('msg','ramaj','toka','mohammed');
+	$pass= new password();
+	$pass->setOnChange('msg','abdy');
+	// $b->setOnCopy('msg','ramaj','mohammed');
 	$form->addInput($b);
 	$form->addInput($r);
 	$form->addInput($s);
+	$form->addInput($pass);
+
 
 	// image
-	$image = new Image(["src"=>"3.jpg"]);
+	$image = new Image(["src"=>"3.jpg", "name" => "absy"]);
+	$image->setName("amr_elabsy");
 	$image->setAlt(" Ayman Photo ");
 	$image->setTitle('Habd');
 	$form->addInput($image);
+
+	//compobox
+	$compo = new CompoBox();
+	$compo->setList("mmm");
+	$compo->addOption(new Option(["value" => "toty", "text" => "martina"]));
+	$form->addInput($compo);
+
+	$compo2 = new CompoBox(["name" => "girgis",'cssClass'=>'multi']);
+	$compo2->setMultiple();
+
+	$compo2->addOptions([new Option(["value" => "martina"]),new Option(["value" => "marina"]),new Option(["value" => "mary"])]);
+	$form->addInput($compo2);
 ?>
 
 <body>
 <?php $form->renderForm(); ?>
-
+<script>
+function msg(name,t,b){
+	alert(""+name+' '+t+" "+b);
+}
+</script>
 </body>

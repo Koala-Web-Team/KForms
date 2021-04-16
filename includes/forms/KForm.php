@@ -1,7 +1,6 @@
 <?php
 
 	require_once ("config.php");
-
 	class Form
 	{
 		private $id;
@@ -9,11 +8,12 @@
 		private $acceptCharset;
 		private $legend;
 		private $action;
-		private $autocomlete;
+		private $autocomplete;
 		private $encrypt;
 		private $noValidate;
 		private $method = "POST";
 		private $name;
+		protected $onReset;
 		private $inputs = [];
 
 		public function __construct( array $attributes = [] ) {
@@ -34,7 +34,7 @@
 		}
 
 		public function addCssClass( $class ) {
-			$this->cssClass .=  " " . $class;
+			$this->cssClass .= " " . $class;
 		}
 
 		public function getCssClass() {
@@ -81,12 +81,12 @@
 			return $this->acceptCharset;
 		}
 
-		public function setAutocomlete( $autocomlete ) {
-			$this->autocomlete = $autocomlete;
+		public function setAutocomlete( $autocomplete = true ) {
+			$this->autocomplete = $autocomplete;
 		}
 
-		public function getAutocomlete() {
-			return $this->autocomlete;
+		public function isAutocomlete() {
+			return $this->autocomplete;
 		}
 
 		public function setEncrypt( $encrypt ) {
@@ -105,7 +105,7 @@
 			return $this->noValidate;
 		}
 
-		public function addInput(KInput $input) {
+		public function addInput( KInput $input ) {
 			$this->inputs[] = $input;
 		}
 
@@ -113,6 +113,25 @@
 			foreach ( $inputs as $input ) {
 				$this->addInput( $input );
 			}
+		}
+
+		public function setOn( $event, $function, ...$param ) {
+			$function .= "(";
+			foreach ( $param as $p ) {
+				$function .= '"' . $p . '", ';
+			}
+			$function = trim( $function, ', ' );
+			$function .= ")";
+			$event = mb_strtolower( "on$event" );
+			$this->$event = $function;
+		}
+
+		public function setOnReset( $function, ...$param ) {
+			$this->setOn( 'rest', $function, ...$param );
+		}
+
+		public function getOnReset() {
+			return $this->onReset;
 		}
 
 		public function renderForm() {
@@ -132,13 +151,13 @@
 		}
 
 		private function getHtmlAttributes() {
-			$attributes = get_object_vars($this);
+			$attributes = get_object_vars( $this );
 			$htmlAttributes = "";
 			foreach ( $attributes as $key => $value ) {
 				if ( $value !== NULL
 					&& !in_array( $key, Helper::getAttributesNotInHtml() )
-					&& !in_array( $key, Helper::getBehavoirsList() ) ) {
-					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "'";
+					&& !in_array( $key, Helper::getBehaviorsList() ) ) {
+					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
 				}
 			}
 			return $htmlAttributes;
