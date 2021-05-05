@@ -1,5 +1,7 @@
 <?php
 
+require_once("includes/forms/config.php");
+
 	Abstract class KInput
 	{
 		private $id;
@@ -13,12 +15,13 @@
 		private $autoFocus;
 		protected $label;
 		private $onClick;
-
+		private $class;
 		private $placeholderBehavoir;
 		private $autocompleteBehavior;
 		private $readonlyBehavior;
 
 		public function __construct( array $attributes = [] ) {
+
 			foreach ( $attributes as $key => $value ) {
 				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower( $key ) ) ) ) {
 					$key = Helper::getAttributeWithCamelCase( mb_strtolower( $key ) );
@@ -29,7 +32,6 @@
 			$this->placeholderBehavoir = new placeholderbehavior();
 			$this->autocompleteBehavior = new autocompleteBehavior();
 			$this->readonlyBehavior = new readonlyBehavior();
-
 			$this->label = new Label();
 		}
 
@@ -157,6 +159,24 @@
 			}
 		}
 
+		public function renderErrors($errors) {
+			if(count($errors) > 0 ){
+				if(isset($errors[$this->getName()])){
+					echo "
+					<span class=\"alert-danger\" role=\"alert\">
+						<strong>".
+							$errors[$this->getName()][0]
+						."</strong>
+					</span>
+					";
+				}
+			}
+			else{
+				print_r("dfdf");
+				die();
+			}
+		}
+
 		// @TODO: Implement the Function.
 		public function setOn( $event, $function, $param = "" ) {
 		}
@@ -176,6 +196,20 @@
 		public function getProperty() {
 		}
 
+		/**
+		 * @param mixed $class
+		 */
+		public function setClass( $class ) {
+			$this->class = $class;
+		}
+
+		/**
+		 * @return mixed
+		 */
+		public function getClass() {
+			return $this->class;
+		}
+
 		public function getInput() {
 		}
 
@@ -183,6 +217,20 @@
 		}
 
 		public function createInput() {
+		}
+
+		/**
+		 * @return mixed
+		 */
+		public function getValidType() {
+			return $this->validType;
+		}
+
+		/**
+		 * @param mixed $validType
+		 */
+		public function setValidType( $validType ) {
+			$this->validType = $validType;
 		}
 
 		public function renderDiv() {

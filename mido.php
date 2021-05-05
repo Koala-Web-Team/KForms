@@ -1,75 +1,66 @@
 <?php
 
-	include "includes/forms/KForm.php";
+include "includes/forms/KForm.php";
 
-	// form
-	$form = new Form([
-		"meTHod" => "post",
-		"action" => "result.php",
-		"cssClass" => "classTest"
-	]);
-	$form->addCssClass("class1 class2");
-	$form->addCssClass("class3 class4");
+// form
+$form = new Form([
+	"meTHod" => "post",
+	"action" => "result.php",
+	"cssClass" => "classTest"
+]);
+$form->addCssClass("class1 class2");
+$form->addCssClass("class3 class4");
 
-	$name = new text();
-	$name->setName('mido');
-	$form->addInput($name);
-	if(isset($errors)) {
-		$name->renderErrors($errors);
-	}
+$name = new text();
+$name->setName('mido');
+$form->addInput($name);
 
 
-	$name1 = new text();
-	$name1->setName('mizo');
-	$form->addInput($name1);
-	if(isset($errors)) {
-		$name1->renderErrors($errors);
-	}
+$name1 = new text();
+$name1->setName('mizo');
+$form->addInput($name1);
+$name1->renderErrors();
 
 
-	$name3 = new text();
-	$name3->setName('linda');
-	$form->addInput($name3);
-	if(isset($errors)) {
-		$name3->renderErrors($errors);
-	}
+$name3 = new text();
+$name3->setName('linda');
+$form->addInput($name3);
+
+$name4 = new text();
+$name4->setName('migo');
+$form->addInput($name4);
+
+$s= new submit();
+$form->addInput($s);
 
 
-	$name4 = new text();
-	$name4->setName('migo');
-	$form->addInput($name4);
+$form2 = new Form([
+	"meTHod" => "post",
+	"action" => "result.php",
+	"cssClass" => "classTest"
+]);
+$form2->addCssClass("class1 class2");
+$form2->addCssClass("class3 class4");
 
-	$s= new submit();
-	$form->addInput($s);
+$name5 = new text();
+$name5->setName('fgdg');
+$form2->addInput($name5);
 
-
-	$form2 = new Form([
-		"meTHod" => "post",
-		"action" => "result.php",
-		"cssClass" => "classTest"
-	]);
-	$form2->addCssClass("class1 class2");
-	$form2->addCssClass("class3 class4");
-
-	$name5 = new text();
-	$name5->setName('fgdg');
-	$form2->addInput($name5);
-
-	$name6 = new text();
-	$name6->setName('gfdgdf');
-	$form2->addInput($name6);
+$name6 = new text();
+$name6->setName('gfdgdf');
+$form2->addInput($name6);
 
 
-	$name7 = new text();
-	$name7->setName('fgdgf');
-	$form2->addInput($name7);
+$name7 = new text();
+$name7->setName('fgdgf');
+$form2->addInput($name7);
 
-	$name8 = new text();
-	$name8->setName('fgfh');
-	$form2->addInput($name8);
+$name8 = new text();
+$name8->setName('fgfh');
+$form2->addInput($name8);
 
-	$s1= new submit();
-	$form2->addInput($s1);
+$s1= new submit();
+$form2->addInput($s1);
 
 
 //	// time
@@ -181,9 +172,7 @@
 
 $form->renderForm();
 
-if(isset($errors)){
-	print_r($errors);
-}
+
 
 $form2->renderForm();
 

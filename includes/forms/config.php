@@ -1,6 +1,14 @@
 <?php
+
+	session_start();
+	if(isset($_SESSION['errors'])) {
+		$errors = $_SESSION['errors'];
+	}
+	session_destroy();
+
     require_once("helper.php");
     require_once("KForm.php");
+	require_once("KValidation.php");
 	require_once("inputtypes/KInput.php");
 
 	require_once("inputtypes/checkable/KCheckables.php");

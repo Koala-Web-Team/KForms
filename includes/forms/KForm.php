@@ -15,6 +15,7 @@
 		private $method = "POST";
 		private $name;
 		private $inputs = [];
+		private $errorMsgClass;
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
