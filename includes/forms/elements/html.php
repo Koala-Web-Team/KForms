@@ -138,6 +138,15 @@ class Html {
 	}
 
 	/**
+	 * @param array $attributes
+	 */
+	public function setAttributes( array $attributes ): void {
+		foreach ( $attributes as $attribute => $value) {
+			$this->attributes[ strtolower($attribute) ] = $value;
+		}
+	}
+
+	/**
 	 * Returns an HTML element in a string.  The major advantage here over
 	 * manually typing out the HTML is that it will escape all attribute
 	 * values.
@@ -207,7 +216,7 @@ class Html {
 		// More subtle checks
 		if ( $this->element === 'input' ) {
 			$type = $this->attributes['type'] ? $this->attributes['type'] : null;
-			$value = $this->attributes['value'] ? $this->attributes['value'] : null;
+			$value = $this->attributes['value'] ?? null;
 			if ( $type === 'checkbox' || $type === 'radio' ) {
 				// The default value for checkboxes and radio buttons is 'on'
 				// not ''. By stripping value="" we break radio boxes that

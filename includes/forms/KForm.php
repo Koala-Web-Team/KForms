@@ -1,108 +1,97 @@
 <?php
-
 	require_once ("config.php");
+
 	class Form
 	{
-		private $id;
-		private $cssClass = "";
-		private $acceptCharset;
-		private $legend;
-		private $action;
-		private $autocomplete;
-		private $encrypt;
-		private $noValidate;
-		private $method = "POST";
-		private $name;
-		protected $onReset;
 		private $inputs = [];
+		private $attributes;
 
 		public function __construct( array $attributes = [] ) {
+			$this->attributes['cssClass'] = "";
 			foreach ( $attributes as $key => $value ) {
-				if ( property_exists( $this, Helper::getAttributeWithCamelCase( $key ) ) ) {
-					$key = Helper::getAttributeWithCamelCase( $key );
-					$this->$key = $value;
-				}
+				$this->attributes[$key] = $value;
 			}
+			$this->addCssClass( "koala-form" );
 		}
 
 		public function setAction( $action ) {
-			$this->action = $action;
+			$this->attributes['action'] = $action;
 		}
 
 		public function getAction() {
-			return $this->action;
+			return $this->attributes['action'];
 		}
 
 		public function addCssClass( $class ) {
-			$this->cssClass .= " " . $class;
+			$this->attributes['cssClass'] .= " " . $class;
 		}
 
 		public function getCssClass() {
-			return trim( $this->cssClass );
+			return trim( $this->attributes['cssClass'] );
 		}
 
 		public function setId( $id ) {
-			$this->id = $id;
+			$this->attributes['id'] = $id;
 		}
 
 		public function getId() {
-			return $this->id;
+			return $this->attributes['id'];
 		}
 
 		public function setLegend( $legend ) {
-			$this->legend = $legend;
+			$this->attributes['legend'] = $legend;
 		}
 
 		public function getLegend() {
-			return $this->legend;
+			return $this->attributes['legend'];
 		}
 
 		public function setMethod( $method ) {
-			$this->method = $method;
+			$this->attributes['method'] = $method;
 		}
 
 		public function getMethod() {
-			return $this->method;
+			return $this->attributes['method'];
 		}
 
 		public function setName( $name ) {
-			$this->name = $name;
+			$this->attributes['name'] = $name;
 		}
 
 		public function getName() {
-			return $this->name;
+			return $this->attributes['name'];
 		}
 
 		public function setAcceptCharset( $acceptCharset ) {
-			$this->acceptCharset = $acceptCharset;
+			$this->attributes['acceptCharset'] = $acceptCharset;
 		}
 
 		public function getAcceptCharset() {
-			return $this->acceptCharset;
+			return $this->attributes['acceptCharset'];
 		}
 
 		public function setAutocomlete( $autocomplete = true ) {
-			$this->autocomplete = $autocomplete;
+			$this->attributes['autocomplete'] = $autocomplete;
 		}
 
 		public function isAutocomlete() {
-			return $this->autocomplete;
+			return $this->attributes['autocomplete'];
 		}
 
 		public function setEncrypt( $encrypt ) {
-			$this->encrypt = $encrypt;
+			$this->attributes['encrypt'] = $encrypt;
 		}
 
 		public function getEncrypt() {
-			return $this->encrypt;
+			return $this->attributes['encrypt'];
 		}
 
 		public function setNoValidate( $noValidate ) {
-			$this->noValidate = $noValidate;
+			$this->attributes['noValidate'] = $noValidate;
 		}
 
 		public function getNovalidate() {
-			return $this->noValidate;
+			return $this->attributes['noValidate'];
 		}
 
 		public function addInput( KInput $input ) {
@@ -123,7 +112,7 @@
 			$function = trim( $function, ', ' );
 			$function .= ")";
 			$event = mb_strtolower( "on$event" );
-			$this->$event = $function;
+			$this->attributes[$event] = $function;
 		}
 
 		public function setOnReset( $function, ...$param ) {
@@ -131,39 +120,27 @@
 		}
 
 		public function getOnReset() {
-			return $this->onReset;
+			return $this->attributes['onReset'];
+		}
+
+		public function toHtml() {
+			return $this->__toString();
+		}
+
+		public function __toString() {
+			$this->attributes['class'] = $this->attributes['cssClass'];
+			unset($this->attributes['cssClass']);
+			$form = new Html("form", $this->attributes);
+			$formBody = "";
+
+			foreach ( $this->inputs as $input ) {
+				$formBody .= $input->toHtml();
+			}
+
+			return $form->toHtml($formBody);
 		}
 
 		public function renderForm() {
-			$this->renderOpenTag();
-
-			foreach ( $this->inputs as $input ) {
-				$input->renderDiv();
-			}
-
-			$this->renderClosingTag();
-		}
-
-		private function renderOpenTag() {
-			$openTag = "<form " . $this->getHtmlAttributes() . ">";
-
-			echo $openTag;
-		}
-
-		private function getHtmlAttributes() {
-			$attributes = get_object_vars( $this );
-			$htmlAttributes = "";
-			foreach ( $attributes as $key => $value ) {
-				if ( $value !== NULL
-					&& !in_array( $key, Helper::getAttributesNotInHtml() )
-					&& !in_array( $key, Helper::getBehaviorsList() ) ) {
-					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
-				}
-			}
-			return $htmlAttributes;
-		}
-
-		private function renderClosingTag() {
-			echo "</form>";
+			echo $this->toHtml();
 		}
 	}
