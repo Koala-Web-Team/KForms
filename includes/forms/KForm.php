@@ -3,6 +3,8 @@
 
 	class Form
 	{
+		use HandleEvents;
+
 		private $inputs = [];
 		private $attributes;
 
@@ -102,17 +104,6 @@
 			foreach ( $inputs as $input ) {
 				$this->addInput( $input );
 			}
-		}
-
-		public function setOn( $event, $function, ...$param ) {
-			$function .= "(";
-			foreach ( $param as $p ) {
-				$function .= '"' . $p . '", ';
-			}
-			$function = trim( $function, ', ' );
-			$function .= ")";
-			$event = mb_strtolower( "on$event" );
-			$this->attributes[$event] = $function;
 		}
 
 		public function setOnReset( $function, ...$param ) {

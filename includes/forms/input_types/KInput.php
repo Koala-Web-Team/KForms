@@ -2,6 +2,7 @@
 
 	Abstract class KInput
 	{
+		use HandleEvents;
 		use InputEvents;
 
 		private $attributes;
@@ -12,6 +13,7 @@
 
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
+				$this->attributes[$key] = $value;
 				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower( $key ) ) ) ) {
 					$key = Helper::getAttributeWithCamelCase( mb_strtolower( $key ) );
 					$this->$key = $value;
@@ -150,45 +152,14 @@
 			return $this->attributes['required'];
 		}
 
-		public function render() {
-
-		}
-
 		public function toHtml($divClass = "") {
 			$div = new Html("div", ["class" => $divClass] );
 			return $div->toHtml($this->__toString());
 		}
 
 		public function __toString() {
+			// TODO: Fetch the Values of the Behaviors and add them to the Attributes
 			$input = new Html("input", $this->attributes);
 			return $input->toHtml();
-		}
-
-		public function renderDiv() {
-			$this->renderOpenTag();
-			$this->render();
-			$this->renderCloseTag();
-		}
-
-		protected function renderOpenTag() {
-			echo "<div class='koala-check-type'>\n";
-		}
-
-		protected function renderCloseTag() {
-			echo "</div>\n";
-		}
-
-		protected function getHtmlAttributes() {
-			$attributes = get_object_vars( $this );
-			$htmlAttributes = "";
-			foreach ( $attributes as $key => $value ) {
-				if ( $value !== NULL
-					&& !in_array( $key, Helper::getAttributesNotInHtml() )
-					&& !in_array( $key, Helper::getBehaviorsList() )
-					&& $value != false ) {
-					$htmlAttributes .= Helper::getHtmlAttributeName( $key ) . "='" . $value . "' ";
-				}
-			}
-			return $htmlAttributes;
 		}
 	}

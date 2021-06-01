@@ -2,17 +2,6 @@
 
 trait InputEvents
 {
-	public function setOn( $event, $function, ...$param ) {
-		$function .= "(";
-		foreach ( $param as $p ) {
-			$function .= '"' . $p . '", ';
-		}
-		$function = trim( $function, ', ' );
-		$function .= ")";
-		$event = Helper::getAttributeWithCamelCase( "on" . $event );
-		$this->attributes[$event] = $function;
-	}
-
 	public function setOnBlur( $function, ...$param ) {
 		$this->setOn( 'blur', $function, ...$param );
 	}
@@ -132,5 +121,4 @@ trait InputEvents
 	public function getOnCut() {
 		return $this->attributes['onCut'];
 	}
-
 }

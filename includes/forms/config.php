@@ -70,10 +70,10 @@ $filesOfClasses = [
 	"RegistrationForm" => "templates/RegistrationForm.php",
 
 	// Traits
-	"InputEvents" => "elements/InputEvents.php"
+	"InputEvents" => "traits/InputEvents.php",
+	"HandleEvents" => "traits/HandleEvents.php"
 ];
 
-clearstatcache();
 spl_autoload_register(function ( $className ) {
 	global $filesOfClasses;
 	require_once($filesOfClasses[$className]);

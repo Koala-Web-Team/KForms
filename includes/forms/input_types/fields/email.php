@@ -7,7 +7,7 @@
 			$this->setPattern( "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" );
 		}
 
-		public function toHtml( $divClass = "" ) {
-			return parent::toHtml( "email" );
+		public function toHtml( $divClass = "email" ) {
+			return parent::toHtml( $divClass );
 		}
 	}

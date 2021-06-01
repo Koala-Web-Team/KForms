@@ -1,6 +1,4 @@
 <?php
-require_once "ValidationException.php";
-require_once "KoalaSessionHandler.php";
 
 class KValidation
 {
@@ -53,8 +51,8 @@ class KValidation
 			var_dump(KoalaSessionHandler::getErrors());
 			var_dump($_SESSION);
 			//exit();
-//			header("Location: {$_SERVER['HTTP_REFERER']}");
-			header("Location: http://localhost/kwt/Kforms/includes/forms/elements/label.php");
+			header("Location: {$_SERVER['HTTP_REFERER']}");
+//			header("Location: http://localhost/kwt/Kforms/includes/forms/elements/label.php");
 		}
 	}
 
@@ -121,13 +119,11 @@ $data = [
 	"name" => "test",
 	"password" => "wsfsdf"];
 $rules = [
-	"name" => "min:5",
+	"name" => "min:5|max:10|required",
 	"password" => "max:3"
 ];
 
-$validator = new KValidation( $data, $rules );
-$validator->validate();
-echo "<pre>";
-//var_dump( get_declared_classes() );
-echo "</pre>";
-var_dump( "test" );
+$errormsg = [
+	"name.required" => "You Must Enter The Name",
+	"required" => "You mUst enter this key"
+];

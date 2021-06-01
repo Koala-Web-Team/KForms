@@ -20,26 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/forms/elements/InputEvents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/elements/KoalaSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/elements/ValidationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/Kvalidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/styleForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/templates/ktemplate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/templates/loginForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/templates/registrationForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/validationForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Buttons_Styles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Checkable_Styles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Default_Form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Differen_Style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/traits/HandleEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/forms/KForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/KForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/assets/css/forms_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/css/forms_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/assets/js/forms_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/js/forms_script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/forms/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/elements/InputEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/traits/InputEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/forms/elements/html.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/label.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/label.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/forms/input_types/fields/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/templates/ktemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/templates/ktemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/templates/registrationForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/templates/registrationForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +74,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mvc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../framework" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
@@ -87,6 +82,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms\traits" />
       <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms\templates" />
       <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms" />
     </key>
@@ -130,7 +126,7 @@
       <workItem from="1621285794140" duration="11955000" />
       <workItem from="1621912606543" duration="2977000" />
       <workItem from="1622111694266" duration="2316000" />
-      <workItem from="1622369553060" duration="21843000" />
+      <workItem from="1622369553060" duration="29403000" />
     </task>
     <servers />
   </component>

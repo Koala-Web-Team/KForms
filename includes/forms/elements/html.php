@@ -102,7 +102,6 @@ class Html {
 		],
 		'input' => [
 			'formaction' => 'GET',
-			'type' => 'text',
 		],
 		'keygen' => [ 'keytype' => 'rsa' ],
 		'link' => [
@@ -215,7 +214,7 @@ class Html {
 
 		// More subtle checks
 		if ( $this->element === 'input' ) {
-			$type = $this->attributes['type'] ? $this->attributes['type'] : null;
+			$type = $this->attributes['type'] ?? null;
 			$value = $this->attributes['value'] ?? null;
 			if ( $type === 'checkbox' || $type === 'radio' ) {
 				// The default value for checkboxes and radio buttons is 'on'

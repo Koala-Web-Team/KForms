@@ -17,6 +17,6 @@ class RegistrationForm extends KTemplate
 		$this->email = new Email();
 		$this->password = new Password();
 		$this->telephone = new Tel();
-		$this->mainForm->addInputs( [$this->name, $this->email, $this->password, $this->telephone] );
+		$this->addInputs( [$this->name, $this->email, $this->password, $this->telephone] );
 	}
 }

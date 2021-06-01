@@ -9,7 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	echo "<pre>";
 	var_dump( $_POST );
 	echo "</pre>";
+
+	$rules = [
+		"name" => "required|min:10",
+		"email" => "min:3"
+	];
+	$validator = new KValidation($_POST, $rules);
+	$validator->validate();
 }
+KoalaSessionHandler::init();
+var_dump(KoalaSessionHandler::getErrors());
 
 
 
@@ -140,11 +149,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // $login = new loginForm($form);
 // $style = new styleForm($login);
 
-	$name = new Text();
-	$name->setId( "test" );
-	$name->setPlaceholder( "Placeholder Test" );
+//	$name = new Text();
+//	$name->setId( "test" );
+//	$name->setPlaceholder( "Placeholder Test" );
 	//var_dump($name);
-	$login = new LoginForm();
+//	$login = new LoginForm(
+//			[
+//				"method" => "GET",
+//				"action" => "index.php"
+//			],
+//			"Tel"
+//	);
 
 	// $login->createLoginForm($name);
 // $registrationForm= new registrationForm($form);
@@ -162,15 +177,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // $registrationForm->password->setPlaceholder("Enter Pass");
 
 
+$form = new Form(["method" => "post"]);
+$inputName = new Text(['name' => "name"]);
+$email = new Email(["name" => "email"]);
+$submit = new Submit();
+
+$form->addInputs([$inputName, $email, $submit]);
+$form->renderForm();
 ?>
 
 <body>
-<?php $login->renderForm(); ?>
-<script>
-	function msg(name,t,b){
-		alert(""+name+' '+t+" "+b);
-	}
-</script>
+<?php // $login->renderForm(); ?>
 <script src="includes/forms/assets/js/forms_script.js"></script>
 
 </body>
