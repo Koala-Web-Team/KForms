@@ -24,7 +24,9 @@ class KoalaSessionHandler
 	}
 
 	public static function getErrors(): array {
-		return $_SESSION['KOALA_ERRORS'];
+		$errors = $_SESSION['KOALA_ERRORS'];
+		self::emptyErrors();
+		return $errors;
 	}
 
 	public static function getListOfErrors(): array {
@@ -34,6 +36,7 @@ class KoalaSessionHandler
 				$errors[] = $er;
 			}
 		}
+		self::emptyErrors();
 		return $errors;
 	}
 
@@ -44,5 +47,9 @@ class KoalaSessionHandler
 	public static function fresh() {
 		$_SESSION['KOALA_ERRORS'] = [];
 		$_SESSION['KOALA_VALUES'] = [];
+	}
+
+	public static function emptyErrors() {
+		$_SESSION['KOALA_ERRORS'] = [];
 	}
 }

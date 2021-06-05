@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$validator = new KValidation($_POST, $rules);
 	$validator->validate();
 }
-KoalaSessionHandler::init();
-var_dump(KoalaSessionHandler::getErrors());
+//KoalaSessionHandler::init();
+//var_dump(KoalaSessionHandler::getErrors());
 
 
 
@@ -179,8 +179,12 @@ var_dump(KoalaSessionHandler::getErrors());
 
 $form = new Form(["method" => "post"]);
 $inputName = new Text(['name' => "name"]);
+$inputName->setLabel("My Name");
 $email = new Email(["name" => "email"]);
+$email->setLabel("Enter Your Email");
 $submit = new Submit();
+
+$form->setInputsStyle("koala-float-label");
 
 $form->addInputs([$inputName, $email, $submit]);
 $form->renderForm();

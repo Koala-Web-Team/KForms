@@ -48,11 +48,11 @@ class KValidation
 		} catch ( ValidationException $e ) {
 			KoalaSessionHandler::init();
 			KoalaSessionHandler::setErrors( $this->errors );
-			var_dump(KoalaSessionHandler::getErrors());
-			var_dump($_SESSION);
-			//exit();
 			header("Location: {$_SERVER['HTTP_REFERER']}");
-//			header("Location: http://localhost/kwt/Kforms/includes/forms/elements/label.php");
+		} catch ( InvalidArgumentException $e ) {
+			KoalaSessionHandler::init();
+			KoalaSessionHandler::setErrors( [] );
+			header("Location: {$_SERVER['HTTP_REFERER']}");
 		}
 	}
 
@@ -84,7 +84,7 @@ class KValidation
 	/**
 	 * @throws ValidationException
 	 */
-	private function min( $key, $rulevalue = null, $errormsg = null ) {
+	private function min( $key, $rulevalue, $errormsg = null ) {
 		//echo "test";
 		$errormsg = $errormsg ?? "The $key must be at least $rulevalue characters";
 		if ( $rulevalue != null ) {
@@ -92,11 +92,11 @@ class KValidation
 				$this->errors[$key][] = $errormsg;
 			}
 		} else {
-			throw new ValidationException(/*$this->validator*/ );
+			throw new ValidationException();
 		}
 	}
 
-	private function max( $key, $rulevalue = null, $errormsg = null ) {
+	private function max( $key, $rulevalue, $errormsg = null ) {
 		$errormsg = $errormsg ?? "The $key must be at most $rulevalue characters";
 		if ( $rulevalue != null ) {
 			if ( trim( strlen( $this->data[$key] ) ) > $rulevalue ) {
@@ -104,6 +104,48 @@ class KValidation
 			}
 		} else {
 			throw new ValidationException();
+		}
+	}
+
+	private function date( $key, $ruleValue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must be a Date";
+		if ( $this->data[$key] instanceof DateTimeInterface ) {
+			return;
+		}
+
+		if ( (!is_string( $this->data[$key] ) && !is_numeric( $this->data[$key] ))
+			|| strtotime( $this->data[$key] ) === false ) {
+			$this->errors[$key][] = $errormsg;
+			return;
+		}
+
+		$date = date_parse( $this->data[$key] );
+		if ( !checkdate( $date['month'], $date['day'], $date['year'] ) ) {
+			$this->errors[$key][] = $errormsg;
+		}
+	}
+
+	private function date_format( $key, $ruleValue, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must be match the format: $ruleValue";
+
+		if (! is_string($this->data[$key]) && ! is_numeric($this->data[$key])) {
+			$this->errors[$key][] = $errormsg;
+			return;
+		}
+
+		$format = $ruleValue;
+
+		$date = DateTime::createFromFormat('!'.$format, $this->data[$key]);
+		if (!($date && $date->format($format) == $this->data[$key])) {
+			$this->errors[$key][] = $errormsg;
+		}
+	}
+
+	private function file($key, $ruleValue = null, $errormsg = null) {
+		$errormsg = $errormsg ?? "The $key must be a Valid File";
+		$file = $_FILES[$key];
+		if ( !file_exists( $file['tmp_name'] ) || $file['size'] == 0 ) {
+			$this->errors[$key][] = $errormsg;
 		}
 	}
 

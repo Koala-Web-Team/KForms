@@ -7,6 +7,7 @@
 
 		private $attributes;
 		protected $label;
+		protected $labelContent;
 
 		private $placeholderBehavior;
 		private $autocompleteBehavior;
@@ -14,25 +15,21 @@
 		public function __construct( array $attributes = [] ) {
 			foreach ( $attributes as $key => $value ) {
 				$this->attributes[$key] = $value;
-				if ( property_exists( $this, Helper::getAttributeWithCamelCase( mb_strtolower( $key ) ) ) ) {
-					$key = Helper::getAttributeWithCamelCase( mb_strtolower( $key ) );
-					$this->$key = $value;
-				}
 			}
 
 			$this->placeholderBehavior = new PlaceholderBehavior();
 			$this->autocompleteBehavior = new AutocompleteBehavior();
 
-			$this->label = new Label();
+			$this->label = new Html("label");
 		}
 
 		public function setId( $id ) {
 			$this->attributes['id'] = $id;
-			$this->label->setFor( $id );
+			$this->label->addAttribute( "for", $id );
 		}
 
 		public function getId() {
-			return $this->attributes['id'];
+			return $this->attributes['id'] ?? null;
 		}
 
 		public function addCssClass( $class ) {
@@ -91,7 +88,7 @@
 			$this->attributes['disabled'] = $disabled;
 		}
 
-		public function getDisabled() {
+		public function isDisabled() {
 			return $this->attributes['disabled'];
 		}
 
@@ -101,15 +98,6 @@
 
 		public function isAutoFocus() {
 			return $this->attributes['autoFocus'];
-		}
-
-		public function setLabel( Label $label ) {
-			$this->label = $label;
-			$this->label->setFor( $this->attributes['id'] );
-		}
-
-		public function getLabel() {
-			return $this->label;
 		}
 
 		public function setPlaceholder( $placeholder ) {
@@ -152,14 +140,34 @@
 			return $this->attributes['required'];
 		}
 
+		public function setLabel( string $label) {
+			$this->labelContent = $label;
+		}
+
+		public function getLabel(): string {
+			return $this->labelContent;
+		}
+
 		public function toHtml($divClass = "") {
-			$div = new Html("div", ["class" => $divClass] );
-			return $div->toHtml($this->__toString());
+			$div = new Html( "div", ["class" => $divClass] );
+			$this->label->setAttributes(
+				[
+					"for" => $this->getId(),
+					"class" => "float-label"
+				]
+			);
+			return $div->toHtml( $this->__toString() . $this->label->toHtml( $this->labelContent ) );
 		}
 
 		public function __toString() {
-			// TODO: Fetch the Values of the Behaviors and add them to the Attributes
+			$this->handleBehaviors();
 			$input = new Html("input", $this->attributes);
+
 			return $input->toHtml();
+		}
+
+		private function handleBehaviors() {
+			$this->attributes['placeholder'] = $this->getPlaceholder();
+			$this->attributes['autocomplete'] = $this->getAutocomplete();
 		}
 	}

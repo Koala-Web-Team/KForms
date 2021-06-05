@@ -7,6 +7,7 @@
 
 		private $inputs = [];
 		private $attributes;
+		private $inputsStyle;
 
 		public function __construct( array $attributes = [] ) {
 			$this->attributes['cssClass'] = "";
@@ -114,24 +115,31 @@
 			return $this->attributes['onReset'];
 		}
 
+		public function renderForm() {
+			echo $this->toHtml();
+		}
+
+		public function setInputsStyle( string $style ) {
+			$this->inputsStyle = $style;
+		}
+
 		public function toHtml() {
 			return $this->__toString();
 		}
 
 		public function __toString() {
-			$this->attributes['class'] = $this->attributes['cssClass'];
-			unset($this->attributes['cssClass']);
-			$form = new Html("form", $this->attributes);
+			$this->handleCssClass();
+			$form = new Html( "form", $this->attributes );
 			$formBody = "";
-
 			foreach ( $this->inputs as $input ) {
-				$formBody .= $input->toHtml();
+				$formBody .= $input->toHtml( $this->inputsStyle );
 			}
 
-			return $form->toHtml($formBody);
+			return $form->toHtml( $formBody );
 		}
 
-		public function renderForm() {
-			echo $this->toHtml();
+		private function handleCssClass() {
+			$this->attributes['class'] = $this->attributes['cssClass'];
+			unset( $this->attributes['cssClass'] );
 		}
 	}
