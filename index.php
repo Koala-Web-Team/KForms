@@ -183,13 +183,21 @@ var_dump(KoalaSessionHandler::getErrors());
 
 $form = new Form(["method" => "post"]);
 $inputName = new Text(['name' => "name"]);
+$inputName->setLabel("My Name");
 $email = new Email(["name" => "email"]);
+$email->setLabel("Enter Your Email");
+$submit = new Submit();
+
+$form->setInputsStyle("koala-float-label");
+
+$form->addInputs([$inputName, $email, $submit]);
 $phone = new Tel(["name" => "tel"]);
 $url = new Url(["name" => "url"]);
 $test = new Text(['name' => "test"]);
 // $first = new Text(['name' => "first"]);
 $submit = new Submit();
 $form->addInputs([$inputName,$email,$phone,$test,$url,$submit]);
+
 $form->renderForm();
 ?>
 

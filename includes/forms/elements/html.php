@@ -145,6 +145,10 @@ class Html {
 		}
 	}
 
+	public function addAttribute( $key, $value ) {
+		$this->attributes[ strtolower($key) ] = $value;
+	}
+
 	/**
 	 * Returns an HTML element in a string.  The major advantage here over
 	 * manually typing out the HTML is that it will escape all attribute
