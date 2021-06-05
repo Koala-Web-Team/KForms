@@ -19,24 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Buttons_Styles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Checkable_Styles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Default_Form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/Differen_Style.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/traits/HandleEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/KForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/KForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/InputEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/traits/InputEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/html.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/input_types/fields/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/templates/ktemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/templates/ktemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/templates/registrationForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/templates/registrationForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Absy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
