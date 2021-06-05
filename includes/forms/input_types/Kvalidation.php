@@ -11,7 +11,8 @@ class KvalidationA {
 		"string" => [ "Field Should Be String" ],
         "email" => [ "This Is An Email Field " ],
         "unique"=>["Field Should Be Unique"],
-        "confirmed" => [ "The Password Doesn't Match" ]
+        "confirmed" => [ "The Password Doesn't Match" ],
+		"phone"=>['Is Not A Valid Phone Number']
 	];
 
 	public function __construct( $data, $rules, $errorMsg = null) {
