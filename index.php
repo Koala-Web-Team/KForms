@@ -9,15 +9,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	echo "<pre>";
 	var_dump( $_POST );
 	echo "</pre>";
-
+$myArr=array('ramaj','test');
 	$rules = [
 		"name" => "required|min:10",
-		"email" => "min:3"
+		"email" => "min:3",
+		"tel"=>"tel",
+		"test"=>"in:ramaj",
+		"url"=>"url",		
 	];
 	$validator = new KValidation($_POST, $rules);
 	$validator->validate();
 }
 KoalaSessionHandler::init();
+// KoalaSessionHandler::fresh();
 var_dump(KoalaSessionHandler::getErrors());
 
 
@@ -180,9 +184,12 @@ var_dump(KoalaSessionHandler::getErrors());
 $form = new Form(["method" => "post"]);
 $inputName = new Text(['name' => "name"]);
 $email = new Email(["name" => "email"]);
+$phone = new Tel(["name" => "tel"]);
+$url = new Url(["name" => "url"]);
+$test = new Text(['name' => "test"]);
+// $first = new Text(['name' => "first"]);
 $submit = new Submit();
-
-$form->addInputs([$inputName, $email, $submit]);
+$form->addInputs([$inputName,$email,$phone,$test,$url,$submit]);
 $form->renderForm();
 ?>
 
