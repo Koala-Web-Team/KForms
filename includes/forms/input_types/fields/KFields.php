@@ -10,7 +10,6 @@
 			parent::__construct( $attributes );
 			$this->setAutocompleteBehavior( new autocompleteBehavior() );
 			$this->setPlaceholderBehavior( new placeholderbehavior() );
-			$this->getLabel()->setAfterElement();
 		}
 
 		public function setPattern( $pattern ) {
