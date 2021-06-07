@@ -102,7 +102,6 @@ class Html {
 		],
 		'input' => [
 			'formaction' => 'GET',
-			'type' => 'text',
 		],
 		'keygen' => [ 'keytype' => 'rsa' ],
 		'link' => [
@@ -135,6 +134,19 @@ class Html {
 		foreach ( $attributes as $attribute => $value) {
 			$this->attributes[ strtolower($attribute) ] = $value;
 		}
+	}
+
+	/**
+	 * @param array $attributes
+	 */
+	public function setAttributes( array $attributes ): void {
+		foreach ( $attributes as $attribute => $value) {
+			$this->attributes[ strtolower($attribute) ] = $value;
+		}
+	}
+
+	public function addAttribute( $key, $value ) {
+		$this->attributes[ strtolower($key) ] = $value;
 	}
 
 	/**
@@ -206,8 +218,8 @@ class Html {
 
 		// More subtle checks
 		if ( $this->element === 'input' ) {
-			$type = $this->attributes['type'] ? $this->attributes['type'] : null;
-			$value = $this->attributes['value'] ? $this->attributes['value'] : null;
+			$type = $this->attributes['type'] ?? null;
+			$value = $this->attributes['value'] ?? null;
 			if ( $type === 'checkbox' || $type === 'radio' ) {
 				// The default value for checkboxes and radio buttons is 'on'
 				// not ''. By stripping value="" we break radio boxes that

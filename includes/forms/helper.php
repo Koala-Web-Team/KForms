@@ -132,6 +132,6 @@ class Helper
 	}
 
 	public static function getAttributesNotInHtml() {
-		return [ 'inputs', "label", "afterElement", "fileTypes", "allowedExtensions", "text", "userDefinedAllowedExtensions" ];
+		return [ 'inputs', "label", "afterElement", "fileTypes", "allowedExtensions", "text", "userDefinedAllowedExtensions", "inputType", "password", "submitButton", "mainForm" ];
 	}
 }

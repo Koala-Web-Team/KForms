@@ -19,91 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0303b0-9b04-4ec7-aec8-b328be11fced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/forms/behaviors/autocomplete/autocompleteBehavior.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/behaviors/autocomplete/noAutocompleteBehavior.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/behaviors/placeholder/noplaceholderbehavior.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/behaviors/placeholder/placeholderbehavior.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/button/KButton.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/button/button.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/button/file.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/button/reset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/button/submit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/checkable/KCheckables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/checkable/checkbox.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/checkable/checkboxes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/checkable/radioButton.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/color/color.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/KFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/email.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/tel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/text.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/textarea.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/fields/url.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/hidden/hidden.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/image/image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/numeric/KNumeric.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/numeric/number.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/numeric/range.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/select/compoBox.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/times/KTimes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/times/date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/times/dateTime.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/times/month.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/times/time.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/input_types/times/week.php" afterDir="false" />
+    <list default="true" id="a090848a-d725-46c2-a909-95c8eb174381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/KForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/KForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/autocomplete/autocompleteBehavior.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/autocomplete/noAutocompleteBehavior.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/noplaceholderbehavior.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/placeholder/placeholderbehavior.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/readonly/noReadonlyBehavior.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/behaviours/readonly/readonlyBehavior.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/html.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/elements/label.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/label.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/KInput.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/button/KButton.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/button/button.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/button/file.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/button/reset.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/button/submit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/KCheckables.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/checkbox.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/checkboxes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/checkable/radioButton.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/color/color.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/comboBox/KComboBox.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/select/KSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/comboBox/option.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/select/option.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/comboBox/select.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/select/select.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/KFields.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/email.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/password.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/tel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/text.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/textarea.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/fields/url.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/hidden/hidden.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/image/image.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/numeric/KNumeric.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/numeric/number.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/numeric/range.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/select/KSelect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/select/compoBox.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/select/option.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/select/select.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/KTimes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/date.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/dateTime.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/month.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/time.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/inputtypes/times/week.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/elements/KValidation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +39,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1lsAZ0cMFRUFhYmtzYFj3Lmy6rf" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -132,12 +58,20 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms\traits" />
+      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms\templates" />
+      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -164,7 +98,23 @@
       <workItem from="1612654377150" duration="511000" />
       <workItem from="1613505414583" duration="1759000" />
       <workItem from="1613571553770" duration="9174000" />
-      <workItem from="1613823788106" duration="6275000" />
+      <workItem from="1613823788106" duration="6745000" />
+      <workItem from="1613919545840" duration="4554000" />
+      <workItem from="1620250768680" duration="2549000" />
+      <workItem from="1620315692529" duration="1530000" />
+      <workItem from="1620335304558" duration="6158000" />
+      <workItem from="1620672437798" duration="3113000" />
+      <workItem from="1620684036317" duration="10000" />
+      <workItem from="1620686414858" duration="17000" />
+      <workItem from="1621117684476" duration="1249000" />
+      <workItem from="1621122780270" duration="597000" />
+      <workItem from="1621220548841" duration="7851000" />
+      <workItem from="1621285794140" duration="11955000" />
+      <workItem from="1621912606543" duration="2977000" />
+      <workItem from="1622111694266" duration="2316000" />
+      <workItem from="1622369553060" duration="32925000" />
+      <workItem from="1622718741831" duration="6600000" />
+      <workItem from="1622909381619" duration="2677000" />
     </task>
     <servers />
   </component>

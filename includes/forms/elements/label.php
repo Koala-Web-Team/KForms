@@ -1,4 +1,5 @@
 <?php
+require_once "KoalaSessionHandler.php";
 
 class Label 
 {
@@ -75,5 +76,4 @@ class Label
 		}
 		return trim( $htmlAttributes );
 	}
-
 }
