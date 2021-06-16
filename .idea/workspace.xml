@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090848a-d725-46c2-a909-95c8eb174381" name="Default Changelist" comment="" />
+    <list default="true" id="e5dcb76d-9ee7-4b57-b009-d87e08a3b356" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,109 +14,39 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="1lsAZ0cMFRUFhYmtzYFj3Lmy6rf" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1tdWcujixGg3KdSQblZfYoeyeqY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms\traits" />
-      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms\templates" />
-      <recent name="C:\xampp\htdocs\kwt\KForms\includes\forms" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a090848a-d725-46c2-a909-95c8eb174381" name="Default Changelist" comment="" />
-      <created>1608375476177</created>
+      <changelist id="e5dcb76d-9ee7-4b57-b009-d87e08a3b356" name="Default Changelist" comment="" />
+      <created>1623099533660</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608375476177</updated>
-      <workItem from="1608375477226" duration="4391000" />
-      <workItem from="1608406305691" duration="4964000" />
-      <workItem from="1608666519992" duration="6318000" />
-      <workItem from="1609061673835" duration="127000" />
-      <workItem from="1609195472987" duration="5457000" />
-      <workItem from="1609355821668" duration="6888000" />
-      <workItem from="1609883081601" duration="1388000" />
-      <workItem from="1611311884555" duration="5566000" />
-      <workItem from="1611438795999" duration="1667000" />
-      <workItem from="1611945585869" duration="1105000" />
-      <workItem from="1612645753314" duration="5569000" />
-      <workItem from="1612654377150" duration="511000" />
-      <workItem from="1613505414583" duration="1759000" />
-      <workItem from="1613571553770" duration="9174000" />
-      <workItem from="1613823788106" duration="6745000" />
-      <workItem from="1613919545840" duration="4554000" />
-      <workItem from="1620250768680" duration="2549000" />
-      <workItem from="1620315692529" duration="1530000" />
-      <workItem from="1620335304558" duration="6158000" />
-      <workItem from="1620672437798" duration="3113000" />
-      <workItem from="1620684036317" duration="10000" />
-      <workItem from="1620686414858" duration="17000" />
-      <workItem from="1621117684476" duration="1249000" />
-      <workItem from="1621122780270" duration="597000" />
-      <workItem from="1621220548841" duration="7851000" />
-      <workItem from="1621285794140" duration="11955000" />
-      <workItem from="1621912606543" duration="2977000" />
-      <workItem from="1622111694266" duration="2316000" />
-      <workItem from="1622369553060" duration="32925000" />
-      <workItem from="1622718741831" duration="6600000" />
-      <workItem from="1622909381619" duration="2677000" />
-      <workItem from="1623096546998" duration="4000" />
+      <updated>1623099533660</updated>
+      <workItem from="1623099535187" duration="7471000" />
+      <workItem from="1623852645323" duration="1003000" />
+      <workItem from="1623853680249" duration="751000" />
+      <workItem from="1623854489862" duration="565000" />
+      <workItem from="1623855108587" duration="5000" />
+      <workItem from="1623855177454" duration="12000" />
+      <workItem from="1623855226258" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
