@@ -1,0 +1,133 @@
+@import "buttons";
+.koala-form {
+  /* Checkbox Different Styles*/
+  .koala-check {
+    .koala-check-inset {
+      @extend %koala-check-type;
+
+      .koala-checkbox {
+        @extend %koala-checkbox;
+
+        &:checked {
+          @extend %checkbox-checked;
+          box-shadow: inset 0 0 0 .08em #fff;;
+        }
+      }
+
+      .koala-check-label {
+        @extend %koala-check-label;
+      }
+    }
+
+    .koala-check-group {
+      @extend %koala-check-type;
+      width: -moz-fit-content;
+      width: fit-content;
+      border-radius: 5px;
+      border: 1px solid $borderColor;;
+      background-color: #fff;
+      padding-right: 5px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      .check-fill {
+        margin: 0;
+        background-color: $grayColor;
+        padding: 10% 0;
+
+        .koala-checkbox {
+          @extend %koala-checkbox;
+
+          &:checked {
+            @extend %checkbox-checked;
+          }
+        }
+      }
+    }
+
+    .kCheckBoxInput-toggle {
+      @extend %koala-check-type;
+
+      position: relative;
+      display: block;
+      .switch-input {
+        display: none;
+      }
+      .switch-label {
+        @extend %koala-check-label;
+        display: block;
+        position: relative;
+        text-indent: 60px;
+        height: 24px;
+        user-select: none;
+      }
+      .switch-label::before,
+      .switch-label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        cursor: pointer;
+      }
+      .switch-label::before {
+        width: 48px;
+        height: 24px;
+        background-color: #dedede;
+        border-radius: 9999em;
+        -webkit-transition: background-color 0.25s ease;
+        transition: background-color 0.25s ease;
+      }
+      .switch-label::after {
+        top: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+        -webkit-transition: left 0.25s ease;
+        transition: left 0.25s ease;
+      }
+      .switch-input:checked + .switch-label::before {
+        background-color: dodgerblue;
+      }
+      .switch-input:checked + .switch-label::after {
+        left: 24px;
+      }
+    }
+
+    .kCheckBoxInput-squareToggle{
+      @extend .kCheckBoxInput-toggle;
+      .switch-label::before {
+        border-radius: 4px;
+      }
+      .switch-label::after {
+        border-radius: 4px;
+        width: 12px;
+      }
+      .switch-input:checked + .switch-label::after {
+        left: 36px;
+      }
+    }
+
+    .koala-check-label {
+      @extend %koala-check-label;
+      margin-left: 5px;
+    }
+  }
+
+  /* Radio Button Different Styles*/
+  .koala-check-outset {
+    @extend %koala-check-type;
+
+    .koala-radio {
+      &:checked {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+        border: 1px solid dodgerblue;
+        background-color: dodgerblue;
+      }
+    }
+    .koala-check-label {
+      @extend %koala-check-label;
+    }
+  }
+}
