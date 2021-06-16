@@ -1,0 +1,76 @@
+@import "variables";
+.koala-form{
+  .koala-input-file{
+    &::file-selector-button{
+      border: none;
+      border-left: 1px solid $grayColor;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+    &::-webkit-file-upload-button{
+      border: none;
+      border-left: 1px solid $grayColor;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+  .koala-input-color{
+    &::-moz-color-swatch{
+      margin-right: -2px;
+      margin-left: 0;
+    }
+  }
+  .koala-check {
+    .koala-check-group {
+      padding-right: 0;
+
+      .koala-check-label {
+        margin-right: 5px;
+      }
+    }
+  }
+  .custom-file{
+    .custom-file-button{
+      border-right: none;
+      border-left: 1px solid #BBBBBB;
+      button{
+        border-radius: 0 0.3125em 0.3125em 0;
+      }
+    }
+  }
+  .p-left-border{
+    .left-border {
+      border-left: none;
+      border-right: 10px solid $grayColor;
+      &:focus {
+        border: 2px solid $focusedColor;
+        border-right: 10px solid $focusedColor;
+      }
+    }
+  }
+  .p-filled-border-left-input{
+    .filled-border-left-input{
+      &:focus{
+        border-left: none;
+        border-right: 3px solid $focusedColor;
+      }
+    }
+  }
+  .koala-input-float-icon{
+    input{
+      padding-left: 0;
+      padding-right: 2.2em;
+    }
+  }
+  .koala-input-divided-icon{
+    .input-icon{
+      border: 1px solid $borderColor ;
+      border-radius: 0 .5em 0.5em 0;
+      border-left: none;
+    }
+    input{
+      width: 85%;
+      border-radius:$mainBorderRadius 0 0 $mainBorderRadius;
+    }
+  }
+}

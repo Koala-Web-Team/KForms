@@ -1,0 +1,122 @@
+@import "numericType";
+.koala-form{
+    .customComboBox {
+        position: relative;
+        margin: 10px auto;
+        font-family: Arial;
+        border: rgba(100, 100, 100, 0.5) solid 1px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: hidden;
+        .options-container {
+            max-height: 0;
+            width: 100%;
+            opacity: 0;
+            transition: all .4s;
+            overflow: hidden;
+            order: 1;
+            scrollbar-width: thin;
+            scrollbar-color: dodgerblue transparent;
+            .option{
+                padding: 12px 24px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .option:hover {
+                color: dodgerblue;
+                background: rgba(100, 100, 100, 0.1);
+            }
+
+            .option.hidden {
+                display: none;
+            }
+
+        }
+
+        .options-container.active {
+            max-height: 240px;
+            opacity: 1;
+            overflow-y: scroll;
+        }
+
+
+        .options-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .options-container::-webkit-scrollbar-thumb {
+            background: dodgerblue;
+        }
+
+        .options-container.active ~ .search-box input {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .tag {
+            font-size: 85%;
+            font-weight: bold;
+            padding: 0.3em 0.5em;
+            margin: 0.2em 0.2em 0.4em 0.2em;
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid dodgerblue;
+            border-radius: 6px;
+            transition: all 0.1s linear;
+            cursor: pointer;
+            .close::after {
+                content: '\2573';
+                display: inline-block;
+                color: dodgerblue;
+                transform: scale(.85);
+                margin-left: 0.75em;
+            }
+            .close:hover::after {
+                color: red;
+            }
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            position: relative;
+            order: 0;
+            pointer-events: initial;
+            transition: all 0.4s;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .search-box input:focus {
+            outline: none;
+        }
+    }
+
+    .customComboBox.activated {
+        border-color: dodgerblue;
+    }
+
+    .customComboBox:after {
+        position: absolute;
+        content: "";
+        top: 1em;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: solid rgba(100, 100, 100, 0.5);
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        transition: transform .4s;
+        cursor: pointer;
+    }
+
+    .customComboBox.activated:after {
+        transform: rotate(-135deg);
+        top: 1.1em;
+    }
+}

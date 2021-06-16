@@ -1,0 +1,169 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+@font-face
+{
+  font-family:'FontAwesome';
+  src:url('../fonts/fontawesome-webfont.eot');
+  src:url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fontawesome-webfont.woff') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+  url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight:normal;
+  font-style:normal
+}
+$focusedColor:#007BFF;
+$lightColor:#fff;
+$labelPlaceholderColor: #7c7e80;
+$grayColor:#BBBBBB;//mainColor
+$blackColor:#343A40;
+$warningValid:#FFC107;
+$successValid:#28A745;
+$secondaryColor: rgb(90,98,104);
+$failValid:#DC3545;
+$inputHeight: 40px;
+$publicMargin:10px;
+$defaultFormWidth:25%;
+$mainBorderRadius: 0.625em;
+$mainBorder: 1px;
+$mainFontFamily: Arial;
+$borderColor:rgba(100, 100, 100, 0.5);
+$boxShadow:0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+$fontSize:20px;
+%box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+%public-shadow{
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.28);
+}
+%public-transition{
+  transition: box-shadow .2s ease-in-out, border-color .2s ease-in-out;
+}
+@mixin border($border,$borderColor,$bRadius){
+  border: $border solid $borderColor;
+  border-radius: $bRadius;
+}
+/*%button-basics{
+  width: $defaultFormWidth;
+  height: $inputHeight;
+  padding: 3px 8px;
+  outline: none;
+  margin: $publicMargin - 5px;
+  font-weight: bold;
+  border-radius: $mainBorderRadius;
+  &:hover,&:focus{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+  }
+  &:disabled:hover{
+    cursor: not-allowed;
+  }
+}*/
+%input{
+  @extend %box-sizing;
+  @extend %public-transition;
+  @include border($mainBorder, $grayColor, $mainBorderRadius / 2);
+  display: block;
+  width: 100%;
+  height: $inputHeight;
+  color: $blackColor;
+  padding: 3px 8px;
+  font-size: 15px;
+  background-clip: padding-box;
+  background-color: #fff;
+  margin: $publicMargin 0;
+  line-height: 2;
+  &:focus {
+    @extend %public-shadow;
+    outline: none;
+    border: 1px solid $focusedColor;
+  }
+}
+%koala-checkbox{
+  appearance: none;
+  outline: none;
+  border: 1px solid $borderColor;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  border-radius: 25%;
+  transition: all ease-in-out 0.15s;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+%koala-check-type {
+  margin-bottom: $publicMargin;
+  .koala-radio {
+    @extend %koala-checkbox;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .koala-radio-label {
+    font-family: $mainFontFamily;
+    color: #212529;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+%radio-checked{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23007BFF'/%3e%3c/svg%3e");
+  border: 1px solid $focusedColor;
+}
+%checkbox-checked{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  background-color: $focusedColor;
+  border: 1px solid $focusedColor;
+}
+%koala-check-label {
+  font-family: $mainFontFamily;
+  color: #212529;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+%koala-input-range-filled {
+  cursor: pointer;
+  appearance: none;
+  background-color: #dee2e6;
+  border-radius: 25px;
+  height: 2px;
+  width: 100%;
+  outline: none;
+  opacity: 1;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: white;
+    border: 1px solid rgba(0, 123, 255, 0.24);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transition: box-shadow .2s ease-in-out;
+  }
+
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    background-color: white;
+    border: 1px solid rgba(0, 123, 255, 0.24);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transition: box-shadow .2s ease-in-out;
+  }
+
+  &:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+    border-radius: 50%;
+    background-clip: content-box;
+  }
+
+  &:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+    border-radius: 50%;
+    background-clip: content-box;
+  }
+}

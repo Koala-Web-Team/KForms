@@ -1,0 +1,210 @@
+@import "checkableType";
+.koala-form {
+  .p-bordered-bottom {
+    margin-bottom: 10px;
+
+    .bordered-bottom {
+      border: none;
+      border-bottom: 1px solid $grayColor;
+      border-radius: 0;
+      outline: none;
+      transition: border-bottom-color 0.5s;
+
+      &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid $focusedColor;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .p-filled-border-input {
+    margin-bottom: 10px;
+
+    .filled-border-input {
+      border: none;
+      background-color: rgba(187, 187, 187, 0.2);
+      border-radius: 0;
+      border-bottom: 1px solid $grayColor;
+
+      &::placeholder {
+        color: #6C757D;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+        border-bottom: 2px solid $focusedColor;
+      }
+    }
+  }
+
+  .p-left-border {
+    margin-bottom: 10px;
+    .left-border {
+      border-left: 10px solid $grayColor;
+
+      &:focus {
+        border: 2px solid $focusedColor;
+        border-left: 10px solid $focusedColor;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .p-filled-border-left-input{
+    @extend .p-filled-border-input;
+    .filled-border-left-input{
+      @extend .filled-border-input;
+      transition: border-left 0.1s ease-in-out;
+      border-bottom: none;
+      &:focus{
+        border-bottom: none;
+        border-left: 3px solid $focusedColor;
+      }
+    }
+  }
+  /*.p-border-bottom-animation-left{
+      position: relative;
+    .border-animation{
+      margin: 0;
+      &:focus{
+        border-left: none;
+      }
+  }
+  &::before {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-bottom: 2px solid $focusedColor;
+    width: 0;
+  }
+  &::before {
+    bottom: 0;
+    left: 0;
+  }
+  &:focus-within::before{
+    width: 100%;
+    border-top-color: $focusedColor;
+    border-right-color: $focusedColor;
+    transition: width 0.3s ease-out;
+  }
+}*/
+ /*.p-border-bottom-animation-center{
+   position: relative;
+   .border-animation{
+     margin: 0;
+     &:focus{
+       border-left: none;
+     }
+   }
+   &::before {
+     box-sizing: inherit;
+     content: '';
+     position: absolute;
+     z-index: -1;
+     border-bottom: 2px solid $focusedColor;
+     width: 0;
+   }
+   &::before {
+     bottom: 0;
+     left: 50%;
+   }
+   &:focus-within::before{
+     width: 100%;
+     border-top-color: $focusedColor;
+     border-right-color: $focusedColor;
+     transition: width 0.3s ease-out;
+     left: 0;
+   }
+ }*/
+  .koala-input-float-icon{
+    position: relative;
+    .input-icon{
+      position: absolute;
+      margin: 0 0.75em;
+      color: $labelPlaceholderColor;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    input{
+      padding-left: 2.2em;
+    }
+  }
+  .koala-input-divided-icon{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    height: $inputHeight;
+    .input-icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e9ecef;
+      width: 15%;
+      margin: 0;
+      height: 100%;
+      border: 1px solid $borderColor ;
+      border-radius: .5em 0 0 0.5em;
+      border-right: none;
+      color: $labelPlaceholderColor;
+    }
+    input{
+      width: 85%;
+      border-radius: 0 $mainBorderRadius $mainBorderRadius 0;
+    }
+  }
+  /*Float Labels*/
+  .koala-float-label{
+    position: relative;
+    margin: 25px 0;
+    font-family: Arial;
+    .float-label{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0 8px;
+      color: $labelPlaceholderColor;
+      font-size: 15px;
+      font-weight: normal;
+      cursor: text;
+    }
+    .float-focused{
+      transition: all ease-in-out 0.3s;
+      top: -12px;
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+      color: $focusedColor;
+    }
+    .float-valid-blur{
+      top: -12px;
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+      color: $blackColor;
+    }
+  }
+  .koala-float-label-inset {
+    @extend .koala-float-label;
+    input {
+      height: $inputHeight + 15;
+      &:not(:placeholder-shown){
+        padding-top: 15px;
+      }
+    }
+    .float-focused{
+      top: 25%;
+      margin: 0 8px;
+    }
+    .float-valid-blur{
+      top: 25%;
+      margin: 0 8px;
+    }
+  }
+}
+@import "buttons";
