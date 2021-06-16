@@ -24,7 +24,19 @@ KoalaSessionHandler::init();
 // KoalaSessionHandler::fresh();
 var_dump(KoalaSessionHandler::getErrors());
 
+////Martin
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+// 	$rules = [
+// 		// "email_confirmation" => "required|end_with:tina|comfirmed",
+// 		// "image" => "image",
+// 		"Martina" => "required",
+// 	];
+// 	$validator = new KValidation($_POST, $rules);
+// 	$validator->validate();
+// }
+// KoalaSessionHandler::init();
+// var_dump(KoalaSessionHandler::getErrors());
 
 // form
 //$form = new Form([
@@ -181,28 +193,42 @@ var_dump(KoalaSessionHandler::getErrors());
 // $registrationForm->password->setPlaceholder("Enter Pass");
 
 
-$form = new Form(["method" => "post"]);
-$inputName = new Text(['name' => "name"]);
-$inputName->setLabel("My Name");
-$email = new Email(["name" => "email"]);
-$email->setLabel("Enter Your Email");
-$submit = new Submit();
+// $form = new Form(["method" => "post"]);
+// $inputName = new Text(['name' => "name"]);
+// $inputName->setLabel("My Name");
+// $email = new Email(["name" => "email"]);
+// $email->setLabel("Enter Your Email");
+// $submit = new Submit();
 
-$form->setInputsStyle("koala-float-label");
+// $form->setInputsStyle("koala-float-label");
 
-$form->addInputs([$inputName, $email, $submit]);
-$phone = new Tel(["name" => "tel"]);
-$url = new Url(["name" => "url"]);
-$test = new Text(['name' => "test"]);
-// $first = new Text(['name' => "first"]);
-$submit = new Submit();
-$form->addInputs([$inputName,$email,$phone,$test,$url,$submit]);
+// $form->addInputs([$inputName, $email, $submit]);
+// $phone = new Tel(["name" => "tel"]);
+// $url = new Url(["name" => "url"]);
+// $test = new Text(['name' => "test"]);
+// // $first = new Text(['name' => "first"]);
+// $submit = new Submit();
+// $form->addInputs([$inputName,$email,$phone,$test,$url,$submit]);
 
-$form->renderForm();
+// $form->renderForm();
+
+$login = new LoginForm(
+	[
+		"method" => "post",
+		"action" => "index.php"
+	],
+	[
+		"type"=>"Tel",
+		"name"=>"Martina"
+	],
+	[
+		"name" => "toty",
+	]
+);
 ?>
 
 <body>
-<?php // $login->renderForm(); ?>
+<?php  $login->renderForm(); ?>
 <script src="includes/forms/assets/js/forms_script.js"></script>
 
 </body>

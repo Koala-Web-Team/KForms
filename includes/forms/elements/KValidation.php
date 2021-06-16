@@ -221,6 +221,125 @@ class KValidation
 		}
 	}
 
+	private function confermit( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key is must be confermed";
+		if ( trim( $this->data[$key] ) != trim( $this->data[$key.'_confirmation'] ) ) {
+			$this->errors[$key][] = $errormsg;
+		} 
+	}
+
+	private function defferent( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key and $rulevalue must be defferent";
+		if ( $rulevalue != null ) {
+			if ( trim( $this->data[$key] ) == trim( $this->data[$rulevalue] ) ) {
+				$this->errors[$key][] = $errormsg;
+			}
+		} 
+	}
+
+	private function same( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key and $rulevalue must be same";
+		if ( $rulevalue != null ) {
+			if ( trim( $this->data[$key] ) != trim( $this->data[$rulevalue] ) ) {
+				$this->errors[$key][] = $errormsg;
+			}
+		} 
+	}
+
+	private function size( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must be equal $rulevalue characters";
+		if ( $rulevalue != null ) {
+			if ( trim( strlen( $this->data[$key] ) ) != $rulevalue ) {
+				$this->errors[$key][] = $errormsg;
+			} 
+		} 
+	}
+
+	private function start_with( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must start with $rulevalue";
+		if ( $rulevalue != null ) {
+			if ( substr( $this->data[$key], 0, strlen($rulevalue)) !== $rulevalue ) {
+				$this->errors[$key][] = $errormsg;
+			} 
+		} 
+	}
+
+	private function end_with( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must end with $rulevalue";
+		if ( $rulevalue != null ) {
+			if ( substr( $this->data[$key], -strlen($rulevalue)) !== $rulevalue ) {
+				$this->errors[$key][] = $errormsg;
+			} 
+		} 
+	}
+
+	private function image( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must be image";
+		$file_extension = pathinfo($this->data[$key], PATHINFO_EXTENSION);
+		$allowed_image_extension = array(
+			"jpg",
+			"png",
+			"gif",
+			"webp",
+			"tiff",
+			"psd",
+			"svg",
+			"bmp",
+			"heif",
+			"jpeg"
+		);
+		if ( ! in_array($file_extension, $allowed_image_extension) ) {
+			$this->errors[$key][] = $errormsg;
+		}
+	}
+
+	private function integer( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key is must be integer";
+		if(!preg_match('/^\d+$/',trim( $this->data[$key]))) {
+			$this->errors[$key][] = $errormsg;
+		} 
+	}
+	
+	private function numeric( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key is must be numeric";
+		if(!is_numeric(trim( $this->data[$key]))) {
+			$this->errors[$key][] = $errormsg;
+		} 
+	}
+
+	private function string( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key is must be string";
+		if(!preg_match("/^[A-Za-z\\- \']+$/",trim( $this->data[$key]))) {
+			$this->errors[$key][] = $errormsg;
+		} 
+	}
+
+	private function boolean( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key is must be boolean";
+		if(is_bool(trim( $this->data[$key])) === false) {
+			$this->errors[$key][] = $errormsg;
+		} 
+	}
+
+	private function digits( $key, $rulevalue = null, $errormsg = null ) {
+		$errormsg = $errormsg ?? "The $key must be digits and equal $rulevalue characters";
+		if ( $rulevalue != null ) {
+			if ( trim( strlen( $this->data[$key] ) ) != $rulevalue || !is_numeric(trim( $this->data[$key]))) {
+				$this->errors[$key][] = $errormsg;
+			} 
+		} 
+	}
+
+	private function digits_between( $key, $rulevalue = null, $errormsg = null ) {
+		$pieces = explode(",", $rulevalue);
+		$errormsg = $errormsg ?? "The $key must be digits and between $pieces[0] and $pieces[1]";
+		if ( $rulevalue != null ) {
+			if ( trim( strlen( $this->data[$key] ) ) <= $pieces[0] || trim( strlen( $this->data[$key] ) ) >= $pieces[1] || !is_numeric(trim( $this->data[$key]))) {
+				$this->errors[$key][] = $errormsg;
+			} 
+		} 
+	}
+
 	/**
 	 * @return mixed|string
 	 */
