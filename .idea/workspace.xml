@@ -19,7 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090848a-d725-46c2-a909-95c8eb174381" name="Default Changelist" comment="" />
+    <list default="true" id="a090848a-d725-46c2-a909-95c8eb174381" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/contact border side.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/contact header center.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/contact header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/css/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/login border side.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/login header center.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/login header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/signup border side.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/signup header center.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/signup header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/assets/Checkable_Styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/Checkable_Styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/assets/css/form-style-arabic.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/css/form-style-arabic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/assets/js/form-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/js/form-style.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +43,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -54,13 +78,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">

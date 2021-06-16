@@ -28,14 +28,14 @@ class DefaultForm{
     koalaFieldset = document.querySelectorAll('.koala-form fieldset');
     koalaLegend = document.querySelectorAll('.koala-form fieldset legend');
     addFirstIndex(ele,classname){
-            let eleClassList= ele.classList,
-                arr = [...eleClassList];
-            arr.splice(0, 0, classname);
-            ele.classList.remove(...eleClassList);
-            for ( let j = 0; j < arr.length; j += 1 ){
-               ele.classList.add(arr[j]);
-            }
+        let eleClassList= ele.classList,
+            arr = [...eleClassList];
+        arr.splice(0, 0, classname);
+        ele.classList.remove(...eleClassList);
+        for ( let j = 0; j < arr.length; j += 1 ){
+            ele.classList.add(arr[j]);
         }
+    }
     inputsDefault(){
         for (let i = 0; i < this.koalaInputs.length; i += 1) {
             if (this.koalaInputs[i].getAttribute('type') === 'text' ||
@@ -74,21 +74,21 @@ class DefaultForm{
                 this.addFirstIndex(this.koalaInputs[i], "koala-input-file");
             }
             else if (this.koalaInputs[i].getAttribute('type') === 'number'){
-                this.addFirstIndex(this.koalaInputs[i], "koala-input-number");
-            }
+                    this.addFirstIndex(this.koalaInputs[i], "koala-input-number");
+                }
         }
     }
     textareaDefault(){
-        for (let i = 0; i < this.textareaField.length; i += 1){
+        /*for (let i = 0; i < this.textareaField.length; i += 1){
             this.addFirstIndex(this.koalaInputs[i], "koala-textarea-field");
-        }
+        }*/
     }
     fieldsetDefault(){
         for (let i = 0; i < this.koalaFieldset.length; i += 1){
             this.addFirstIndex(this.koalaInputs[i], "koala-fieldset");
         }
         for (let i = 0; i < this.koalaLegend.length; i += 1){
-             this.addFirstIndex(this.koalaInputs[i], "koala-legend");
+            this.addFirstIndex(this.koalaInputs[i], "koala-legend");
         }
     }
     allDefaults(){

@@ -1,10 +1,11 @@
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 @font-face {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   src: url("../fonts/fontawesome-webfont.eot");
   src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 /*%button-basics{
   width: $defaultFormWidth;
   height: $inputHeight;
@@ -25,42 +26,61 @@
   border: none;
   border-left: 1px solid #BBBBBB;
   margin-left: 10px;
-  margin-right: 0; }
+  margin-right: 0;
+}
 .koala-form .koala-input-file::-webkit-file-upload-button {
   border: none;
   border-left: 1px solid #BBBBBB;
   margin-left: 10px;
-  margin-right: 0; }
+  margin-right: 0;
+}
 .koala-form .koala-input-color::-moz-color-swatch {
   margin-right: -2px;
-  margin-left: 0; }
+  margin-left: 0;
+}
 .koala-form .koala-check .koala-check-group {
-  padding-right: 0; }
-  .koala-form .koala-check .koala-check-group .koala-check-label {
-    margin-right: 5px; }
+  padding-right: 0;
+}
+.koala-form .koala-check .koala-check-group .koala-check-label {
+  margin-right: 5px;
+}
 .koala-form .custom-file .custom-file-button {
   border-right: none;
-  border-left: 1px solid #BBBBBB; }
-  .koala-form .custom-file .custom-file-button button {
-    border-radius: 0 0.3125em 0.3125em 0; }
+  border-left: 1px solid #BBBBBB;
+}
+.koala-form .custom-file .custom-file-button button {
+  border-radius: 0 0.3125em 0.3125em 0;
+}
 .koala-form .p-left-border .left-border {
   border-left: none;
-  border-right: 10px solid #BBBBBB; }
-  .koala-form .p-left-border .left-border:focus {
-    border: 2px solid #007BFF;
-    border-right: 10px solid #007BFF; }
+  border-right: 10px solid #BBBBBB;
+}
+.koala-form .p-left-border .left-border:focus {
+  border: 2px solid #007BFF;
+  border-right: 10px solid #007BFF;
+}
 .koala-form .p-filled-border-left-input .filled-border-left-input:focus {
   border-left: none;
-  border-right: 3px solid #007BFF; }
+  border-right: 3px solid #007BFF;
+}
 .koala-form .koala-input-float-icon input {
   padding-left: 0;
-  padding-right: 2.2em; }
+  padding-right: 2.2em;
+}
 .koala-form .koala-input-divided-icon .input-icon {
   border: 1px solid rgba(100, 100, 100, 0.5);
-  border-radius: 0 .5em 0.5em 0;
-  border-left: none; }
+  border-radius: 0 0.5em 0.5em 0;
+  border-left: none;
+}
 .koala-form .koala-input-divided-icon input {
   width: 85%;
-  border-radius: 0.625em 0 0 0.625em; }
+  border-radius: 0.625em 0 0 0.625em;
+}
+.koala-form .kCheckBoxInput-toggle .switch-input:checked + .switch-label::after {
+  right: 24px;
+}
+.koala-form .kCheckBoxInput-squareToggle .switch-input:checked + .switch-label::after {
+  right: 36px;
+}
 
 /*# sourceMappingURL=form-style-arabic.css.map */

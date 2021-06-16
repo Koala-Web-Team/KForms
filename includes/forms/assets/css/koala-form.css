@@ -1,22 +1,25 @@
 @charset "UTF-8";
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
-@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 @font-face {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   src: url("../fonts/fontawesome-webfont.eot");
   src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
   font-weight: normal;
-  font-style: normal; }
-.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .date-picker .selected-date, .date-picker-month .selected-date, *, .koala-form .koala-input-color {
+  font-style: normal;
+}
+.koala-form .koala-input-color, *, .date-picker-month .selected-date, .koala-form .date-picker .selected-date, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-input-file, .koala-form .koala-input-number, .koala-form .koala-textarea-field, .koala-form .koala-input-field, .koala-form .koala-search-field {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-.koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-number:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus, .koala-form .date-picker .selected-date:focus, .date-picker-month .selected-date:focus {
-  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.28); }
+.date-picker-month .selected-date:focus, .koala-form .date-picker .selected-date:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-number:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus {
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.28);
+}
 
-.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .date-picker .selected-date, .date-picker-month .selected-date {
-  transition: box-shadow .2s ease-in-out, border-color .2s ease-in-out; }
+.date-picker-month .selected-date, .koala-form .date-picker .selected-date, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-input-file, .koala-form .koala-input-number, .koala-form .koala-textarea-field, .koala-form .koala-input-field, .koala-form .koala-search-field {
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
 
 /*%button-basics{
   width: $defaultFormWidth;
@@ -34,7 +37,7 @@
     cursor: not-allowed;
   }
 }*/
-.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .date-picker .selected-date, .date-picker-month .selected-date {
+.date-picker-month .selected-date, .koala-form .date-picker .selected-date, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-input-file, .koala-form .koala-input-number, .koala-form .koala-textarea-field, .koala-form .koala-input-field, .koala-form .koala-search-field {
   border: 1px solid #BBBBBB;
   border-radius: 0.3125em;
   display: block;
@@ -46,12 +49,14 @@
   background-clip: padding-box;
   background-color: #fff;
   margin: 10px 0;
-  line-height: 2; }
-  .koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-number:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus, .koala-form .date-picker .selected-date:focus, .date-picker-month .selected-date:focus {
-    outline: none;
-    border: 1px solid #007BFF; }
+  line-height: 2;
+}
+.date-picker-month .selected-date:focus, .koala-form .date-picker .selected-date:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-number:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus {
+  outline: none;
+  border: 1px solid #007BFF;
+}
 
-.koala-form .koala-check-type .koala-radio, .koala-form .koala-check .koala-check-inset .koala-radio, .koala-form .koala-check .koala-check-group .koala-radio, .koala-form .koala-check-outset .koala-radio, .koala-form .koala-check .koala-check-type .koala-checkbox, .koala-form .koala-check .koala-check-inset .koala-checkbox, .koala-form .koala-check .koala-check-group .check-fill .koala-checkbox {
+.koala-form .koala-check .koala-check-group .check-fill .koala-checkbox, .koala-form .koala-check .koala-check-inset .koala-checkbox, .koala-form .koala-check .koala-check-type .koala-checkbox, .koala-form .koala-check-outset .koala-radio, .koala-form .koala-check .kCheckBoxInput-toggle .koala-radio, .koala-form .koala-check .kCheckBoxInput-squareToggle .koala-radio, .koala-form .koala-check .koala-check-group .koala-radio, .koala-form .koala-check .koala-check-inset .koala-radio, .koala-form .koala-check-type .koala-radio {
   appearance: none;
   outline: none;
   border: 1px solid rgba(100, 100, 100, 0.5);
@@ -63,39 +68,46 @@
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; }
+  background-size: contain;
+}
 
-.koala-form .koala-check-type, .koala-form .koala-check .koala-check-inset, .koala-form .koala-check .koala-check-group, .koala-form .koala-check-outset {
-  margin-bottom: 10px; }
-  .koala-form .koala-check-type .koala-radio, .koala-form .koala-check .koala-check-inset .koala-radio, .koala-form .koala-check .koala-check-group .koala-radio, .koala-form .koala-check-outset .koala-radio {
-    display: inline-block;
-    border-radius: 50%; }
-  .koala-form .koala-check-type .koala-radio-label, .koala-form .koala-check .koala-check-inset .koala-radio-label, .koala-form .koala-check .koala-check-group .koala-radio-label, .koala-form .koala-check-outset .koala-radio-label {
-    font-family: Arial;
-    color: #212529;
-    font-size: 15px;
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer; }
-
-.koala-form .koala-check-type .koala-radio:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23007BFF'/%3e%3c/svg%3e");
-  border: 1px solid #007BFF; }
-
-.koala-form .koala-check .koala-check-type .koala-checkbox:checked, .koala-form .koala-check .koala-check-inset .koala-checkbox:checked, .koala-form .koala-check .koala-check-group .check-fill .koala-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-  background-color: #007BFF;
-  border: 1px solid #007BFF; }
-
-.koala-form .koala-check .koala-check-type .koala-check-label, .koala-form .koala-check .koala-check-inset .koala-check-label, .koala-form .koala-check .koala-check-label, .koala-form .koala-check-outset .koala-check-label {
+.koala-form .koala-check-outset, .koala-form .koala-check .kCheckBoxInput-toggle, .koala-form .koala-check .kCheckBoxInput-squareToggle, .koala-form .koala-check .koala-check-group, .koala-form .koala-check .koala-check-inset, .koala-form .koala-check-type {
+  margin-bottom: 10px;
+}
+.koala-form .koala-check-outset .koala-radio, .koala-form .koala-check .kCheckBoxInput-toggle .koala-radio, .koala-form .koala-check .kCheckBoxInput-squareToggle .koala-radio, .koala-form .koala-check .koala-check-group .koala-radio, .koala-form .koala-check .koala-check-inset .koala-radio, .koala-form .koala-check-type .koala-radio {
+  display: inline-block;
+  border-radius: 50%;
+}
+.koala-form .koala-check-outset .koala-radio-label, .koala-form .koala-check .kCheckBoxInput-toggle .koala-radio-label, .koala-form .koala-check .kCheckBoxInput-squareToggle .koala-radio-label, .koala-form .koala-check .koala-check-group .koala-radio-label, .koala-form .koala-check .koala-check-inset .koala-radio-label, .koala-form .koala-check-type .koala-radio-label {
   font-family: Arial;
   color: #212529;
   font-size: 15px;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-.koala-form .range-wrap .koala-input-range-popup,
-.koala-form .range-wrap .koala-input-range-label, .koala-form .min-max-slider > input {
+.koala-form .koala-check-type .koala-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23007BFF'/%3e%3c/svg%3e");
+  border: 1px solid #007BFF;
+}
+
+.koala-form .koala-check .koala-check-group .check-fill .koala-checkbox:checked, .koala-form .koala-check .koala-check-inset .koala-checkbox:checked, .koala-form .koala-check .koala-check-type .koala-checkbox:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  background-color: #007BFF;
+  border: 1px solid #007BFF;
+}
+
+.koala-form .koala-check-outset .koala-check-label, .koala-form .koala-check .koala-check-label, .koala-form .koala-check .kCheckBoxInput-toggle .switch-label, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label, .koala-form .koala-check .koala-check-inset .koala-check-label, .koala-form .koala-check .koala-check-type .koala-check-label {
+  font-family: Arial;
+  color: #212529;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.koala-form .min-max-slider > input, .koala-form .range-wrap .koala-input-range-popup,
+.koala-form .range-wrap .koala-input-range-label {
   cursor: pointer;
   appearance: none;
   background-color: #dee2e6;
@@ -103,35 +115,40 @@
   height: 2px;
   width: 100%;
   outline: none;
-  opacity: 1; }
-  .koala-form .range-wrap .koala-input-range-popup::-webkit-slider-thumb,
-  .koala-form .range-wrap .koala-input-range-label::-webkit-slider-thumb, .koala-form .min-max-slider > input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: white;
-    border: 1px solid rgba(0, 123, 255, 0.24);
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    transition: box-shadow .2s ease-in-out; }
-  .koala-form .range-wrap .koala-input-range-popup::-moz-range-thumb,
-  .koala-form .range-wrap .koala-input-range-label::-moz-range-thumb, .koala-form .min-max-slider > input::-moz-range-thumb {
-    -moz-appearance: none;
-    background-color: white;
-    border: 1px solid rgba(0, 123, 255, 0.24);
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    transition: box-shadow .2s ease-in-out; }
-  .koala-form .range-wrap .koala-input-range-popup:focus::-webkit-slider-thumb,
-  .koala-form .range-wrap .koala-input-range-label:focus::-webkit-slider-thumb, .koala-form .min-max-slider > input:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-    border-radius: 50%;
-    background-clip: content-box; }
-  .koala-form .range-wrap .koala-input-range-popup:focus::-moz-range-thumb,
-  .koala-form .range-wrap .koala-input-range-label:focus::-moz-range-thumb, .koala-form .min-max-slider > input:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-    border-radius: 50%;
-    background-clip: content-box; }
+  opacity: 1;
+}
+.koala-form .min-max-slider > input::-webkit-slider-thumb, .koala-form .range-wrap .koala-input-range-popup::-webkit-slider-thumb,
+.koala-form .range-wrap .koala-input-range-label::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid rgba(0, 123, 255, 0.24);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.koala-form .min-max-slider > input::-moz-range-thumb, .koala-form .range-wrap .koala-input-range-popup::-moz-range-thumb,
+.koala-form .range-wrap .koala-input-range-label::-moz-range-thumb {
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid rgba(0, 123, 255, 0.24);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.koala-form .min-max-slider > input:focus::-webkit-slider-thumb, .koala-form .range-wrap .koala-input-range-popup:focus::-webkit-slider-thumb,
+.koala-form .range-wrap .koala-input-range-label:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+  border-radius: 50%;
+  background-clip: content-box;
+}
+.koala-form .min-max-slider > input:focus::-moz-range-thumb, .koala-form .range-wrap .koala-input-range-popup:focus::-moz-range-thumb,
+.koala-form .range-wrap .koala-input-range-label:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+  border-radius: 50%;
+  background-clip: content-box;
+}
 
 .koala-form {
   border: 1px solid #BBBBBB;
@@ -139,336 +156,529 @@
   width: 30%;
   margin-right: auto;
   margin-left: auto;
-  padding: 20px 10px; }
-  .koala-form .form-header {
-    margin-bottom: 25px;
-    font-family: Arial; }
-    .koala-form .form-header .form-title {
-      color: #343A40; }
-      .koala-form .form-header .form-title:after {
-        content: '';
-        border-bottom: 3px solid #007BFF;
-        display: block;
-        width: 25px;
-        margin-top: 10px; }
-  .koala-form .koala-label {
-    font-family: Arial;
-    color: #343A40;
-    font-size: 12px;
-    font-weight: bold; }
-  .koala-form .koala-fieldset {
-    border: 1px solid #BBBBBB;
-    border-radius: 0.625em;
-    padding: 10px; }
-    .koala-form .koala-fieldset .koala-legend {
-      margin-right: auto;
-      margin-left: auto;
-      padding: 0 7px;
-      font-family: Arial;
-      color: #343A40; }
-  .koala-form .koala-textarea-field {
-    height: 80px; }
-  .koala-form .koala-input-button {
-    width: 25%;
-    height: 40px;
-    padding: 3px 8px;
-    outline: none;
-    margin: 5px;
-    font-weight: bold;
-    border-radius: 0.625em;
-    border: 1px solid #007BFF;
-    border-radius: 0.3125em;
-    background-color: #007BFF;
-    opacity: 0.8;
-    color: #fff; }
-    .koala-form .koala-input-button:hover, .koala-form .koala-input-button:focus {
-      cursor: pointer;
-      transition: all .3s ease-in-out;
-      opacity: 1; }
-    .koala-form .koala-input-button:disabled:hover {
-      cursor: not-allowed; }
-    .koala-form .koala-input-button:disabled, .koala-form .koala-input-button:disabled:hover {
-      opacity: 0.5; }
-  .koala-form .koala-input-number {
-    padding-right: 0;
-    appearance: none; }
-  .koala-form .koala-input-range {
-    cursor: pointer;
-    appearance: none;
-    background-color: #dee2e6;
-    border-radius: 25px;
-    height: 7px;
-    width: 100%;
-    outline: none;
-    opacity: 1; }
-    .koala-form .koala-input-range::-webkit-slider-thumb {
-      background-color: #007BFF;
-      border-radius: 50%;
-      transition: box-shadow .2s ease-in-out; }
-    .koala-form .koala-input-range::-moz-range-thumb {
-      background-color: #007BFF;
-      border: none;
-      border-radius: 50%;
-      transition: box-shadow .2s ease-in-out; }
-    .koala-form .koala-input-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-      border-radius: 50%;
-      background-clip: content-box; }
-    .koala-form .koala-input-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-      border-radius: 50%;
-      background-clip: content-box; }
-  .koala-form .koala-input-file {
-    font-weight: unset;
-    padding: 0;
-    margin: 0 0 10px 0;
-    line-height: 0; }
-    .koala-form .koala-input-file::file-selector-button {
-      height: 100%;
-      border: none;
-      border-right: 1px solid #BBBBBB;
-      margin-right: 10px;
-      color: #343A40;
-      font-weight: unset;
-      outline: none; }
-    .koala-form .koala-input-file::-webkit-file-upload-button {
-      height: 100%;
-      border: none;
-      border-right: 1px solid #BBBBBB;
-      margin-right: 10px;
-      color: #343A40;
-      font-weight: unset;
-      outline: none; }
-  .koala-form .koala-input-color {
-    border: 1px solid #BBBBBB;
-    border-radius: 5px;
-    width: 40px;
-    height: 35px;
-    background-color: #fff;
-    outline: none; }
-    .koala-form .koala-input-color::-webkit-color-swatch {
-      border: none;
-      border-radius: 5px;
-      height: 100%;
-      width: 100%; }
-    .koala-form .koala-input-color::-moz-color-swatch {
-      border: none;
-      border-radius: 5px;
-      height: 90%;
-      margin-left: -1px;
-      width: 109%; }
-  .koala-form .koala-input-date, .koala-form .koala-input-time {
-    padding-right: 0; }
-    .koala-form .koala-input-date::-webkit-datetime-edit, .koala-form .koala-input-time::-webkit-datetime-edit {
-      color: #6C757D;
-      font-family: Arial; }
-    .koala-form .koala-input-date::-webkit-calendar-picker-indicator, .koala-form .koala-input-time::-webkit-calendar-picker-indicator {
-      opacity: 0.6;
-      background-color: #e9ecef;
-      padding: 25% 10px;
-      border-left: 1px solid #BBBBBB;
-      color: #DC3545; }
-  .koala-form .koala-type-date, .koala-form .koala-type-time {
-    padding: 0 8px;
-    font-family: Arial;
-    color: #6C757D; }
-  .koala-form .koala-check .check-title {
-    font-family: Arial;
-    color: #343A40;
-    margin-bottom: 15px; }
-
+  padding: 20px 10px;
+}
+.koala-form .form-header {
+  margin-bottom: 25px;
+  font-family: Arial;
+}
+.koala-form .form-header .form-title {
+  color: #343A40;
+}
+.koala-form .form-header .form-title:after {
+  content: "";
+  border-bottom: 3px solid #007BFF;
+  display: block;
+  width: 25px;
+  margin-top: 10px;
+}
+.koala-form .koala-label {
+  font-family: Arial;
+  color: #343A40;
+  font-size: 12px;
+  font-weight: bold;
+}
+.koala-form .koala-fieldset {
+  border: 1px solid #BBBBBB;
+  border-radius: 0.625em;
+  padding: 10px;
+}
+.koala-form .koala-fieldset .koala-legend {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 7px;
+  font-family: Arial;
+  color: #343A40;
+}
+.koala-form .koala-textarea-field {
+  height: 80px;
+}
+.koala-form .koala-input-button {
+  width: 25%;
+  height: 40px;
+  padding: 3px 8px;
+  outline: none;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 0.625em;
+  border: 1px solid #007BFF;
+  border-radius: 0.3125em;
+  background-color: #007BFF;
+  opacity: 0.8;
+  color: #fff;
+}
+.koala-form .koala-input-button:hover, .koala-form .koala-input-button:focus {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.koala-form .koala-input-button:disabled:hover {
+  cursor: not-allowed;
+}
+.koala-form .koala-input-button:disabled, .koala-form .koala-input-button:disabled:hover {
+  opacity: 0.5;
+}
+.koala-form .koala-input-number {
+  padding-right: 0;
+  appearance: none;
+}
+.koala-form .koala-input-range {
+  cursor: pointer;
+  appearance: none;
+  background-color: #dee2e6;
+  border-radius: 25px;
+  height: 7px;
+  width: 100%;
+  outline: none;
+  opacity: 1;
+}
+.koala-form .koala-input-range::-webkit-slider-thumb {
+  background-color: #007BFF;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.koala-form .koala-input-range::-moz-range-thumb {
+  background-color: #007BFF;
+  border: none;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.koala-form .koala-input-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+  border-radius: 50%;
+  background-clip: content-box;
+}
+.koala-form .koala-input-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
+  border-radius: 50%;
+  background-clip: content-box;
+}
+.koala-form .koala-input-file {
+  font-weight: unset;
+  padding: 0;
+  margin: 0 0 10px 0;
+  line-height: 0;
+}
+.koala-form .koala-input-file::file-selector-button {
+  height: 100%;
+  border: none;
+  border-right: 1px solid #BBBBBB;
+  margin-right: 10px;
+  color: #343A40;
+  font-weight: unset;
+  outline: none;
+}
+.koala-form .koala-input-file::-webkit-file-upload-button {
+  height: 100%;
+  border: none;
+  border-right: 1px solid #BBBBBB;
+  margin-right: 10px;
+  color: #343A40;
+  font-weight: unset;
+  outline: none;
+}
+.koala-form .koala-input-color {
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
+  width: 40px;
+  height: 35px;
+  background-color: #fff;
+  outline: none;
+}
+.koala-form .koala-input-color::-webkit-color-swatch {
+  border: none;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+.koala-form .koala-input-color::-moz-color-swatch {
+  border: none;
+  border-radius: 5px;
+  height: 90%;
+  margin-left: -1px;
+  width: 109%;
+}
+.koala-form .koala-input-date, .koala-form .koala-input-time {
+  padding-right: 0;
+}
+.koala-form .koala-input-date::-webkit-datetime-edit, .koala-form .koala-input-time::-webkit-datetime-edit {
+  color: #6C757D;
+  font-family: Arial;
+}
+.koala-form .koala-input-date::-webkit-calendar-picker-indicator, .koala-form .koala-input-time::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  background-color: #e9ecef;
+  padding: 25% 10px;
+  border-left: 1px solid #BBBBBB;
+  color: #DC3545;
+}
+.koala-form .koala-type-date, .koala-form .koala-type-time {
+  padding: 0 8px;
+  font-family: Arial;
+  color: #6C757D;
+}
+.koala-form .koala-check .check-title {
+  font-family: Arial;
+  color: #343A40;
+  margin-bottom: 15px;
+}
 @media only screen and (max-width: 1000px) {
   .koala-form {
-    width: 33.33333%; } }
+    width: 33.33333%;
+  }
+}
 @media only screen and (max-width: 768px) {
   .koala-form {
-    width: 50%; } }
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 576px) {
   .koala-form {
-    width: 75%; } }
+    width: 75%;
+  }
+}
 .koala-form .koala-outline-border {
   border: 1px solid #007BFF;
   border-radius: 0.625em;
   background-color: #fff;
   color: #007BFF;
-  border-radius: 0.3125em; }
-  .koala-form .koala-outline-border:hover, .koala-form .koala-outline-border:focus {
-    outline: none;
-    cursor: pointer;
-    color: #fff;
-    background-color: #007BFF; }
+  border-radius: 0.3125em;
+}
+.koala-form .koala-outline-border:hover, .koala-form .koala-outline-border:focus {
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007BFF;
+}
 .koala-form .koala-button-bRadius {
-  border-radius: 1.875em; }
+  border-radius: 1.875em;
+}
 .koala-form .koala-outline-success {
   border: 1px solid #28A745;
   border-radius: 0.625em;
   background-color: #fff;
   border-color: #28A745;
   color: #28A745;
-  border-color: #28A745; }
-  .koala-form .koala-outline-success:hover, .koala-form .koala-outline-success:focus {
-    background-color: #28A745;
-    border-color: #28A745;
-    color: #fff; }
-  .koala-form .koala-outline-success:disabled, .koala-form .koala-outline-success[disabled]:hover {
-    opacity: .5;
-    background-color: #fff;
-    color: #28A745; }
+  border-color: #28A745;
+}
+.koala-form .koala-outline-success:hover, .koala-form .koala-outline-success:focus {
+  background-color: #28A745;
+  border-color: #28A745;
+  color: #fff;
+}
+.koala-form .koala-outline-success:disabled, .koala-form .koala-outline-success[disabled]:hover {
+  opacity: 0.5;
+  background-color: #fff;
+  color: #28A745;
+}
 .koala-form .koala-outline-danger {
   border: 1px solid #DC3545;
   border-radius: 0.625em;
   background-color: #fff;
   border-color: #DC3545;
   color: #DC3545;
-  border-color: #DC3545; }
-  .koala-form .koala-outline-danger:hover, .koala-form .koala-outline-danger:focus {
-    background-color: #DC3545;
-    border-color: #DC3545;
-    color: #fff; }
-  .koala-form .koala-outline-danger:disabled, .koala-form .koala-outline-danger[disabled]:hover {
-    opacity: .5;
-    background-color: #fff;
-    color: #DC3545; }
+  border-color: #DC3545;
+}
+.koala-form .koala-outline-danger:hover, .koala-form .koala-outline-danger:focus {
+  background-color: #DC3545;
+  border-color: #DC3545;
+  color: #fff;
+}
+.koala-form .koala-outline-danger:disabled, .koala-form .koala-outline-danger[disabled]:hover {
+  opacity: 0.5;
+  background-color: #fff;
+  color: #DC3545;
+}
 .koala-form .koala-outline-golden {
   border: 1px solid #FFC107;
   border-radius: 0.625em;
   background-color: #fff;
   border-color: #FFC107;
   color: #FFC107;
-  border-color: #FFC107; }
-  .koala-form .koala-outline-golden:hover, .koala-form .koala-outline-golden:focus {
-    background-color: #FFC107;
-    border-color: #FFC107;
-    color: #fff; }
-  .koala-form .koala-outline-golden:disabled, .koala-form .koala-outline-golden[disabled]:hover {
-    opacity: .5;
-    background-color: #fff;
-    color: #FFC107; }
+  border-color: #FFC107;
+}
+.koala-form .koala-outline-golden:hover, .koala-form .koala-outline-golden:focus {
+  background-color: #FFC107;
+  border-color: #FFC107;
+  color: #fff;
+}
+.koala-form .koala-outline-golden:disabled, .koala-form .koala-outline-golden[disabled]:hover {
+  opacity: 0.5;
+  background-color: #fff;
+  color: #FFC107;
+}
 .koala-form .koala-opacity-button {
   background-color: rgba(0, 105, 217, 0.3);
   color: #007BFF;
-  border: none; }
-  .koala-form .koala-opacity-button:focus, .koala-form .koala-opacity-button:hover {
-    background-color: #007BFF;
-    color: #fff;
-    transition: all ease-in-out .3s; }
+  border: none;
+}
+.koala-form .koala-opacity-button:focus, .koala-form .koala-opacity-button:hover {
+  background-color: #007BFF;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+}
 .koala-form .koala-opacity-button-success {
   background-color: rgba(33, 136, 56, 0.3);
   color: #28A745;
-  border: none; }
-  .koala-form .koala-opacity-button-success:hover, .koala-form .koala-opacity-button-success:focus {
-    background-color: #28A745;
-    color: #fff; }
+  border: none;
+}
+.koala-form .koala-opacity-button-success:hover, .koala-form .koala-opacity-button-success:focus {
+  background-color: #28A745;
+  color: #fff;
+}
 .koala-form .koala-opacity-button-danger {
   background-color: rgba(200, 35, 51, 0.3);
   color: #DC3545;
-  border: none; }
-  .koala-form .koala-opacity-button-danger:hover, .koala-form .koala-opacity-button-danger:focus {
-    background-color: #DC3545;
-    color: #fff; }
+  border: none;
+}
+.koala-form .koala-opacity-button-danger:hover, .koala-form .koala-opacity-button-danger:focus {
+  background-color: #DC3545;
+  color: #fff;
+}
 .koala-form .koala-opacity-button-warning {
   background-color: rgba(224, 168, 0, 0.3);
   color: #FFC107;
-  border: none; }
-  .koala-form .koala-opacity-button-warning:hover, .koala-form .koala-opacity-button-warning:focus {
-    background-color: #FFC107;
-    color: #fff; }
+  border: none;
+}
+.koala-form .koala-opacity-button-warning:hover, .koala-form .koala-opacity-button-warning:focus {
+  background-color: #FFC107;
+  color: #fff;
+}
 .koala-form .koala-link-button {
   border: none;
   background-color: #fff;
-  color: #007BFF; }
-  .koala-form .koala-link-button:hover, .koala-form .koala-link-button:focus {
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer; }
-  .koala-form .koala-link-button:disabled, .koala-form .koala-link-button[disabled]:hover {
-    cursor: not-allowed; }
+  color: #007BFF;
+}
+.koala-form .koala-link-button:hover, .koala-form .koala-link-button:focus {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+.koala-form .koala-link-button:disabled, .koala-form .koala-link-button[disabled]:hover {
+  cursor: not-allowed;
+}
 .koala-form .koala-link-success {
-  color: #28A745; }
-  .koala-form .koala-link-success:hover, .koala-form .koala-link-success:focus {
-    background-color: #28A745;
-    color: #fff;
-    text-decoration: none; }
-  .koala-form .koala-link-success:disabled, .koala-form .koala-link-success[disabled]:hover {
-    background-color: #fff;
-    color: #28A745;
-    opacity: 0.5; }
+  color: #28A745;
+}
+.koala-form .koala-link-success:hover, .koala-form .koala-link-success:focus {
+  background-color: #28A745;
+  color: #fff;
+  text-decoration: none;
+}
+.koala-form .koala-link-success:disabled, .koala-form .koala-link-success[disabled]:hover {
+  background-color: #fff;
+  color: #28A745;
+  opacity: 0.5;
+}
 .koala-form .koala-link-danger {
-  color: #DC3545; }
-  .koala-form .koala-link-danger:hover, .koala-form .koala-link-danger:focus {
-    background-color: #DC3545;
-    color: #fff;
-    text-decoration: none; }
-  .koala-form .koala-link-danger:disabled, .koala-form .koala-link-danger[disabled]:hover {
-    background-color: #fff;
-    color: #DC3545;
-    opacity: 0.5; }
+  color: #DC3545;
+}
+.koala-form .koala-link-danger:hover, .koala-form .koala-link-danger:focus {
+  background-color: #DC3545;
+  color: #fff;
+  text-decoration: none;
+}
+.koala-form .koala-link-danger:disabled, .koala-form .koala-link-danger[disabled]:hover {
+  background-color: #fff;
+  color: #DC3545;
+  opacity: 0.5;
+}
 .koala-form .koala-link-golden {
-  color: #FFC107; }
-  .koala-form .koala-link-golden:hover, .koala-form .koala-link-golden:focus {
-    background-color: #FFC107;
-    color: #fff;
-    text-decoration: none; }
-  .koala-form .koala-link-golden:disabled, .koala-form .koala-link-golden[disabled]:hover {
-    background-color: #fff;
-    color: #FFC107;
-    opacity: 0.5; }
+  color: #FFC107;
+}
+.koala-form .koala-link-golden:hover, .koala-form .koala-link-golden:focus {
+  background-color: #FFC107;
+  color: #fff;
+  text-decoration: none;
+}
+.koala-form .koala-link-golden:disabled, .koala-form .koala-link-golden[disabled]:hover {
+  background-color: #fff;
+  color: #FFC107;
+  opacity: 0.5;
+}
 .koala-form .koala-input-button-success {
   background-color: #28A745;
   color: #fff;
   opacity: 0.8;
-  border: none; }
-  .koala-form .koala-input-button-success:hover, .koala-form .koala-input-button-success:focus {
-    opacity: 1; }
-  .koala-form .koala-input-button-success:disabled, .koala-form .koala-input-button-success:disabled:hover {
-    opacity: 0.5; }
+  border: none;
+}
+.koala-form .koala-input-button-success:hover, .koala-form .koala-input-button-success:focus {
+  opacity: 1;
+}
+.koala-form .koala-input-button-success:disabled, .koala-form .koala-input-button-success:disabled:hover {
+  opacity: 0.5;
+}
 .koala-form .koala-input-button-danger {
   background-color: #DC3545;
   color: #fff;
   opacity: 0.8;
-  border: none; }
-  .koala-form .koala-input-button-danger:hover, .koala-form .koala-input-button-danger:focus {
-    opacity: 1; }
-  .koala-form .koala-input-button-danger:disabled, .koala-form .koala-input-button-danger:disabled:hover {
-    opacity: 0.5; }
+  border: none;
+}
+.koala-form .koala-input-button-danger:hover, .koala-form .koala-input-button-danger:focus {
+  opacity: 1;
+}
+.koala-form .koala-input-button-danger:disabled, .koala-form .koala-input-button-danger:disabled:hover {
+  opacity: 0.5;
+}
 .koala-form .koala-input-button-warning {
   background-color: #FFC107;
   color: #fff;
   opacity: 0.8;
-  border: none; }
-  .koala-form .koala-input-button-warning:hover, .koala-form .koala-input-button-warning:focus {
-    opacity: 1; }
-  .koala-form .koala-input-button-warning:disabled, .koala-form .koala-input-button-warning:disabled:hover {
-    opacity: 0.5; }
+  border: none;
+}
+.koala-form .koala-input-button-warning:hover, .koala-form .koala-input-button-warning:focus {
+  opacity: 1;
+}
+.koala-form .koala-input-button-warning:disabled, .koala-form .koala-input-button-warning:disabled:hover {
+  opacity: 0.5;
+}
 
 .koala-form {
   /* Checkbox Different Styles*/
-  /* Radio Button Different Styles*/ }
-  .koala-form .koala-check .koala-check-inset .koala-checkbox:checked {
-    box-shadow: inset 0 0 0 .08em #fff; }
-  .koala-form .koala-check .koala-check-group {
-    width: -moz-fit-content;
-    width: fit-content;
-    border-radius: 5px;
-    border: 1px solid rgba(100, 100, 100, 0.5);
-    background-color: #fff;
-    padding-right: 5px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1; }
-    .koala-form .koala-check .koala-check-group .check-fill {
-      margin: 0;
-      background-color: #BBBBBB;
-      padding: 10% 0; }
-  .koala-form .koala-check .koala-check-label {
-    margin-left: 5px; }
-  .koala-form .koala-check-outset .koala-radio:checked {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
-    border: 1px solid dodgerblue;
-    background-color: dodgerblue; }
+  /* Radio Button Different Styles*/
+}
+.koala-form .koala-check .koala-check-inset .koala-checkbox:checked {
+  box-shadow: inset 0 0 0 0.08em #fff;
+}
+.koala-form .koala-check .koala-check-group {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  background-color: #fff;
+  padding-right: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.koala-form .koala-check .koala-check-group .check-fill {
+  margin: 0;
+  background-color: #BBBBBB;
+  padding: 10% 0;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle, .koala-form .koala-check .kCheckBoxInput-squareToggle {
+  position: relative;
+  display: block;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-input, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-input {
+  display: none;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-label, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label {
+  display: block;
+  position: relative;
+  text-indent: 60px;
+  height: 24px;
+  user-select: none;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-label::before, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label::before,
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-label::after,
+.koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-label::before, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label::before {
+  width: 48px;
+  height: 24px;
+  background-color: #dedede;
+  border-radius: 9999em;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-label::after, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label::after {
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-input:checked + .switch-label::before, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-input:checked + .switch-label::before {
+  background-color: dodgerblue;
+}
+.koala-form .koala-check .kCheckBoxInput-toggle .switch-input:checked + .switch-label::after, .koala-form .koala-check .kCheckBoxInput-squareToggle .switch-input:checked + .switch-label::after {
+  left: 24px;
+}
+.koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label::before {
+  border-radius: 4px;
+}
+.koala-form .koala-check .kCheckBoxInput-squareToggle .switch-label::after {
+  border-radius: 4px;
+  width: 12px;
+}
+.koala-form .koala-check .kCheckBoxInput-squareToggle .switch-input:checked + .switch-label::after {
+  left: 36px;
+}
+.koala-form .koala-check .koala-check-label {
+  margin-left: 5px;
+}
+.koala-form .koala-check-outset .koala-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border: 1px solid dodgerblue;
+  background-color: dodgerblue;
+}
+.p-bordered-bottom {
+  margin-bottom: 10px;
+}
+.p-bordered-bottom .bordered-bottom {
+  border: none;
+  border-bottom: 1px solid #BBBBBB;
+  border-radius: 0;
+  outline: none;
+  transition: border-bottom-color 0.5s;
+}
+.p-bordered-bottom .bordered-bottom:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #007BFF;
+  box-shadow: none;
+}
 
-.koala-form {
-  /*.p-border-bottom-animation-left{
+.p-filled-border-input, .p-filled-border-left-input {
+  margin-bottom: 10px;
+}
+.p-filled-border-input .filled-border-input, .p-filled-border-left-input .filled-border-input, .p-filled-border-left-input .filled-border-left-input {
+  border: none;
+  background-color: rgba(187, 187, 187, 0.2);
+  border-radius: 0;
+  border-bottom: 1px solid #BBBBBB;
+}
+.p-filled-border-input .filled-border-input::placeholder, .p-filled-border-left-input .filled-border-input::placeholder, .p-filled-border-left-input .filled-border-left-input::placeholder {
+  color: #6C757D;
+}
+.p-filled-border-input .filled-border-input:focus, .p-filled-border-left-input .filled-border-input:focus, .p-filled-border-left-input .filled-border-left-input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #007BFF;
+}
+
+.p-left-border {
+  margin-bottom: 10px;
+}
+.p-left-border .left-border {
+  border-left: 10px solid #BBBBBB;
+}
+.p-left-border .left-border:focus {
+  border: 2px solid #007BFF;
+  border-left: 10px solid #007BFF;
+  outline: none;
+  box-shadow: none;
+}
+
+.p-filled-border-left-input .filled-border-left-input {
+  transition: border-left 0.1s ease-in-out;
+  border-bottom: none;
+}
+.p-filled-border-left-input .filled-border-left-input:focus {
+  border-bottom: none;
+  border-left: 3px solid #007BFF;
+}
+
+/*.p-border-bottom-animation-left{
       position: relative;
     .border-animation{
       margin: 0;
@@ -495,722 +705,282 @@
     transition: width 0.3s ease-out;
   }
 }*/
-  /*.p-border-bottom-animation-center{
-    position: relative;
-    .border-animation{
-      margin: 0;
-      &:focus{
-        border-left: none;
-      }
+/*.p-border-bottom-animation-center{
+  position: relative;
+  .border-animation{
+    margin: 0;
+    &:focus{
+      border-left: none;
     }
-    &::before {
-      box-sizing: inherit;
-      content: '';
-      position: absolute;
-      z-index: -1;
-      border-bottom: 2px solid $focusedColor;
-      width: 0;
-    }
-    &::before {
-      bottom: 0;
-      left: 50%;
-    }
-    &:focus-within::before{
-      width: 100%;
-      border-top-color: $focusedColor;
-      border-right-color: $focusedColor;
-      transition: width 0.3s ease-out;
-      left: 0;
-    }
-  }*/
-  /*Float Labels*/ }
-  .koala-form .p-bordered-bottom {
-    margin-bottom: 10px; }
-    .koala-form .p-bordered-bottom .bordered-bottom {
-      border: none;
-      border-bottom: 1px solid #BBBBBB;
-      border-radius: 0;
-      outline: none;
-      transition: border-bottom-color 0.5s; }
-      .koala-form .p-bordered-bottom .bordered-bottom:focus {
-        outline: none;
-        border: none;
-        border-bottom: 2px solid #007BFF;
-        box-shadow: none; }
-  .koala-form .p-filled-border-input, .koala-form .p-filled-border-left-input {
-    margin-bottom: 10px; }
-    .koala-form .p-filled-border-input .filled-border-input, .koala-form .p-filled-border-left-input .filled-border-input, .koala-form .p-filled-border-left-input .filled-border-left-input {
-      border: none;
-      background-color: rgba(187, 187, 187, 0.2);
-      border-radius: 0;
-      border-bottom: 1px solid #BBBBBB; }
-      .koala-form .p-filled-border-input .filled-border-input::placeholder, .koala-form .p-filled-border-left-input .filled-border-input::placeholder, .koala-form .p-filled-border-left-input .filled-border-left-input::placeholder {
-        color: #6C757D; }
-      .koala-form .p-filled-border-input .filled-border-input:focus, .koala-form .p-filled-border-left-input .filled-border-input:focus, .koala-form .p-filled-border-left-input .filled-border-left-input:focus {
-        outline: none;
-        box-shadow: none;
-        border: none;
-        border-bottom: 2px solid #007BFF; }
-  .koala-form .p-left-border {
-    margin-bottom: 10px; }
-    .koala-form .p-left-border .left-border {
-      border-left: 10px solid #BBBBBB; }
-      .koala-form .p-left-border .left-border:focus {
-        border: 2px solid #007BFF;
-        border-left: 10px solid #007BFF;
-        outline: none;
-        box-shadow: none; }
-  .koala-form .p-filled-border-left-input .filled-border-left-input {
-    transition: border-left 0.1s ease-in-out;
-    border-bottom: none; }
-    .koala-form .p-filled-border-left-input .filled-border-left-input:focus {
-      border-bottom: none;
-      border-left: 3px solid #007BFF; }
-  .koala-form .koala-input-float-icon {
-    position: relative; }
-    .koala-form .koala-input-float-icon .input-icon {
-      position: absolute;
-      margin: 0 0.75em;
-      color: #7c7e80;
-      top: 50%;
-      transform: translateY(-50%); }
-    .koala-form .koala-input-float-icon input {
-      padding-left: 2.2em; }
-  .koala-form .koala-input-divided-icon {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    align-items: center;
-    height: 40px; }
-    .koala-form .koala-input-divided-icon .input-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #e9ecef;
-      width: 15%;
-      margin: 0;
-      height: 100%;
-      border: 1px solid rgba(100, 100, 100, 0.5);
-      border-radius: .5em 0 0 0.5em;
-      border-right: none;
-      color: #7c7e80; }
-    .koala-form .koala-input-divided-icon input {
-      width: 85%;
-      border-radius: 0 0.625em 0.625em 0; }
-  .koala-form .koala-float-label, .koala-form .koala-float-label-inset {
-    position: relative;
-    margin: 25px 0;
-    font-family: Arial; }
-    .koala-form .koala-float-label .float-label, .koala-form .koala-float-label-inset .float-label {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      margin: 0 8px;
-      color: #7c7e80;
-      font-size: 15px;
-      font-weight: normal;
-      cursor: text; }
-    .koala-form .koala-float-label .float-focused, .koala-form .koala-float-label-inset .float-focused {
-      transition: all ease-in-out 0.3s;
-      top: -12px;
-      margin: 0;
-      font-size: 12px;
-      font-weight: bold;
-      color: #007BFF; }
-    .koala-form .koala-float-label .float-valid-blur, .koala-form .koala-float-label-inset .float-valid-blur {
-      top: -12px;
-      margin: 0;
-      font-size: 12px;
-      font-weight: bold;
-      color: #343A40; }
-  .koala-form .koala-float-label-inset input {
-    height: 55px; }
-    .koala-form .koala-float-label-inset input:not(:placeholder-shown) {
-      padding-top: 15px; }
-  .koala-form .koala-float-label-inset .float-focused {
-    top: 25%;
-    margin: 0 8px; }
-  .koala-form .koala-float-label-inset .float-valid-blur {
-    top: 25%;
-    margin: 0 8px; }
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .date-picker .selected-date, .date-picker-month .selected-date, *, .koala-form .koala-input-color {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-number:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus, .koala-form .date-picker .selected-date:focus, .date-picker-month .selected-date:focus {
-  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.28); }
-
-.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .date-picker .selected-date, .date-picker-month .selected-date {
-  transition: box-shadow .2s ease-in-out, border-color .2s ease-in-out; }
-
-/*%button-basics{
-  width: $defaultFormWidth;
-  height: $inputHeight;
-  padding: 3px 8px;
-  outline: none;
-  margin: $publicMargin - 5px;
-  font-weight: bold;
-  border-radius: $mainBorderRadius;
-  &:hover,&:focus{
-    cursor: pointer;
-    transition: all .3s ease-in-out;
   }
-  &:disabled:hover{
-    cursor: not-allowed;
+  &::before {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-bottom: 2px solid $focusedColor;
+    width: 0;
+  }
+  &::before {
+    bottom: 0;
+    left: 50%;
+  }
+  &:focus-within::before{
+    width: 100%;
+    border-top-color: $focusedColor;
+    border-right-color: $focusedColor;
+    transition: width 0.3s ease-out;
+    left: 0;
   }
 }*/
-.koala-form .koala-input-field, .koala-form .koala-search-field, .koala-form .koala-textarea-field, .koala-form .koala-input-number, .koala-form .koala-input-file, .koala-form .koala-input-date, .koala-form .koala-input-time, .koala-form .koala-type-date, .koala-form .koala-type-time, .koala-form .date-picker .selected-date, .date-picker-month .selected-date {
-  border: 1px solid #BBBBBB;
-  border-radius: 0.3125em;
-  display: block;
-  width: 100%;
+.koala-input-float-icon {
+  position: relative;
+}
+.koala-input-float-icon .input-icon {
+  position: absolute;
+  margin: 0 0.75em;
+  color: #7c7e80;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.koala-input-float-icon input {
+  padding-left: 2.2em;
+}
+
+.koala-input-divided-icon {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  align-items: center;
   height: 40px;
-  color: #343A40;
-  padding: 3px 8px;
-  font-size: 15px;
-  background-clip: padding-box;
-  background-color: #fff;
-  margin: 10px 0;
-  line-height: 2; }
-  .koala-form .koala-input-field:focus, .koala-form .koala-search-field:focus, .koala-form .koala-textarea-field:focus, .koala-form .koala-input-number:focus, .koala-form .koala-input-file:focus, .koala-form .koala-input-date:focus, .koala-form .koala-input-time:focus, .koala-form .koala-type-date:focus, .koala-form .koala-type-time:focus, .koala-form .date-picker .selected-date:focus, .date-picker-month .selected-date:focus {
-    outline: none;
-    border: 1px solid #007BFF; }
-
-.koala-form .koala-check-type .koala-radio, .koala-form .koala-check .koala-check-inset .koala-radio, .koala-form .koala-check .koala-check-group .koala-radio, .koala-form .koala-check-outset .koala-radio, .koala-form .koala-check .koala-check-type .koala-checkbox, .koala-form .koala-check .koala-check-inset .koala-checkbox, .koala-form .koala-check .koala-check-group .check-fill .koala-checkbox {
-  appearance: none;
-  outline: none;
+}
+.koala-input-divided-icon .input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef;
+  width: 15%;
+  margin: 0;
+  height: 100%;
   border: 1px solid rgba(100, 100, 100, 0.5);
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  border-radius: 25%;
-  transition: all ease-in-out 0.15s;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; }
+  border-radius: 0.5em 0 0 0.5em;
+  border-right: none;
+  color: #7c7e80;
+}
+.koala-input-divided-icon input {
+  width: 85%;
+  border-radius: 0 0.625em 0.625em 0;
+}
 
-.koala-form .koala-check-type, .koala-form .koala-check .koala-check-inset, .koala-form .koala-check .koala-check-group, .koala-form .koala-check-outset {
-  margin-bottom: 10px; }
-  .koala-form .koala-check-type .koala-radio, .koala-form .koala-check .koala-check-inset .koala-radio, .koala-form .koala-check .koala-check-group .koala-radio, .koala-form .koala-check-outset .koala-radio {
-    display: inline-block;
-    border-radius: 50%; }
-  .koala-form .koala-check-type .koala-radio-label, .koala-form .koala-check .koala-check-inset .koala-radio-label, .koala-form .koala-check .koala-check-group .koala-radio-label, .koala-form .koala-check-outset .koala-radio-label {
-    font-family: Arial;
-    color: #212529;
-    font-size: 15px;
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer; }
-
-.koala-form .koala-check-type .koala-radio:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23007BFF'/%3e%3c/svg%3e");
-  border: 1px solid #007BFF; }
-
-.koala-form .koala-check .koala-check-type .koala-checkbox:checked, .koala-form .koala-check .koala-check-inset .koala-checkbox:checked, .koala-form .koala-check .koala-check-group .check-fill .koala-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-  background-color: #007BFF;
-  border: 1px solid #007BFF; }
-
-.koala-form .koala-check .koala-check-type .koala-check-label, .koala-form .koala-check .koala-check-inset .koala-check-label, .koala-form .koala-check .koala-check-label, .koala-form .koala-check-outset .koala-check-label {
+/*Float Labels*/
+.koala-float-label, .koala-float-label-inset {
+  position: relative;
+  margin: 25px 0;
   font-family: Arial;
-  color: #212529;
+}
+.koala-float-label .float-label, .koala-float-label-inset .float-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 8px;
+  color: #7c7e80;
   font-size: 15px;
-  display: inline-block;
-  vertical-align: middle; }
-
-.koala-form .range-wrap .koala-input-range-popup,
-.koala-form .range-wrap .koala-input-range-label, .koala-form .min-max-slider > input {
-  cursor: pointer;
-  appearance: none;
-  background-color: #dee2e6;
-  border-radius: 25px;
-  height: 2px;
-  width: 100%;
-  outline: none;
-  opacity: 1; }
-  .koala-form .range-wrap .koala-input-range-popup::-webkit-slider-thumb,
-  .koala-form .range-wrap .koala-input-range-label::-webkit-slider-thumb, .koala-form .min-max-slider > input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: white;
-    border: 1px solid rgba(0, 123, 255, 0.24);
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    transition: box-shadow .2s ease-in-out; }
-  .koala-form .range-wrap .koala-input-range-popup::-moz-range-thumb,
-  .koala-form .range-wrap .koala-input-range-label::-moz-range-thumb, .koala-form .min-max-slider > input::-moz-range-thumb {
-    -moz-appearance: none;
-    background-color: white;
-    border: 1px solid rgba(0, 123, 255, 0.24);
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    transition: box-shadow .2s ease-in-out; }
-  .koala-form .range-wrap .koala-input-range-popup:focus::-webkit-slider-thumb,
-  .koala-form .range-wrap .koala-input-range-label:focus::-webkit-slider-thumb, .koala-form .min-max-slider > input:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-    border-radius: 50%;
-    background-clip: content-box; }
-  .koala-form .range-wrap .koala-input-range-popup:focus::-moz-range-thumb,
-  .koala-form .range-wrap .koala-input-range-label:focus::-moz-range-thumb, .koala-form .min-max-slider > input:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-    border-radius: 50%;
-    background-clip: content-box; }
-
-.koala-form {
-  border: 1px solid #BBBBBB;
-  border-radius: 1.25em;
-  width: 30%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px 10px; }
-  .koala-form .form-header {
-    margin-bottom: 25px;
-    font-family: Arial; }
-    .koala-form .form-header .form-title {
-      color: #343A40; }
-      .koala-form .form-header .form-title:after {
-        content: '';
-        border-bottom: 3px solid #007BFF;
-        display: block;
-        width: 25px;
-        margin-top: 10px; }
-  .koala-form .koala-label {
-    font-family: Arial;
-    color: #343A40;
-    font-size: 12px;
-    font-weight: bold; }
-  .koala-form .koala-fieldset {
-    border: 1px solid #BBBBBB;
-    border-radius: 0.625em;
-    padding: 10px; }
-    .koala-form .koala-fieldset .koala-legend {
-      margin-right: auto;
-      margin-left: auto;
-      padding: 0 7px;
-      font-family: Arial;
-      color: #343A40; }
-  .koala-form .koala-textarea-field {
-    height: 80px; }
-  .koala-form .koala-input-button {
-    width: 25%;
-    height: 40px;
-    padding: 3px 8px;
-    outline: none;
-    margin: 5px;
-    font-weight: bold;
-    border-radius: 0.625em;
-    border: 1px solid #007BFF;
-    border-radius: 0.3125em;
-    background-color: #007BFF;
-    opacity: 0.8;
-    color: #fff; }
-    .koala-form .koala-input-button:hover, .koala-form .koala-input-button:focus {
-      cursor: pointer;
-      transition: all .3s ease-in-out;
-      opacity: 1; }
-    .koala-form .koala-input-button:disabled:hover {
-      cursor: not-allowed; }
-    .koala-form .koala-input-button:disabled, .koala-form .koala-input-button:disabled:hover {
-      opacity: 0.5; }
-  .koala-form .koala-input-number {
-    padding-right: 0;
-    appearance: none; }
-  .koala-form .koala-input-range {
-    cursor: pointer;
-    appearance: none;
-    background-color: #dee2e6;
-    border-radius: 25px;
-    height: 7px;
-    width: 100%;
-    outline: none;
-    opacity: 1; }
-    .koala-form .koala-input-range::-webkit-slider-thumb {
-      background-color: #007BFF;
-      border-radius: 50%;
-      transition: box-shadow .2s ease-in-out; }
-    .koala-form .koala-input-range::-moz-range-thumb {
-      background-color: #007BFF;
-      border: none;
-      border-radius: 50%;
-      transition: box-shadow .2s ease-in-out; }
-    .koala-form .koala-input-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-      border-radius: 50%;
-      background-clip: content-box; }
-    .koala-form .koala-input-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(0, 123, 255, 0.24);
-      border-radius: 50%;
-      background-clip: content-box; }
-  .koala-form .koala-input-file {
-    font-weight: unset;
-    padding: 0;
-    margin: 0 0 10px 0;
-    line-height: 0; }
-    .koala-form .koala-input-file::file-selector-button {
-      height: 100%;
-      border: none;
-      border-right: 1px solid #BBBBBB;
-      margin-right: 10px;
-      color: #343A40;
-      font-weight: unset;
-      outline: none; }
-    .koala-form .koala-input-file::-webkit-file-upload-button {
-      height: 100%;
-      border: none;
-      border-right: 1px solid #BBBBBB;
-      margin-right: 10px;
-      color: #343A40;
-      font-weight: unset;
-      outline: none; }
-  .koala-form .koala-input-color {
-    border: 1px solid #BBBBBB;
-    border-radius: 5px;
-    width: 40px;
-    height: 35px;
-    background-color: #fff;
-    outline: none; }
-    .koala-form .koala-input-color::-webkit-color-swatch {
-      border: none;
-      border-radius: 5px;
-      height: 100%;
-      width: 100%; }
-    .koala-form .koala-input-color::-moz-color-swatch {
-      border: none;
-      border-radius: 5px;
-      height: 90%;
-      margin-left: -1px;
-      width: 109%; }
-  .koala-form .koala-input-date, .koala-form .koala-input-time {
-    padding-right: 0; }
-    .koala-form .koala-input-date::-webkit-datetime-edit, .koala-form .koala-input-time::-webkit-datetime-edit {
-      color: #6C757D;
-      font-family: Arial; }
-    .koala-form .koala-input-date::-webkit-calendar-picker-indicator, .koala-form .koala-input-time::-webkit-calendar-picker-indicator {
-      opacity: 0.6;
-      background-color: #e9ecef;
-      padding: 25% 10px;
-      border-left: 1px solid #BBBBBB;
-      color: #DC3545; }
-  .koala-form .koala-type-date, .koala-form .koala-type-time {
-    padding: 0 8px;
-    font-family: Arial;
-    color: #6C757D; }
-  .koala-form .koala-check .check-title {
-    font-family: Arial;
-    color: #343A40;
-    margin-bottom: 15px; }
-
-@media only screen and (max-width: 1000px) {
-  .koala-form {
-    width: 33.33333%; } }
-@media only screen and (max-width: 768px) {
-  .koala-form {
-    width: 50%; } }
-@media only screen and (max-width: 576px) {
-  .koala-form {
-    width: 75%; } }
-.koala-form .koala-outline-border {
-  border: 1px solid #007BFF;
-  border-radius: 0.625em;
-  background-color: #fff;
+  font-weight: normal;
+  cursor: text;
+}
+.koala-float-label .float-focused, .koala-float-label-inset .float-focused {
+  transition: all ease-in-out 0.3s;
+  top: -12px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
   color: #007BFF;
-  border-radius: 0.3125em; }
-  .koala-form .koala-outline-border:hover, .koala-form .koala-outline-border:focus {
-    outline: none;
-    cursor: pointer;
-    color: #fff;
-    background-color: #007BFF; }
-.koala-form .koala-button-bRadius {
-  border-radius: 1.875em; }
-.koala-form .koala-outline-success {
-  border: 1px solid #28A745;
-  border-radius: 0.625em;
-  background-color: #fff;
-  border-color: #28A745;
-  color: #28A745;
-  border-color: #28A745; }
-  .koala-form .koala-outline-success:hover, .koala-form .koala-outline-success:focus {
-    background-color: #28A745;
-    border-color: #28A745;
-    color: #fff; }
-  .koala-form .koala-outline-success:disabled, .koala-form .koala-outline-success[disabled]:hover {
-    opacity: .5;
-    background-color: #fff;
-    color: #28A745; }
-.koala-form .koala-outline-danger {
-  border: 1px solid #DC3545;
-  border-radius: 0.625em;
-  background-color: #fff;
-  border-color: #DC3545;
-  color: #DC3545;
-  border-color: #DC3545; }
-  .koala-form .koala-outline-danger:hover, .koala-form .koala-outline-danger:focus {
-    background-color: #DC3545;
-    border-color: #DC3545;
-    color: #fff; }
-  .koala-form .koala-outline-danger:disabled, .koala-form .koala-outline-danger[disabled]:hover {
-    opacity: .5;
-    background-color: #fff;
-    color: #DC3545; }
-.koala-form .koala-outline-golden {
-  border: 1px solid #FFC107;
-  border-radius: 0.625em;
-  background-color: #fff;
-  border-color: #FFC107;
-  color: #FFC107;
-  border-color: #FFC107; }
-  .koala-form .koala-outline-golden:hover, .koala-form .koala-outline-golden:focus {
-    background-color: #FFC107;
-    border-color: #FFC107;
-    color: #fff; }
-  .koala-form .koala-outline-golden:disabled, .koala-form .koala-outline-golden[disabled]:hover {
-    opacity: .5;
-    background-color: #fff;
-    color: #FFC107; }
-.koala-form .koala-opacity-button {
-  background-color: rgba(0, 105, 217, 0.3);
-  color: #007BFF;
-  border: none; }
-  .koala-form .koala-opacity-button:focus, .koala-form .koala-opacity-button:hover {
-    background-color: #007BFF;
-    color: #fff;
-    transition: all ease-in-out .3s; }
-.koala-form .koala-opacity-button-success {
-  background-color: rgba(33, 136, 56, 0.3);
-  color: #28A745;
-  border: none; }
-  .koala-form .koala-opacity-button-success:hover, .koala-form .koala-opacity-button-success:focus {
-    background-color: #28A745;
-    color: #fff; }
-.koala-form .koala-opacity-button-danger {
-  background-color: rgba(200, 35, 51, 0.3);
-  color: #DC3545;
-  border: none; }
-  .koala-form .koala-opacity-button-danger:hover, .koala-form .koala-opacity-button-danger:focus {
-    background-color: #DC3545;
-    color: #fff; }
-.koala-form .koala-opacity-button-warning {
-  background-color: rgba(224, 168, 0, 0.3);
-  color: #FFC107;
-  border: none; }
-  .koala-form .koala-opacity-button-warning:hover, .koala-form .koala-opacity-button-warning:focus {
-    background-color: #FFC107;
-    color: #fff; }
-.koala-form .koala-link-button {
-  border: none;
-  background-color: #fff;
-  color: #007BFF; }
-  .koala-form .koala-link-button:hover, .koala-form .koala-link-button:focus {
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer; }
-  .koala-form .koala-link-button:disabled, .koala-form .koala-link-button[disabled]:hover {
-    cursor: not-allowed; }
-.koala-form .koala-link-success {
-  color: #28A745; }
-  .koala-form .koala-link-success:hover, .koala-form .koala-link-success:focus {
-    background-color: #28A745;
-    color: #fff;
-    text-decoration: none; }
-  .koala-form .koala-link-success:disabled, .koala-form .koala-link-success[disabled]:hover {
-    background-color: #fff;
-    color: #28A745;
-    opacity: 0.5; }
-.koala-form .koala-link-danger {
-  color: #DC3545; }
-  .koala-form .koala-link-danger:hover, .koala-form .koala-link-danger:focus {
-    background-color: #DC3545;
-    color: #fff;
-    text-decoration: none; }
-  .koala-form .koala-link-danger:disabled, .koala-form .koala-link-danger[disabled]:hover {
-    background-color: #fff;
-    color: #DC3545;
-    opacity: 0.5; }
-.koala-form .koala-link-golden {
-  color: #FFC107; }
-  .koala-form .koala-link-golden:hover, .koala-form .koala-link-golden:focus {
-    background-color: #FFC107;
-    color: #fff;
-    text-decoration: none; }
-  .koala-form .koala-link-golden:disabled, .koala-form .koala-link-golden[disabled]:hover {
-    background-color: #fff;
-    color: #FFC107;
-    opacity: 0.5; }
-.koala-form .koala-input-button-success {
-  background-color: #28A745;
-  color: #fff;
-  opacity: 0.8;
-  border: none; }
-  .koala-form .koala-input-button-success:hover, .koala-form .koala-input-button-success:focus {
-    opacity: 1; }
-  .koala-form .koala-input-button-success:disabled, .koala-form .koala-input-button-success:disabled:hover {
-    opacity: 0.5; }
-.koala-form .koala-input-button-danger {
-  background-color: #DC3545;
-  color: #fff;
-  opacity: 0.8;
-  border: none; }
-  .koala-form .koala-input-button-danger:hover, .koala-form .koala-input-button-danger:focus {
-    opacity: 1; }
-  .koala-form .koala-input-button-danger:disabled, .koala-form .koala-input-button-danger:disabled:hover {
-    opacity: 0.5; }
-.koala-form .koala-input-button-warning {
-  background-color: #FFC107;
-  color: #fff;
-  opacity: 0.8;
-  border: none; }
-  .koala-form .koala-input-button-warning:hover, .koala-form .koala-input-button-warning:focus {
-    opacity: 1; }
-  .koala-form .koala-input-button-warning:disabled, .koala-form .koala-input-button-warning:disabled:hover {
-    opacity: 0.5; }
+}
+.koala-float-label .float-valid-blur, .koala-float-label-inset .float-valid-blur {
+  top: -12px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #343A40;
+}
+
+.koala-float-label-inset input {
+  height: 55px;
+}
+.koala-float-label-inset input:not(:placeholder-shown) {
+  padding-top: 15px;
+}
+.koala-float-label-inset .float-focused {
+  top: 25%;
+  margin: 0 8px;
+}
+.koala-float-label-inset .float-valid-blur {
+  top: 25%;
+  margin: 0 8px;
+}
 
 .koala-form {
   /*Range Type*/
   /* webkit specific styling */
-  /*Numeric Type*/ }
-  .koala-form .range-wrap {
-    width: 100%;
-    position: relative;
-    margin: 30px 0;
-    font-family: Arial; }
-    .koala-form .range-wrap .range-popup {
-      position: absolute;
-      top: -150%; }
-      .koala-form .range-wrap .range-popup span {
-        width: 40px;
-        height: 24px;
-        line-height: 24px;
-        text-align: center;
-        background: #007BFF;
-        color: #fff;
-        font-size: 12px;
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        border-radius: 6px; }
-      .koala-form .range-wrap .range-popup span:before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: 10px solid #007BFF;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        top: 90%;
-        left: 50%;
-        margin-left: -5px;
-        margin-top: -1px; }
-    .koala-form .range-wrap .range-label {
-      position: absolute;
-      left: 10px;
-      top: 25px; }
-  .koala-form span.labelsContainer {
-    position: relative;
-    left: 10px;
-    top: 15px; }
-  .koala-form span.value.lower::before {
-    content: "€";
-    display: inline-block; }
-  .koala-form span.value.upper::before {
-    content: "- €";
-    display: inline-block;
-    left: 110%; }
-  .koala-form .min-max-slider > input {
-    cursor: pointer;
-    position: absolute; }
-  .koala-form .min-max-slider > input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: white;
-    border: 1px solid rgba(0, 123, 255, 0.24);
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    transition: box-shadow .2s ease-in-out; }
-  .koala-form .min-max-slider > input::-webkit-slider-runnable-track {
-    cursor: pointer; }
-  .koala-form .number-input, .koala-form .number-input-right {
-    border: 1px solid #BBBBBB;
-    border-radius: 6px;
-    display: inline-flex;
-    width: 100%;
-    height: 40px;
-    margin-bottom: 10px; }
-    .koala-form .number-input .custom-number-input, .koala-form .number-input-right .custom-number-input {
-      -webkit-appearance: textfield;
-      -moz-appearance: textfield;
-      border: none;
-      border-left: 1px solid #BBBBBB;
-      border-right: 1px solid #BBBBBB;
-      height: unset;
-      border-radius: 0;
-      width: 60%;
-      margin: 0;
-      outline: none;
-      text-align: center;
-      background-clip: content-box; }
-      .koala-form .number-input .custom-number-input::-webkit-inner-spin-button, .koala-form .number-input-right .custom-number-input::-webkit-inner-spin-button, .koala-form .number-input .custom-number-input::-webkit-outer-spin-button, .koala-form .number-input-right .custom-number-input::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        -moz-appearance: none; }
-      .koala-form .number-input .custom-number-input:active, .koala-form .number-input-right .custom-number-input:active {
-        outline: none; }
-    .koala-form .number-input button, .koala-form .number-input-right button {
-      outline: none;
-      -webkit-appearance: none;
-      background-color: transparent;
-      border: none;
-      align-items: center;
-      justify-content: center;
-      width: 20%;
-      height: 40px;
-      cursor: pointer;
-      margin: 0;
-      position: relative; }
-    .koala-form .number-input *, .koala-form .number-input-right * {
-      color: #007BFF;
-      font-size: 20px;
-      box-sizing: border-box; }
-  .koala-form .number-input-right {
-    position: relative; }
-    .koala-form .number-input-right .custom-number-input {
-      width: 80%;
-      border-left: none;
-      border-right: 1px solid #BBBBBB; }
-    .koala-form .number-input-right button {
-      -webkit-appearance: none;
-      background-color: transparent;
-      border: none;
-      text-align: center;
-      line-height: 10px;
-      width: 20%;
-      height: 20px;
-      cursor: pointer;
-      position: absolute;
-      padding: 0;
-      right: 0;
-      color: #BBBBBB;
-      transition: all ease-in-out 0.25s; }
-      .koala-form .number-input-right button:hover {
-        color: #007BFF; }
-    .koala-form .number-input-right .plus {
-      top: 0; }
-    .koala-form .number-input-right .minus {
-      bottom: 0;
-      border-top: 1px solid #BBBBBB; }
-    .koala-form .number-input-right * {
-      color: #007BFF;
-      font-size: 20px;
-      box-sizing: border-box; }
+  /*Numeric Type*/
+}
+.koala-form .range-wrap {
+  width: 100%;
+  position: relative;
+  margin: 30px 0;
+  font-family: Arial;
+}
+.koala-form .range-wrap .range-popup {
+  position: absolute;
+  top: -150%;
+}
+.koala-form .range-wrap .range-popup span {
+  width: 40px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: #007BFF;
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 6px;
+}
+.koala-form .range-wrap .range-popup span:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #007BFF;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 90%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -1px;
+}
+.koala-form .range-wrap .range-label {
+  position: absolute;
+  left: 10px;
+  top: 25px;
+}
+.koala-form span.labelsContainer {
+  position: relative;
+  left: 10px;
+  top: 15px;
+}
+.koala-form span.value.lower::before {
+  content: "€";
+  display: inline-block;
+}
+.koala-form span.value.upper::before {
+  content: "- €";
+  display: inline-block;
+  left: 110%;
+}
+.koala-form .min-max-slider > input {
+  cursor: pointer;
+  position: absolute;
+}
+.koala-form .min-max-slider > input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid rgba(0, 123, 255, 0.24);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.koala-form .min-max-slider > input::-webkit-slider-runnable-track {
+  cursor: pointer;
+}
+.koala-form .number-input, .koala-form .number-input-right {
+  border: 1px solid #BBBBBB;
+  border-radius: 6px;
+  display: inline-flex;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.koala-form .number-input .custom-number-input, .koala-form .number-input-right .custom-number-input {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  border: none;
+  border-left: 1px solid #BBBBBB;
+  border-right: 1px solid #BBBBBB;
+  height: unset;
+  border-radius: 0;
+  width: 60%;
+  margin: 0;
+  outline: none;
+  text-align: center;
+  background-clip: content-box;
+}
+.koala-form .number-input .custom-number-input::-webkit-inner-spin-button, .koala-form .number-input-right .custom-number-input::-webkit-inner-spin-button, .koala-form .number-input .custom-number-input::-webkit-outer-spin-button, .koala-form .number-input-right .custom-number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.koala-form .number-input .custom-number-input:active, .koala-form .number-input-right .custom-number-input:active {
+  outline: none;
+}
+.koala-form .number-input button, .koala-form .number-input-right button {
+  outline: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 40px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+.koala-form .number-input *, .koala-form .number-input-right * {
+  color: #007BFF;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.koala-form .number-input-right {
+  position: relative;
+}
+.koala-form .number-input-right .custom-number-input {
+  width: 80%;
+  border-left: none;
+  border-right: 1px solid #BBBBBB;
+}
+.koala-form .number-input-right button {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  line-height: 10px;
+  width: 20%;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  color: #BBBBBB;
+  transition: all ease-in-out 0.25s;
+}
+.koala-form .number-input-right button:hover {
+  color: #007BFF;
+}
+.koala-form .number-input-right .plus {
+  top: 0;
+}
+.koala-form .number-input-right .minus {
+  bottom: 0;
+  border-top: 1px solid #BBBBBB;
+}
+.koala-form .number-input-right * {
+  color: #007BFF;
+  font-size: 20px;
+  box-sizing: border-box;
+}
 
 .koala-form .customComboBox {
   position: relative;
@@ -1219,70 +989,85 @@
   border: rgba(100, 100, 100, 0.5) solid 1px;
   border-radius: 6px;
   width: 100%;
-  overflow: hidden; }
-  .koala-form .customComboBox .options-container {
-    max-height: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all .4s;
-    overflow: hidden;
-    order: 1;
-    scrollbar-width: thin;
-    scrollbar-color: dodgerblue transparent; }
-    .koala-form .customComboBox .options-container .option {
-      padding: 12px 24px;
-      font-weight: bold;
-      cursor: pointer; }
-    .koala-form .customComboBox .options-container .option:hover {
-      color: dodgerblue;
-      background: rgba(100, 100, 100, 0.1); }
-    .koala-form .customComboBox .options-container .option.hidden {
-      display: none; }
-  .koala-form .customComboBox .options-container.active {
-    max-height: 240px;
-    opacity: 1;
-    overflow-y: scroll; }
-  .koala-form .customComboBox .options-container::-webkit-scrollbar {
-    width: 6px; }
-  .koala-form .customComboBox .options-container::-webkit-scrollbar-thumb {
-    background: dodgerblue; }
-  .koala-form .customComboBox .options-container.active ~ .search-box input {
-    opacity: 1;
-    pointer-events: auto; }
-  .koala-form .customComboBox .tag {
-    font-size: 85%;
-    font-weight: bold;
-    padding: 0.3em 0.5em;
-    margin: 0.2em 0.2em 0.4em 0.2em;
-    display: inline-block;
-    background-color: transparent;
-    border: 1px solid dodgerblue;
-    border-radius: 6px;
-    transition: all 0.1s linear;
-    cursor: pointer; }
-    .koala-form .customComboBox .tag .close::after {
-      content: '\2573';
-      display: inline-block;
-      color: dodgerblue;
-      transform: scale(0.85);
-      margin-left: 0.75em; }
-    .koala-form .customComboBox .tag .close:hover::after {
-      color: red; }
-  .koala-form .customComboBox .search-box input {
-    flex: 1;
-    border: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    position: relative;
-    order: 0;
-    pointer-events: initial;
-    transition: all 0.4s;
-    cursor: pointer;
-    height: 100%; }
-  .koala-form .customComboBox .search-box input:focus {
-    outline: none; }
+  overflow: hidden;
+}
+.koala-form .customComboBox .options-container {
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+  order: 1;
+  scrollbar-width: thin;
+  scrollbar-color: dodgerblue transparent;
+}
+.koala-form .customComboBox .options-container .option {
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.koala-form .customComboBox .options-container .option:hover {
+  color: dodgerblue;
+  background: rgba(100, 100, 100, 0.1);
+}
+.koala-form .customComboBox .options-container .option.hidden {
+  display: none;
+}
+.koala-form .customComboBox .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+.koala-form .customComboBox .options-container::-webkit-scrollbar {
+  width: 6px;
+}
+.koala-form .customComboBox .options-container::-webkit-scrollbar-thumb {
+  background: dodgerblue;
+}
+.koala-form .customComboBox .options-container.active ~ .search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+.koala-form .customComboBox .tag {
+  font-size: 85%;
+  font-weight: bold;
+  padding: 0.3em 0.5em;
+  margin: 0.2em 0.2em 0.4em 0.2em;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid dodgerblue;
+  border-radius: 6px;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.koala-form .customComboBox .tag .close::after {
+  content: "╳";
+  display: inline-block;
+  color: dodgerblue;
+  transform: scale(0.85);
+  margin-left: 0.75em;
+}
+.koala-form .customComboBox .tag .close:hover::after {
+  color: red;
+}
+.koala-form .customComboBox .search-box input {
+  flex: 1;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  position: relative;
+  order: 0;
+  pointer-events: initial;
+  transition: all 0.4s;
+  cursor: pointer;
+  height: 100%;
+}
+.koala-form .customComboBox .search-box input:focus {
+  outline: none;
+}
 .koala-form .customComboBox.activated {
-  border-color: dodgerblue; }
+  border-color: dodgerblue;
+}
 .koala-form .customComboBox:after {
   position: absolute;
   content: "";
@@ -1295,13 +1080,15 @@
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);
-  transition: transform .4s;
-  cursor: pointer; }
+  transition: transform 0.4s;
+  cursor: pointer;
+}
 .koala-form .customComboBox.activated:after {
   transform: rotate(-135deg);
-  top: 1.1em; }
+  top: 1.1em;
+}
 
-.koala-form .date-picker .calendar-icon, .date-picker-month .calendar-icon {
+.date-picker-month .calendar-icon, .koala-form .date-picker .calendar-icon {
   border: 2px solid #BBBBBB;
   display: inline-block;
   position: absolute;
@@ -1309,331 +1096,389 @@
   left: 90%;
   top: 11px;
   width: 24px;
-  pointer-events: none; }
-  .koala-form .date-picker .calendar-icon:after, .date-picker-month .calendar-icon:after, .koala-form .date-picker .calendar-icon:before, .date-picker-month .calendar-icon:before {
-    border: 2px solid #BBBBBB;
-    content: '';
-    position: absolute; }
-  .koala-form .date-picker .calendar-icon:after, .date-picker-month .calendar-icon:after {
-    bottom: 19px;
-    left: -2px;
-    right: -2px;
-    top: -2px; }
-  .koala-form .date-picker .calendar-icon:before, .date-picker-month .calendar-icon:before {
-    background: none;
-    border-bottom: none;
-    border-top: none;
-    border-width: 4px;
-    bottom: 23px;
-    left: 2px;
-    right: 2px;
-    top: -4px; }
+  pointer-events: none;
+}
+.date-picker-month .calendar-icon:after, .koala-form .date-picker .calendar-icon:after, .date-picker-month .calendar-icon:before, .koala-form .date-picker .calendar-icon:before {
+  border: 2px solid #BBBBBB;
+  content: "";
+  position: absolute;
+}
+.date-picker-month .calendar-icon:after, .koala-form .date-picker .calendar-icon:after {
+  bottom: 19px;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+}
+.date-picker-month .calendar-icon:before, .koala-form .date-picker .calendar-icon:before {
+  background: none;
+  border-bottom: none;
+  border-top: none;
+  border-width: 4px;
+  bottom: 23px;
+  left: 2px;
+  right: 2px;
+  top: -4px;
+}
 
 .koala-form .date-picker {
   position: relative;
   cursor: pointer;
   user-select: none;
-  font-family: Arial; }
-  .koala-form .date-picker .months_menu {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    background-color: white;
-    top: 65px;
-    width: 100%;
-    height: 75%; }
-    .koala-form .date-picker .months_menu button {
-      cursor: pointer;
-      outline: 0;
-      border: 0;
-      background: transparent;
-      font-family: sans-serif;
-      font-size: 16px;
-      width: 100px;
-      height: 50px;
-      margin: 10px;
-      border-radius: 4px;
-      transition-duration: 0.2s; }
-      .koala-form .date-picker .months_menu button:hover {
-        background: #eee;
-        color: #248dd9; }
-      .koala-form .date-picker .months_menu button:focus {
-        color: #eee;
-        background-color: #248dd9; }
-    .koala-form .date-picker .months_menu.active {
-      display: flex; }
-  .koala-form .date-picker .years_menu {
-    display: none;
-    flex-wrap: wrap;
-    max-height: 75%;
-    width: 100%;
-    margin-bottom: 20px;
-    overflow-y: scroll;
-    position: absolute;
-    background-color: white;
-    top: 65px; }
-    .koala-form .date-picker .years_menu::-webkit-scrollbar {
-      width: 5px;
-      /* width of the entire scrollbar */ }
-    .koala-form .date-picker .years_menu::-webkit-scrollbar-track {
-      background: #bebebe;
-      border-radius: 20px;
-      /* color of the tracking area */ }
-    .koala-form .date-picker .years_menu::-webkit-scrollbar-thumb {
-      background-color: #248dd9;
-      /* color of the scroll thumb */
-      border-radius: 20px;
-      /* roundness of the scroll thumb */
-      border: 1px solid #989898;
-      /* creates padding around scroll thumb */ }
-    .koala-form .date-picker .years_menu button {
-      cursor: pointer;
-      outline: 0;
-      border: 0;
-      background: transparent;
-      font-family: sans-serif;
-      font-size: 16px;
-      width: 15%;
-      height: 30px;
-      border-radius: 4px;
-      margin: 10px;
-      transition-duration: 0.2s; }
-      .koala-form .date-picker .years_menu button:hover {
-        background: #eee;
-        color: #248dd9; }
-      .koala-form .date-picker .years_menu button:focus {
-        color: #eee;
-        background-color: #248dd9; }
-    .koala-form .date-picker .years_menu.active {
-      display: flex; }
-  .koala-form .date-picker .calendar {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 40px 30px -20px rgba(0, 0, 0, 0.3);
-    cursor: default;
-    z-index: 9999999; }
-    .koala-form .date-picker .calendar.active {
-      display: inline-grid;
-      position: absolute; }
-    .koala-form .date-picker .calendar .date-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 15px;
-      margin-bottom: 20px;
-      font-weight: 300; }
-      .koala-form .date-picker .calendar .date-header .current-date {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .koala-form .date-picker .calendar .date-header .current-date .year, .koala-form .date-picker .calendar .date-header .current-date .mth {
-          margin: 5px;
-          cursor: pointer; }
-      .koala-form .date-picker .calendar .date-header .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 40px;
-        transition-duration: .2s;
-        position: relative; }
-        .koala-form .date-picker .calendar .date-header .nav:hover {
-          background: #007BFF;
-          color: #eee; }
-    .koala-form .date-picker .calendar .daysLabels {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      grid-template-columns: repeat(7, 1fr);
-      color: #999;
-      font-weight: 600;
-      margin-bottom: 15px; }
-      .koala-form .date-picker .calendar .daysLabels span {
-        width: 50px;
-        justify-self: center;
-        align-self: center;
-        text-align: center; }
-    .koala-form .date-picker .calendar .days {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr); }
-      .koala-form .date-picker .calendar .days button {
-        cursor: pointer;
-        outline: 0;
-        border: 0;
-        background: transparent;
-        font-family: sans-serif;
-        font-size: 16px;
-        justify-self: center;
-        align-self: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        margin: 3px;
-        transition-duration: .2s; }
-        .koala-form .date-picker .calendar .days button:hover {
-          background: #eee;
-          color: #007BFF; }
-        .koala-form .date-picker .calendar .days button.day.selected {
-          box-shadow: inset 0 0 0 2px;
-          background-color: #007BFF;
-          color: #fff; }
-    .koala-form .date-picker .calendar footer {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      font-size: 18px; }
-      .koala-form .date-picker .calendar footer #today {
-        cursor: pointer;
-        background-color: #007BFF;
-        color: #eee;
-        padding: 7px;
-        margin-top: 20px;
-        border-radius: 7px;
-        border: .1em solid #eee; }
-        .koala-form .date-picker .calendar footer #today:hover {
-          box-shadow: inset 0 0 0 .4px; }
+  font-family: Arial;
+}
+.koala-form .date-picker .months_menu {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  top: 65px;
+  width: 100%;
+  height: 75%;
+}
+.koala-form .date-picker .months_menu button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+}
+.koala-form .date-picker .months_menu button:hover {
+  background: #eee;
+  color: #248dd9;
+}
+.koala-form .date-picker .months_menu button:focus {
+  color: #eee;
+  background-color: #248dd9;
+}
+.koala-form .date-picker .months_menu.active {
+  display: flex;
+}
+.koala-form .date-picker .years_menu {
+  display: none;
+  flex-wrap: wrap;
+  max-height: 75%;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  position: absolute;
+  background-color: white;
+  top: 65px;
+}
+.koala-form .date-picker .years_menu::-webkit-scrollbar {
+  width: 5px;
+  /* width of the entire scrollbar */
+}
+.koala-form .date-picker .years_menu::-webkit-scrollbar-track {
+  background: #bebebe;
+  border-radius: 20px;
+  /* color of the tracking area */
+}
+.koala-form .date-picker .years_menu::-webkit-scrollbar-thumb {
+  background-color: #248dd9;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #989898;
+  /* creates padding around scroll thumb */
+}
+.koala-form .date-picker .years_menu button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 15%;
+  height: 30px;
+  border-radius: 4px;
+  margin: 10px;
+  transition-duration: 0.2s;
+}
+.koala-form .date-picker .years_menu button:hover {
+  background: #eee;
+  color: #248dd9;
+}
+.koala-form .date-picker .years_menu button:focus {
+  color: #eee;
+  background-color: #248dd9;
+}
+.koala-form .date-picker .years_menu.active {
+  display: flex;
+}
+.koala-form .date-picker .calendar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 40px 30px -20px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  z-index: 9999999;
+}
+.koala-form .date-picker .calendar.active {
+  display: inline-grid;
+  position: absolute;
+}
+.koala-form .date-picker .calendar .date-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.koala-form .date-picker .calendar .date-header .current-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.koala-form .date-picker .calendar .date-header .current-date .year, .koala-form .date-picker .calendar .date-header .current-date .mth {
+  margin: 5px;
+  cursor: pointer;
+}
+.koala-form .date-picker .calendar .date-header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  transition-duration: 0.2s;
+  position: relative;
+}
+.koala-form .date-picker .calendar .date-header .nav:hover {
+  background: #007BFF;
+  color: #eee;
+}
+.koala-form .date-picker .calendar .daysLabels {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.koala-form .date-picker .calendar .daysLabels span {
+  width: 50px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+.koala-form .date-picker .calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.koala-form .date-picker .calendar .days button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 16px;
+  justify-self: center;
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 3px;
+  transition-duration: 0.2s;
+}
+.koala-form .date-picker .calendar .days button:hover {
+  background: #eee;
+  color: #007BFF;
+}
+.koala-form .date-picker .calendar .days button.day.selected {
+  box-shadow: inset 0 0 0 2px;
+  background-color: #007BFF;
+  color: #fff;
+}
+.koala-form .date-picker .calendar footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+}
+.koala-form .date-picker .calendar footer #today {
+  cursor: pointer;
+  background-color: #007BFF;
+  color: #eee;
+  padding: 7px;
+  margin-top: 20px;
+  border-radius: 7px;
+  border: 0.1em solid #eee;
+}
+.koala-form .date-picker .calendar footer #today:hover {
+  box-shadow: inset 0 0 0 0.4px;
+}
 
 .date-picker-month {
   position: relative;
   cursor: pointer;
-  user-select: none; }
-  .date-picker-month .months_menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    top: 65px;
-    width: 100%; }
-    .date-picker-month .months_menu button {
-      cursor: pointer;
-      outline: 0;
-      border: 0;
-      background: transparent;
-      font-family: sans-serif;
-      font-size: 16px;
-      width: 100px;
-      height: 50px;
-      margin: 10px;
-      border-radius: 4px;
-      transition-duration: 0.2s; }
-      .date-picker-month .months_menu button:hover {
-        background: #eee;
-        color: #248dd9; }
-      .date-picker-month .months_menu button:focus {
-        color: #eee;
-        background-color: #248dd9; }
-  .date-picker-month .years_menu {
-    display: none;
-    flex-wrap: wrap;
-    max-height: 70%;
-    width: 100%;
-    margin-bottom: 20px;
-    overflow-y: scroll;
-    position: absolute;
-    background-color: white;
-    top: 65px; }
-    .date-picker-month .years_menu::-webkit-scrollbar {
-      width: 5px;
-      /* width of the entire scrollbar */ }
-    .date-picker-month .years_menu::-webkit-scrollbar-track {
-      background: #bebebe;
-      border-radius: 20px;
-      /* color of the tracking area */ }
-    .date-picker-month .years_menu::-webkit-scrollbar-thumb {
-      background-color: #248dd9;
-      /* color of the scroll thumb */
-      border-radius: 20px;
-      /* roundness of the scroll thumb */
-      border: 1px solid #989898;
-      /* creates padding around scroll thumb */ }
-    .date-picker-month .years_menu button {
-      cursor: pointer;
-      outline: 0;
-      border: 0;
-      background: transparent;
-      font-family: sans-serif;
-      font-size: 16px;
-      width: 15%;
-      height: 30px;
-      border-radius: 4px;
-      margin: 10px;
-      transition-duration: 0.2s; }
-      .date-picker-month .years_menu button:hover {
-        background: #eee;
-        color: #248dd9; }
-      .date-picker-month .years_menu button:focus {
-        color: #eee;
-        background-color: #248dd9; }
-    .date-picker-month .years_menu.active {
-      display: flex; }
-  .date-picker-month .calendar {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 40px 30px -20px rgba(0, 0, 0, 0.3);
-    cursor: default;
-    z-index: 999999; }
-    .date-picker-month .calendar.active {
-      display: inline-grid;
-      position: absolute;
-      width: 392px; }
-    .date-picker-month .calendar .date-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 20px;
-      margin-bottom: 20px;
-      font-weight: 300; }
-      .date-picker-month .calendar .date-header .current-date {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .date-picker-month .calendar .date-header .current-date .year, .date-picker-month .calendar .date-header .current-date .mth {
-          margin: 5px;
-          cursor: pointer; }
-      .date-picker-month .calendar .date-header .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 40px;
-        transition-duration: .2s;
-        position: relative; }
-        .date-picker-month .calendar .date-header .nav:hover {
-          background: #007BFF;
-          color: #eee; }
-    .date-picker-month .calendar footer {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      font-size: 18px; }
-      .date-picker-month .calendar footer #ok {
-        cursor: pointer;
-        background-color: #007BFF;
-        color: #eee;
-        padding: 7px 17px;
-        margin-top: 20px;
-        border-radius: 7px;
-        border: .1em solid #eee; }
-        .date-picker-month .calendar footer #ok:hover {
-          box-shadow: inset 0 0 0 .4px; }
+  user-select: none;
+}
+.date-picker-month .months_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  top: 65px;
+  width: 100%;
+}
+.date-picker-month .months_menu button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+}
+.date-picker-month .months_menu button:hover {
+  background: #eee;
+  color: #248dd9;
+}
+.date-picker-month .months_menu button:focus {
+  color: #eee;
+  background-color: #248dd9;
+}
+.date-picker-month .years_menu {
+  display: none;
+  flex-wrap: wrap;
+  max-height: 70%;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  position: absolute;
+  background-color: white;
+  top: 65px;
+}
+.date-picker-month .years_menu::-webkit-scrollbar {
+  width: 5px;
+  /* width of the entire scrollbar */
+}
+.date-picker-month .years_menu::-webkit-scrollbar-track {
+  background: #bebebe;
+  border-radius: 20px;
+  /* color of the tracking area */
+}
+.date-picker-month .years_menu::-webkit-scrollbar-thumb {
+  background-color: #248dd9;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #989898;
+  /* creates padding around scroll thumb */
+}
+.date-picker-month .years_menu button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 15%;
+  height: 30px;
+  border-radius: 4px;
+  margin: 10px;
+  transition-duration: 0.2s;
+}
+.date-picker-month .years_menu button:hover {
+  background: #eee;
+  color: #248dd9;
+}
+.date-picker-month .years_menu button:focus {
+  color: #eee;
+  background-color: #248dd9;
+}
+.date-picker-month .years_menu.active {
+  display: flex;
+}
+.date-picker-month .calendar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 40px 30px -20px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  z-index: 999999;
+}
+.date-picker-month .calendar.active {
+  display: inline-grid;
+  position: absolute;
+  width: 392px;
+}
+.date-picker-month .calendar .date-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.date-picker-month .calendar .date-header .current-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.date-picker-month .calendar .date-header .current-date .year, .date-picker-month .calendar .date-header .current-date .mth {
+  margin: 5px;
+  cursor: pointer;
+}
+.date-picker-month .calendar .date-header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  transition-duration: 0.2s;
+  position: relative;
+}
+.date-picker-month .calendar .date-header .nav:hover {
+  background: #007BFF;
+  color: #eee;
+}
+.date-picker-month .calendar footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+}
+.date-picker-month .calendar footer #ok {
+  cursor: pointer;
+  background-color: #007BFF;
+  color: #eee;
+  padding: 7px 17px;
+  margin-top: 20px;
+  border-radius: 7px;
+  border: 0.1em solid #eee;
+}
+.date-picker-month .calendar footer #ok:hover {
+  box-shadow: inset 0 0 0 0.4px;
+}
 
 .koala-form .custom-input-file {
-  display: none; }
+  display: none;
+}
 .koala-form .custom-file {
   display: flex;
   flex-direction: row;
@@ -1649,22 +1494,27 @@
   background-color: #fff;
   border-radius: 0.3125em;
   font-family: Arial;
-  cursor: pointer; }
-  .koala-form .custom-file .custom-file-button {
-    height: 100%;
-    border-right: 1px solid #BBBBBB; }
-    .koala-form .custom-file .custom-file-button button {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 0.3125em 0 0 0.3125em;
-      font-size: 15px;
-      color: #343A40;
-      cursor: pointer; }
-  .koala-form .custom-file .custom-file-selected {
-    padding: 0.55em; }
-    .koala-form .custom-file .custom-file-selected span {
-      vertical-align: middle;
-      color: #343A40; }
+  cursor: pointer;
+}
+.koala-form .custom-file .custom-file-button {
+  height: 100%;
+  border-right: 1px solid #BBBBBB;
+}
+.koala-form .custom-file .custom-file-button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.3125em 0 0 0.3125em;
+  font-size: 15px;
+  color: #343A40;
+  cursor: pointer;
+}
+.koala-form .custom-file .custom-file-selected {
+  padding: 0.55em;
+}
+.koala-form .custom-file .custom-file-selected span {
+  vertical-align: middle;
+  color: #343A40;
+}
 
 /*# sourceMappingURL=koala-form.css.map */
