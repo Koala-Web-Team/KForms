@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,21 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a090848a-d725-46c2-a909-95c8eb174381" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/contact border side.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/contact header center.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/contact header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/css/template.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/login border side.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/login header center.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/login header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/signup border side.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/signup header center.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/forms/assets/signup header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/forms/assets/output.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/assets/Checkable_Styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/Checkable_Styles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/assets/css/form-style-arabic.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/css/form-style-arabic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/forms/assets/js/form-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/assets/js/form-style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/forms/input_types/KInput.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +74,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes/forms/assets/css/koala-form.css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -140,6 +132,8 @@
       <workItem from="1622718741831" duration="6600000" />
       <workItem from="1622909381619" duration="2677000" />
       <workItem from="1623096546998" duration="4000" />
+      <workItem from="1624165823085" duration="262000" />
+      <workItem from="1624166188912" duration="1162000" />
     </task>
     <servers />
   </component>

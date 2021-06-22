@@ -20,9 +20,9 @@ $myArr=array('ramaj','test');
 	$validator = new KValidation($_POST, $rules);
 	$validator->validate();
 }
-KoalaSessionHandler::init();
+//KoalaSessionHandler::init();
 // KoalaSessionHandler::fresh();
-var_dump(KoalaSessionHandler::getErrors());
+//var_dump(KoalaSessionHandler::getErrors());
 
 ////Martin
 // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -225,10 +225,20 @@ $login = new LoginForm(
 		"name" => "toty",
 	]
 );
+
+$form = new Form();
+
+$name = new Text();
+$name->setIdentity("name");
+$name->addCssClass("filled-border-input");
+$form->setInputsStyle("p-filled-border-input");
+
+$form->addInput($name);
+$form->renderForm();
 ?>
 
 <body>
-<?php  $login->renderForm(); ?>
+<?php  //$login->renderForm(); ?>
 <script src="includes/forms/assets/js/forms_script.js"></script>
 
 </body>

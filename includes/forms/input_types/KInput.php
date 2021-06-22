@@ -13,6 +13,7 @@
 		private $autocompleteBehavior;
 
 		public function __construct( array $attributes = [] ) {
+			$this->attributes['cssClass'] = "";
 			foreach ( $attributes as $key => $value ) {
 				$this->attributes[$key] = $value;
 			}
@@ -148,6 +149,16 @@
 			return $this->labelContent;
 		}
 
+		public function setIdentity( string $identity ) {
+			$this->setName($identity);
+			$this->setLabel($identity);
+			$this->setPlaceholder($identity);
+		}
+
+		public function setLabelClass( string $class ) {
+
+		}
+
 		public function toHtml($divClass = "") {
 			$div = new Html( "div", ["class" => $divClass] );
 			$this->label->setAttributes(
@@ -161,6 +172,7 @@
 
 		public function __toString() {
 			$this->handleBehaviors();
+			$this->handleCssClass();
 			$input = new Html("input", $this->attributes);
 
 			return $input->toHtml();
@@ -169,5 +181,10 @@
 		private function handleBehaviors() {
 			$this->attributes['placeholder'] = $this->getPlaceholder();
 			$this->attributes['autocomplete'] = $this->getAutocomplete();
+		}
+
+		private function handleCssClass() {
+			$this->attributes['class'] = $this->attributes['cssClass'];
+			unset( $this->attributes['cssClass'] );
 		}
 	}
