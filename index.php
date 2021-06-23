@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="includes/forms/assets/css/forms_style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <?php
 
 include "includes/forms/KForm.php";
@@ -226,15 +227,44 @@ $login = new LoginForm(
 	]
 );
 
+//$form = new Form();
+//
+//$name = new Text();
+//$name->setIdentity("name");
+//$name->addCssClass("filled-border-input");
+//$form->setInputsStyle("p-filled-border-input");
+//
+//$form->addInput($name);
+//$form->renderForm();
+
 $form = new Form();
 
 $name = new Text();
+$email = new Email();
+$telephone = new Tel();
+$pass=new Password();
+$submit=new Submit();
+
+$form->setInputsStyle("p-filled-border-input");
 $name->setIdentity("name");
+$email->setIdentity('email');
+$telephone->setIdentity('telephone');
+$pass->setIdentity('password');
+
 $name->addCssClass("filled-border-input");
+
+///$name->addCssClass("filled-border-left-input");
+$email->addCssClass(KInput::FILLED_BORDER);
+$telephone->addCssClass(KInput::FILLED_BORDER);
+$pass->addCssClass(KInput::FILLED_BORDER);
+$submit->addCssClass("submit-koala");
 $form->setInputsStyle("p-filled-border-input");
 
-$form->addInput($name);
+$form->setTitle("Sign Up Form");
+$form->addInputs([$name,$email,$telephone,$pass,$submit]);
 $form->renderForm();
+
+
 ?>
 
 <body>

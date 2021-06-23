@@ -8,6 +8,7 @@
 		private $inputs = [];
 		private $attributes;
 		private $inputsStyle;
+		private $title;
 
 		public function __construct( array $attributes = [] ) {
 			$this->attributes['cssClass'] = "";
@@ -107,6 +108,14 @@
 			}
 		}
 
+		public function setTitle( $title ): void {
+			$this->title = $title;
+		}
+
+		public function getTitle() {
+			return $this->title;
+		}
+
 		public function setOnReset( $function, ...$param ) {
 			$this->setOn( 'rest', $function, ...$param );
 		}
@@ -131,6 +140,14 @@
 			$this->handleCssClass();
 			$form = new Html( "form", $this->attributes );
 			$formBody = "";
+
+			$h3 = new Html("h3", ["class" => "form-title"]);
+			$div = new Html("div", ["class" => "form-header"]);
+
+			if ( $this->getTitle() != null ) {
+				$formBody .= $div->toHtml( $h3->toHtml( $this->getTitle() ) );
+			}
+
 			foreach ( $this->inputs as $input ) {
 				$formBody .= $input->toHtml( $this->inputsStyle );
 			}

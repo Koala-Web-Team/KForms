@@ -63,6 +63,9 @@ $filesOfClasses = [
 	// Placeholder
 	"PlaceholderBehavior" => "behaviors/placeholder/PlaceholderBehavior.php",
 	"NoPlaceholderBehavior" => "behaviors/placeholder/NoPlaceholderBehavior.php",
+	// Label
+	"LabelBehavior" => "behaviors/label/LabelBehavior.php",
+	"NoLabelBehavior" => "behaviors/label/NoLabelBehavior.php",
 
 	// Templates
 	"KTemplate" => "templates/KTemplate.php",

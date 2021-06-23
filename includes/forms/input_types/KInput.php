@@ -5,12 +5,15 @@
 		use HandleEvents;
 		use InputEvents;
 
+		const FILLED_BORDER = "filled-border-input";
+
 		private $attributes;
 		protected $label;
 		protected $labelContent;
 
 		private $placeholderBehavior;
 		private $autocompleteBehavior;
+		private $labelBehavior;
 
 		public function __construct( array $attributes = [] ) {
 			$this->attributes['cssClass'] = "";
@@ -20,6 +23,7 @@
 
 			$this->placeholderBehavior = new PlaceholderBehavior();
 			$this->autocompleteBehavior = new AutocompleteBehavior();
+			$this->labelBehavior = new LabelBehavior();
 
 			$this->label = new Html("label");
 		}
@@ -35,6 +39,10 @@
 
 		public function addCssClass( $class ) {
 			$this->attributes['cssClass'] .= " " . $class;
+
+			if ( $class == KInput::FILLED_BORDER ) {
+				$this->setLabelBehavior(new NoLabelBehavior());
+			}
 		}
 
 		public function getCssClass() {
@@ -141,12 +149,16 @@
 			return $this->attributes['required'];
 		}
 
-		public function setLabel( string $label) {
-			$this->labelContent = $label;
+		public function setLabel( string $label ) {
+			$this->labelBehavior->setLabel($label);
 		}
 
 		public function getLabel(): string {
-			return $this->labelContent;
+			return $this->labelBehavior->getLabel();
+		}
+
+		protected function setLabelBehavior( $labelBehavior ) {
+			$this->labelBehavior = $labelBehavior;
 		}
 
 		public function setIdentity( string $identity ) {
